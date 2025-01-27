@@ -39,24 +39,30 @@ header {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    flex-direction: column; /* Stack elements vertically */
 }
 
 .profile-pic {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 0; /* Remove margin */
+    margin-bottom: 15px; /* Add margin below the image */
     object-fit: cover;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    text-align: center;
 }
 
 header p {
     margin: 5px 0 0;
     font-size: 1.2rem;
+    text-align: center;
+    width: 100%; /* Ensure the paragraph takes full width */
+    line-height: 1.5; /* Adjust line height for readability */
 }
 
 /* Navigation */
@@ -91,6 +97,7 @@ nav a:hover {
 .timeline {
     position: relative;
     margin: 40px 0;
+    overflow: hidden;
 }
 
 .timeline::before {
@@ -104,19 +111,26 @@ nav a:hover {
     background-color: #ddd;
 }
 
+/* Timeline Items */
 .timeline-item {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-    margin: 10px 0;
     width: 50%;
+    margin-bottom: 40px;
+    position: relative;
+    clear: both; /* Add this to fix the floating issue */
 }
 
+/* Odd Items (Left Side) */
 .timeline-item:nth-child(odd) {
-    align-self: flex-end;
-    justify-content: flex-start;
+    float: left; /* Float odd items to the left */
+    text-align: right; /* Right-align text for odd items */
+    padding-right: 30px;
+}
+
+/* Even Items (Right Side) */
+.timeline-item:nth-child(even) {
+    float: right; /* Float even items to the right */
+    text-align: left; /* Left-align text for even items */
     padding-left: 30px;
-    padding-right: 0;
 }
 
 .timeline-content {
@@ -125,9 +139,34 @@ nav a:hover {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
+    width: calc(100% - 40px);
 }
 
-.timeline-content::before {
+/* Add the circle on the timeline */
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #4ca1af;
+    border-radius: 50%;
+    top: 25px;
+    z-index: 1;
+}
+
+/* Position circle on the right for odd items */
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: -5px;
+}
+
+/* Position circle on the left for even items */
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -5px;
+}
+
+/* Triangle for odd items */
+.timeline-item:nth-child(odd) .timeline-content::before {
     content: '';
     position: absolute;
     top: 20px;
@@ -137,8 +176,13 @@ nav a:hover {
     border-color: transparent transparent transparent #fff;
 }
 
-.timeline-item:nth-child(odd) .timeline-content::before {
+/* Triangle for even items */
+.timeline-item:nth-child(even) .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
     left: -10px;
+    border-style: solid;
     border-width: 10px 10px 10px 0;
     border-color: transparent #fff transparent transparent;
 }
@@ -334,27 +378,54 @@ footer a {
 /* Responsive Design */
 @media (max-width: 768px) {
     .timeline::before {
-        left: 20px;
+        left: 0;
+        margin-left: 20px;
     }
 
     .timeline-item {
         width: 100%;
-        padding: 0 0 0 50px;
-        justify-content: flex-start;
+        float: none; /* Remove float on smaller screens */
+        text-align: left; /* Align text to the left */
+        padding-left: 30px;
+        padding-right: 0;
+        margin-bottom: 60px;
     }
 
     .timeline-item:nth-child(odd) {
-        padding: 0 0 0 50px;
+        float: none; /* Remove float on smaller screens */
+        text-align: left; /* Align text to the left */
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+    .timeline-content {
+        width: calc(100% - 30px);
+        margin-left: 30px;
     }
 
     .timeline-content::before {
-        left: 10px;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #fff transparent transparent;
+        left: -10px;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #fff;
     }
 
-    .timeline-item:nth-child(odd) .timeline-content::before {
-        left: 10px;
+    .timeline-content::after {
+        left: -5px;
+    }
+
+    /* Odd Items (Left Side) */
+    .timeline-item:nth-child(odd) {
+        float: right; /* Float odd items to the left */
+        text-align: left; /* Right-align text for odd items */
+        padding-left: 30px;
+        padding-right: auto;
+    }
+    
+    /* Even Items (Right Side) */
+    .timeline-item:nth-child(even) {
+        float: right; /* Float even items to the right */
+        text-align: left; /* Left-align text for even items */
+        padding-left: 30px;
     }
 
     .profile {
