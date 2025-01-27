@@ -255,6 +255,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .languages-list li {
@@ -307,6 +308,10 @@ nav a:hover {
 
 .update-info p {
     margin-bottom: 10px;
+}
+
+.update-date {
+    font-weight: bold;
 }
 
 .read-more {
