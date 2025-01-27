@@ -8,6 +8,11 @@ body {
     color: #333;
 }
 
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0;       /* Remove default indentation */
+}
+
 .container {
     width: 85%;
     max-width: 1200px;
@@ -337,6 +342,7 @@ nav a:hover {
 }
 
 /* Contact Section */
+
 .contact-info {
     list-style: none;
     padding: 0;
