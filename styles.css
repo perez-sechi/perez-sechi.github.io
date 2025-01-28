@@ -10,7 +10,7 @@ body {
 
 ul {
     list-style-type: none; /* Remove bullet points */
-    padding-left: 0;       /* Remove default indentation */
+    padding-left: 0; /* Remove default indentation */
 }
 
 .container {
@@ -190,6 +190,50 @@ nav a:hover {
     border-style: solid;
     border-width: 10px 10px 10px 0;
     border-color: transparent #fff transparent transparent;
+}
+
+.timeline-complement {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 40px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) .timeline-complement {
+    left: 100%;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-complement {
+    right: 100%;
+    margin-right: 30px;
+    text-align: right;
+}
+
+.company-logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.timeline-item:nth-child(even) .tech-stack {
+    justify-content: flex-end;
+}
+
+.tech-pill {
+    background: #4ca1af;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
 }
 
 .company {
@@ -431,7 +475,7 @@ footer a {
         padding-left: 30px;
         padding-right: auto;
     }
-    
+
     /* Even Items (Right Side) */
     .timeline-item:nth-child(even) {
         float: right; /* Float even items to the right */
