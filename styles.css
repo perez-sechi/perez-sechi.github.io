@@ -290,6 +290,26 @@ nav a:hover {
     font-size: 0.9em;
 }
 
+.education-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.education-logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.education-item,
+.awards-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 /* Education & Awards Sections */
 .education-item,
 .awards-list li {
@@ -303,12 +323,26 @@ nav a:hover {
 .education-item h3,
 .awards-list li {
     margin-top: 0;
+    font-weight: bold;
 }
 
 .award-year {
     font-weight: bold;
     margin-right: 10px;
     color: #4ca1af;
+}
+
+.award-logo {
+    max-width: 200px;
+    max-height: 50px;
+}
+
+.award-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin-right: 20px;
 }
 
 /* Languages */
