@@ -559,4 +559,30 @@ footer a {
         width: auto;
         margin-right: 10px;
     }
+
+    .education-item,
+    .awards-list li {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    .education-logo-container,
+    .award-logo-container {
+        width: 100%; /* Make logo container full width */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add margin below the logo */
+        justify-content: center; /* Center the logo */
+    }
+
+    .education-content,
+    .award-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Awards List */
+    .awards-list li {
+        text-align: left; /* Align text to the left */
+    }
 }
