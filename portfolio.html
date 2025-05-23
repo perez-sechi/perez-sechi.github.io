@@ -1,837 +1,829 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlos I. Pérez-Sechi - AI Solutions Expert (Light Grayscale)</title> <meta
-        name="description"
-        content="Carlos I. Pérez-Sechi - Expert in AI applications, LLMs, and digital transformation. Showcasing projects, skills, and experience in a modern light grayscale theme."
-    />
-    <meta
-        name="keywords"
-        content="AI applications, LLMs, chatbots, digital transformation, knowledge portals, performance optimization, AI Engineer, AI Consultant, light grayscale theme, AI portfolio, AI experience"
-    />
-    <meta name="author" content="Carlos I. Pérez-Sechi" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Carlos I. Pérez-Sechi (Light Grayscale)</title>
+        <meta
+            name="description"
+            content="Portfolio and detailed experience of Carlos I. Pérez-Sechi, showcasing AI projects, LLM implementations, skills, education, awards, and digital transformation successes in a modern light grayscale theme."
+        />
+        <meta
+            name="keywords"
+            content="AI portfolio, LLM projects, data science projects, digital transformation examples, Carlos I. Pérez-Sechi projects, AI skills, AI experience, AI education, AI news, AI updates, light grayscale design, negative theme"
+        />
+        <meta name="author" content="Carlos I. Pérez-Sechi" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-8QPR7MQ5QD');
-    </script>
-    <style>
-        /* Custom global styles */
-        body {
-            font-family: 'Inter', sans-serif; 
-            @apply bg-neutral-100 text-neutral-800; /* Base light gray theme */
-        }
-
-        /* Animation for service icons */
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Fade-in animation styles */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Custom scrollbar (optional - light theme) */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #e5e5e5; /* neutral-200 */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #a3a3a3; /* neutral-400 */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #737373; /* neutral-500 */
-        }
-        /* Ensure Tailwind JIT generates necessary classes */
-        .group:hover .group-hover\:opacity-100 { opacity: 1; }
-        .group:hover .group-hover\:translate-y-0 { transform: translateY(0px); }
-        .group:hover .group-hover\:scale-105 { transform: scale(1.05); }
-
-    </style>
-    <script>
-      // Tailwind config for Light Grayscale Theme
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              // Light Grayscale palette
-              primary: '#404040', // Dark gray (neutral-700) - for primary text/elements on light bg
-              'primary-dark': '#262626', // Darker gray (neutral-800) - for hover states
-              secondary: '#737373', // Medium gray (neutral-500) - for secondary text/elements
-              'secondary-dark': '#525252', // Medium-dark gray (neutral-600) - for hover states
-              
-              neutral: { 
-                50: '#fafafa',
-                100: '#f5f5f5', 
-                200: '#e5e5e5', 
-                300: '#d4d4d4', 
-                400: '#a3a3a3', 
-                500: '#737373', 
-                600: '#525252', 
-                700: '#404040', 
-                800: '#262626', 
-                900: '#171717', 
-                950: '#0a0a0a',
-              },
-              'custom-bg': '#f5f5f5', 
-              'card-bg': '#ffffff', 
-              'section-alt-bg': '#e5e5e5', 
-              'border-color': '#d4d4d4', 
-              'text-main': '#262626', 
-              'text-secondary': '#525252', 
-              'text-headings': '#171717', 
-              'accent-purple': '#525252', 
-              'accent-teal': '#737373', 
-            },
-            animation: {
-              'gradient-pulse': 'gradientPulse 6s ease infinite',
-              'text-focus-in': 'text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
-              'slide-in-elliptic-top-fwd': 'slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
-            },
-            keyframes: {
-              gradientPulse: { 
-                '0%, 100%': { 'background-position': '0% 50%' },
-                '50%': { 'background-position': '100% 50%' },
-              },
-               'text-focus-in': {
-                    '0%': {
-                        filter: 'blur(12px)',
-                        opacity: '0'
-                    },
-                    to: {
-                        filter: 'blur(0)',
-                        opacity: '1'
-                    }
-                },
-                'slide-in-elliptic-top-fwd': {
-                    '0%': {
-                        transform: 'translateY(-600px) rotateX(-30deg) scale(0)',
-                        'transform-origin': '50% 100%',
-                        opacity: '0'
-                    },
-                    to: {
-                        transform: 'translateY(0) rotateX(0) scale(1)',
-                        'transform-origin': '50% 1400px',
-                        opacity: '1'
-                    }
-                }
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
             }
-          }
-        }
-      }
-    </script>
-</head>
-<body class="bg-custom-bg text-text-main antialiased">
+            gtag('js', new Date());
+            gtag('config', 'G-8QPR7MQ5QD');
+        </script>
+        <style>
+            /* Custom global styles */
+            body {
+                font-family: 'Inter', sans-serif;
+                @apply bg-neutral-100 text-neutral-800; /* Base light gray theme */
+            }
 
-    <header class="sticky top-0 z-50 bg-neutral-100/80 backdrop-blur-md shadow-lg border-b border-border-color">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0">
-                     <a href="index.html" class="text-2xl font-bold text-text-headings"> Carlos I. Pérez<span class="text-neutral-500">-Sechi</span>
-                    </a>
+            /* Fade-in animation styles */
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .fade-in.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            /* Custom scrollbar (optional - light theme) */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #e5e5e5; /* neutral-200 */
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #a3a3a3; /* neutral-400 */
+                border-radius: 4px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #737373; /* neutral-500 */
+            }
+        </style>
+        <script>
+            // Tailwind config for Light Grayscale Theme
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            // Light Grayscale palette
+                            primary: '#404040', // Dark gray (neutral-700) - for primary text/elements on light bg
+                            'primary-dark': '#262626', // Darker gray (neutral-800) - for hover states
+                            secondary: '#737373', // Medium gray (neutral-500) - for secondary text/elements
+                            'secondary-dark': '#525252', // Medium-dark gray (neutral-600) - for hover states
+
+                            neutral: {
+                                // Tailwind's default grays are excellent
+                                50: '#fafafa',
+                                100: '#f5f5f5', // Main background
+                                200: '#e5e5e5', // Card background
+                                300: '#d4d4d4',
+                                400: '#a3a3a3',
+                                500: '#737373', // Our secondary
+                                600: '#525252', // Our secondary-dark
+                                700: '#404040', // Our primary
+                                800: '#262626', // Our primary-dark, default body text
+                                900: '#171717',
+                                950: '#0a0a0a',
+                            },
+                            'custom-bg': '#f5f5f5', // Main background (neutral-100)
+                            'card-bg': '#ffffff', // Card backgrounds (white) or neutral-50/neutral-100 for slight off-white
+                            'border-color': '#d4d4d4', // Border color (neutral-300)
+                            'accent-highlight': '#171717', // A very dark gray for highlights if needed (neutral-900)
+                            'text-main': '#262626', // Main text color (neutral-800)
+                            'text-secondary': '#525252', // Secondary text color (neutral-600)
+                            'text-headings': '#171717', // Heading text color (neutral-900)
+                        },
+                        // Animations and keyframes remain the same as they are not color-dependent
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="bg-custom-bg text-text-main antialiased">
+        <header class="sticky top-0 z-50 bg-neutral-100/80 backdrop-blur-md shadow-lg border-b border-border-color">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0">
+                        <a href="./index.html" class="text-2xl font-bold text-text-headings">
+                            <img
+                                src="./logo.svg"
+                                alt="Logo"
+                                class="h-10 w-auto"
+                                onerror="this.src='https://placehold.co/150x50/A3A3A3/171717?text=Logo&font=inter'; this.onerror=null;"
+                            />
+                        </a>
+                    </div>
+                    <nav class="hidden md:flex space-x-6">
+                        <a
+                            href="index.html#services"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Services</a
+                        >
+                        <a
+                            href="index.html#results"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Results</a
+                        >
+                        <a
+                            href="index.html#testimonials"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Client Success</a
+                        >
+                        <a href="portfolio.html" class="text-text-headings font-semibold px-3 py-2 rounded-md text-sm"
+                            >Portfolio</a
+                        >
+                        <a
+                            href="index.html#contact"
+                            class="bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg"
+                            >Contact</a
+                        >
+                    </nav>
+                    <div class="md:hidden">
+                        <button
+                            id="mobile-menu-button"
+                            class="text-text-secondary hover:text-text-headings focus:outline-none"
+                        >
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
                 </div>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#services" class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                    <a href="#results" class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Results</a>
-                    <a href="#testimonials" class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Client Success</a>
-                    <a href="portfolio.html" class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
-                    <a href="#contact" class="bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-text-secondary hover:text-text-headings focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden bg-neutral-50 border-t border-border-color">
+                <a
+                    href="index.html#services"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
+                    >Services</a
+                >
+                <a
+                    href="index.html#results"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
+                    >Results</a
+                >
+                <a
+                    href="index.html#testimonials"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
+                    >Client Success</a
+                >
+                <a href="portfolio.html" class="block text-text-headings bg-neutral-200 px-4 py-3 text-sm font-medium"
+                    >Portfolio</a
+                >
+                <a
+                    href="index.html#contact"
+                    class="block bg-neutral-800 hover:bg-neutral-700 text-white text-center mx-4 my-3 px-4 py-3 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg"
+                    >Contact</a
+                >
+            </div>
+        </header>
+
+        <section id="updates" class="py-16 md:py-24 bg-neutral-200/50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Latest Updates & Insights</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Stay informed with my latest articles, project milestones, and thoughts on AI and technology.
+                    </p>
+                </div>
+                <div id="updates-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8"></div>
+                <div class="pagination flex justify-center space-x-4">
+                    <button
+                        id="load-prev"
+                        aria-label="Previous Updates"
+                        class="bg-neutral-700 hover:bg-neutral-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 disabled:opacity-50"
+                    >
+                        <i class="fas fa-chevron-left mr-2"></i>Prev
+                    </button>
+                    <button
+                        id="load-next"
+                        aria-label="Next Updates"
+                        class="bg-neutral-700 hover:bg-neutral-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+                    >
+                        Next<i class="fas fa-chevron-right ml-2"></i>
                     </button>
                 </div>
             </div>
-        </div>
-        <div id="mobile-menu" class="md:hidden hidden bg-neutral-50 border-t border-border-color">
-            <a href="#services" class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium">Services</a>
-            <a href="#results" class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium">Results</a>
-            <a href="#testimonials" class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium">Client Success</a>
-            <a href="portfolio.html" class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium">Portfolio</a>
-            <a href="#contact" class="block bg-neutral-800 hover:bg-neutral-700 text-white text-center mx-4 my-3 px-4 py-3 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">Contact</a>
-        </div>
-    </header>
+        </section>
 
-    <section class="relative py-20 md:py-32 bg-gradient-to-br from-neutral-100 via-custom-bg to-neutral-200 overflow-hidden">
-        <div class="absolute inset-0 opacity-30">
-             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-neutral-300 rounded-full filter blur-3xl animate-gradient-pulse"></div>
-             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neutral-400 rounded-full filter blur-3xl animate-gradient-pulse animation-delay-3000"></div>
-        </div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="max-w-3xl mx-auto">
-                <img src="./profile.png" alt="Carlos I. Pérez-Sechi" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-8 shadow-2xl border-4 border-neutral-300 animate-slide-in-elliptic-top-fwd filter grayscale" onerror="this.src='https://placehold.co/150x150/A3A3A3/171717?text=CPS&font=inter'; this.onerror=null; this.classList.add('filter','grayscale');"/>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-text-headings mb-6 animate-text-focus-in">
-                    Carlos I. Pérez-Sechi
-                </h1>
-                <p class="text-lg sm:text-xl text-text-secondary mb-10 max-w-2xl mx-auto animate-text-focus-in" style="animation-delay: 0.3s;">
-                    AI Solutions Expert | Enterprise LLM Implementation | Digital Transformation
-                </p>
-                <p class="text-xl sm:text-2xl md:text-3xl font-bold text-text-headings mb-6 animate-text-focus-in" style="animation-delay: 0.5s;">
-                    <span class="text-primary"> 
-                        Transform Your Business with Custom AI Solutions
-                    </span>
-                </p>
-                <p class="text-md sm:text-lg text-text-secondary mb-12 max-w-xl mx-auto animate-text-focus-in" style="animation-delay: 0.7s;">
-                    I architect and deploy powerful AI tools that drive tangible business outcomes, from optimizing internal systems to building intelligent, scalable chatbots.
-                </p>
-                <div class="animate-text-focus-in" style="animation-delay: 0.9s;">
-                    <a href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink" class="bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block">
-                        Book a Free Strategy Session <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+        <section id="skills" class="py-16 md:py-24 bg-custom-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Core Competencies</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        A blend of technical expertise, strategic thinking, and leadership to drive innovation.
+                    </p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="skill-category bg-card-bg p-6 rounded-xl shadow-xl fade-in border border-border-color">
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Technology & Tools</h3>
+                        <ul class="space-y-2 text-text-main">
+                            <li><b>AI Engineering:</b> Ollama, VertexAI, QLoRA, PEFT, RASA</li>
+                            <li><b>Machine Learning (ML):</b> SAS Enterprise Miner, Base SAS, PyTorch, Tensorflow</li>
+                            <li>
+                                <b>Data Analytics & Visualization:</b> Plotly, Matplotlib, NetworkX, PowerBI, Tableau,
+                                Pandas, Numpy, Scikit-learn
+                            </li>
+                            <li><b>Cloud Technologies:</b> AWS, GCP, Azure</li>
+                            <li><b>DevOps:</b> Ansible, Terraform, Docker, Kubernetes</li>
+                            <li><b>Software Development:</b> Python, .NET, PHP, JavaScript/TypeScript, C++</li>
+                            <li><b>Web/Mobile Frameworks:</b> ReactJS, Angular, React Native</li>
+                            <li><b>Database Management:</b> SQL, NoSQL</li>
+                            <li><b>API Management:</b> OAuth2/JWT, AWS API Gateway</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="skill-category bg-card-bg p-6 rounded-xl shadow-xl fade-in border border-border-color"
+                        style="animation-delay: 0.1s"
+                    >
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Methodologies & Operations</h3>
+                        <ul class="space-y-2 text-text-main">
+                            <li><b>Agile:</b> Scrum, Kanban, SAFe, LeSS</li>
+                            <li><b>Lean Process Optimization</b></li>
+                            <li><b>CI/CD Pipeline Design</b></li>
+                            <li><b>Data Governance:</b> GDPR, DCAM</li>
+                            <li><b>Quality Assurance:</b> TDD, BDD, SonarQube</li>
+                            <li><b>Cybersecurity:</b> OWASP, ISO27001</li>
+                            <li><b>Incident Management:</b> ITIL, PagerDuty</li>
+                            <li><b>Compliance:</b> HIPAA, SOC2</li>
+                            <li><b>Performance Engineering:</b> JMeter, APM</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="skill-category bg-card-bg p-6 rounded-xl shadow-xl fade-in border border-border-color"
+                        style="animation-delay: 0.2s"
+                    >
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Leadership & Strategy</h3>
+                        <ul class="space-y-2 text-text-main">
+                            <li><b>Digital Transformation</b></li>
+                            <li><b>Innovation Strategy</b></li>
+                            <li><b>Growth Strategies</b></li>
+                            <li><b>Organizational Design</b></li>
+                            <li><b>Change Management</b></li>
+                            <li><b>Strategic Planning:</b> OKRs, Balanced Scorecard</li>
+                            <li><b>Mergers & Acquisitions:</b> IT Due Diligence</li>
+                            <li><b>Talent Development</b></li>
+                            <li><b>Stakeholder Management</b></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="py-16 md:py-24 bg-section-alt-bg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">My Core AI Services</h2>
-                <p class="text-lg text-text-secondary max-w-2xl mx-auto">Tailored AI consulting to address your unique organizational needs and unlock new potentials.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-neutral-400/30 transition-all duration-300 transform hover:-translate-y-1 group border border-border-color">
-                    <div class="service-icon floating text-5xl text-primary mb-6">
-                        <i class="fas fa-cogs"></i> </div>
-                    <h3 class="text-2xl font-semibold text-text-headings mb-3">Performance Optimization</h3>
-                    <p class="text-text-secondary mb-6 leading-relaxed">
-                        Boost corporate application and internal system performance. I identify bottlenecks, optimize processes, and implement AI-driven solutions for significant speed and efficiency enhancements.
-                    </p>
-                    <a href="#contact" class="text-primary hover:text-primary-dark font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
+        <section id="languages" class="py-16 md:py-24 bg-neutral-200/50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Languages</h2>
                 </div>
-                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-neutral-400/30 transition-all duration-300 transform hover:-translate-y-1 group border border-border-color" style="animation-delay: 0.2s;">
-                    <div class="service-icon floating text-5xl text-primary mb-6">
-                        <i class="fas fa-brain"></i> </div>
-                    <h3 class="text-2xl font-semibold text-text-headings mb-3">AI Chatbots & Assistants</h3>
-                    <p class="text-text-secondary mb-6 leading-relaxed">
-                        Design, implementation, and optimization of scalable AI chatbots and Copilot-style assistants. Create powerful tools to enhance customer service and streamline operations.
-                    </p>
-                    <a href="#contact" class="text-primary hover:text-primary-dark font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
-                </div>
-                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-neutral-400/30 transition-all duration-300 transform hover:-translate-y-1 group border border-border-color" style="animation-delay: 0.4s;">
-                    <div class="service-icon floating text-5xl text-primary mb-6">
-                        <i class="fas fa-archive"></i> </div>
-                    <h3 class="text-2xl font-semibold text-text-headings mb-3">Intelligent Document Repositories</h3>
-                    <p class="text-text-secondary mb-6 leading-relaxed">
-                        Implementation of advanced Retrieval-Augmented Generation (RAG) systems for optimal corporate documentation management. Make knowledge easily accessible and actionable.
-                    </p>
-                    <a href="#contact" class="text-primary hover:text-primary-dark font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
+                <div class="max-w-md mx-auto bg-card-bg p-6 rounded-xl shadow-xl fade-in border border-border-color">
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center text-lg">
+                            <span class="text-text-main">Spanish</span>
+                            <span class="font-semibold text-primary">Native</span>
+                        </li>
+                        <li class="flex justify-between items-center text-lg">
+                            <span class="text-text-main">English</span>
+                            <span class="font-semibold text-primary">C1 Advanced</span>
+                        </li>
+                        <li class="flex justify-between items-center text-lg">
+                            <span class="text-text-main">German</span>
+                            <span class="font-semibold text-primary">B1 Intermediate</span>
+                        </li>
+                        <li class="flex justify-between items-center text-lg">
+                            <span class="text-text-main">French</span>
+                            <span class="font-semibold text-primary">B1 Intermediate</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="results" class="py-16 md:py-24 bg-custom-bg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Measurable Impact</h2>
-                <p class="text-lg text-text-secondary max-w-2xl mx-auto">Demonstrable results showcasing the transformative power of AI solutions.</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 border border-border-color">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">40%</span>
-                    <span class="block text-sm md:text-base text-text-secondary">Avg. Reduction in Support Costs</span>
-                </div>
-                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 border border-border-color" style="animation-delay: 0.15s;">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">70%</span>
-                    <span class="block text-sm md:text-base text-text-secondary">Infrastructure Efficiency Up</span>
-                </div>
-                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 border border-border-color" style="animation-delay: 0.3s;">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">85%</span>
-                    <span class="block text-sm md:text-base text-text-secondary">User Adoption for AI Solutions</span>
-                </div>
-                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 border border-border-color" style="animation-delay: 0.45s;">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">15+</span>
-                    <span class="block text-sm md:text-base text-text-secondary">Enterprise Transformations</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="py-16 md:py-24 bg-section-alt-bg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Client Success Stories</h2>
-                <p class="text-lg text-text-secondary max-w-2xl mx-auto">Hear from organizations that have transformed their operations with my AI solutions.</p>
-            </div>
-            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col border border-border-color">
-                    <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
-                    <p class="text-text-main mb-6 italic flex-grow">
-                        "Carlos implemented a privacy-preserving LLM architecture that achieved ISO27001 certification and reduced our support costs. His expertise in AI has been transformative for our business."
+        <section id="experience" class="py-16 md:py-24 bg-custom-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Success Stories & Experience</h2>
+                    <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                        As an AI consultant and technology leader, I've helped organizations across industries implement
+                        cutting-edge solutions that drive measurable business outcomes. Here's how I've transformed
+                        challenges into opportunities.
                     </p>
-                    <div class="mt-auto border-t border-border-color pt-6">
-                        <div class="flex items-center">
-                            <img src="./img/hyteams_logo.png" alt="hyTeams Client" class="w-14 h-14 rounded-full mr-4 border-2 border-neutral-300 filter grayscale" onerror="this.src='https://placehold.co/60x60/A3A3A3/171717?text=Client1&font=inter'; this.onerror=null; this.classList.add('filter','grayscale');"/>
+                </div>
+                <div class="space-y-12">
+                    <div
+                        class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
+                            <img
+                                src="img/knauf_logo.png"
+                                alt="Knauf Logo"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=Knauf&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                            />
+                            <h3 class="text-xl font-semibold text-text-headings">Knauf</h3>
+                            <p class="text-sm text-secondary">Remote | Mar 2025 – Present</p>
+                            <p class="text-xs text-neutral-500 mt-1">Freelance AI Optimization Consultant</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-primary mb-3">
+                                AI Chatbot Optimization & Enterprise Knowledge Retrieval
+                            </h4>
+                            <p class="text-text-main mb-4">
+                                Working with Knauf to enhance their LLM-powered chat system for improved documentation
+                                search, organizational knowledge retrieval, and image generation.
+                            </p>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Fine-tuned LLM assistant for documentation, knowledge retrieval, and image
+                                        generation.
+                                    </li>
+                                    <li>Optimized prompt engineering and retrieval mechanisms.</li>
+                                    <li>Enhanced user experience within LibreChat.</li>
+                                    <li>Aligned AI assistant with Knauf's internal processes.</li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>Streamlined knowledge access in a global organization.</li>
+                                    <li>Improved AI assistant response accuracy and relevance.</li>
+                                    <li>Enhanced enterprise-wide AI adoption.</li>
+                                </ul>
+                            </div>
                             <div>
-                                <h4 class="font-semibold text-text-headings text-lg">Chief Financial Officer</h4>
-                                <p class="text-sm text-text-secondary">Solution provider for IBEX35 companies</p>
+                                <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >LibreChat</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >GPT-4o Mini</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >LangChain</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >RAG</span
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col border border-border-color" style="animation-delay: 0.2s;">
-                     <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
-                    <p class="text-text-main mb-6 italic flex-grow">
-                        "Carlos orchestrated our cloud migration and digital transformation with exceptional vision. His implementation of containerized architecture and automated testing reduced deployment time, while cutting our infrastructure costs. The workforce planning system he developed continues to be a critical asset for our 13,000+ employees across Spain."
-                    </p>
-                     <div class="mt-auto border-t border-border-color pt-6">
-                        <div class="flex items-center">
-                            <img src="./img/decathlon_logo.jpg" alt="Decathlon Client" class="w-14 h-14 rounded-full mr-4 border-2 border-neutral-300 filter grayscale" onerror="this.src='https://placehold.co/60x60/A3A3A3/171717?text=Client2&font=inter'; this.onerror=null; this.classList.add('filter','grayscale');"/>
+
+                    <div
+                        class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color"
+                        style="animation-delay: 0.1s"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
+                            <img
+                                src="img/hyteams_logo.png"
+                                alt="hyTeams Logo"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=hyTeams&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                            />
+                            <h3 class="text-xl font-semibold text-text-headings">hyTeams</h3>
+                            <p class="text-sm text-secondary">Madrid | Jan 2022 – Mar 2025</p>
+                            <p class="text-xs text-neutral-500 mt-1">AI Solutions Architect</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-primary mb-3">
+                                AI-Powered Workplace Analytics Platform
+                            </h4>
+                            <p class="text-text-main mb-4">
+                                Architected and implemented an AI platform for hybrid workplace management for IBEX 35
+                                companies, boosting satisfaction and efficiency.
+                            </p>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>Designed AI workplace analytics solution.</li>
+                                    <li>Coordinated remote development teams.</li>
+                                    <li>Implemented ISO27001 certified LLM architecture.</li>
+                                    <li>Delivered AI chatbots reducing support costs by 40%.</li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>81% platform adoption (10,000+ users).</li>
+                                    <li>Transformed workspace management for 10+ large corps.</li>
+                                    <li>Established client as an innovation leader.</li>
+                                </ul>
+                            </div>
                             <div>
-                                <h4 class="font-semibold text-text-headings text-lg">Digital Solutions Manager</h4>
-                                <p class="text-sm text-text-secondary">Global Producer and Retailer of Sporting Goods</p>
+                                <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Python</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >VertexAI</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >GCP</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >ISO27001</span
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col border border-border-color" style="animation-delay: 0.4s;">
-                     <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
-                    <p class="text-text-main mb-6 italic flex-grow">
-                        "Carlos revolutionized our educational platform. His implementation improved student engagement and reduced course dropout rates. The scalable architecture he designed now supports over 3,000 concurrent users across our global platform without performance degradation."
+            </div>
+        </section>
+
+        <section id="education" class="py-16 md:py-24 bg-neutral-200/50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Education</h2>
+                </div>
+                <div class="max-w-2xl mx-auto space-y-8">
+                    <div
+                        class="education-item bg-card-bg p-6 rounded-xl shadow-xl flex items-start space-x-4 fade-in border border-border-color"
+                    >
+                        <img
+                            src="img/ucm_logo_strecht.png"
+                            alt="UCM Logo"
+                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter grayscale"
+                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UCM&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                        />
+                        <div>
+                            <h3 class="text-xl font-semibold text-primary">PhD. Data Science</h3>
+                            <p class="text-text-main">
+                                Complutense University of Madrid | Nov 2022 – Jun 2026 (Expected)
+                            </p>
+                            <p class="text-sm text-text-secondary italic">
+                                Thesis: Explainable Communities Based on Network Visualizations
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="education-item bg-card-bg p-6 rounded-xl shadow-xl flex items-start space-x-4 fade-in border border-border-color"
+                        style="animation-delay: 0.1s"
+                    >
+                        <img
+                            src="img/ucm_logo_strecht.png"
+                            alt="UCM Logo"
+                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter grayscale"
+                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UCM&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                        />
+                        <div>
+                            <h3 class="text-xl font-semibold text-primary">MSc. Data Mining & Business Intelligence</h3>
+                            <p class="text-text-main">Complutense University of Madrid | Oct 2019 – Jun 2021</p>
+                        </div>
+                    </div>
+                    <div
+                        class="education-item bg-card-bg p-6 rounded-xl shadow-xl flex items-start space-x-4 fade-in border border-border-color"
+                        style="animation-delay: 0.2s"
+                    >
+                        <img
+                            src="img/upm_logo_strecht.png"
+                            alt="UPM Logo"
+                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter grayscale"
+                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UPM&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                        />
+                        <div>
+                            <h3 class="text-xl font-semibold text-primary">BSc. Telecommunications Engineering</h3>
+                            <p class="text-text-main">Polytechnics University of Madrid | Sep 2013 – Jun 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="py-16 md:py-24 bg-custom-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Awards & Certifications</h2>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <div
+                        class="award-item bg-card-bg p-6 rounded-xl shadow-xl flex items-center space-x-4 fade-in border border-border-color"
+                    >
+                        <img
+                            src="img/sas_logo.png"
+                            alt="SAS Logo"
+                            class="h-12 w-12 object-contain flex-shrink-0 rounded-md filter grayscale"
+                            onerror="this.src='https://placehold.co/48x48/A3A3A3/171717?text=SAS&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                        />
+                        <div class="flex-grow">
+                            <p class="text-lg text-text-main">
+                                Certificate in Data Mining and Business Analytics by SAS
+                            </p>
+                        </div>
+                        <span
+                            class="text-sm font-semibold text-secondary bg-neutral-200 px-3 py-1 rounded-full border border-neutral-300"
+                            >2021</span
+                        >
+                    </div>
+                    <div
+                        class="award-item bg-card-bg p-6 rounded-xl shadow-xl flex items-center space-x-4 fade-in border border-border-color"
+                        style="animation-delay: 0.1s"
+                    >
+                        <img
+                            src="img/coitt_logo.jpg"
+                            alt="COITT Logo"
+                            class="h-12 w-12 object-contain flex-shrink-0 rounded-md filter grayscale"
+                            onerror="this.src='https://placehold.co/48x48/A3A3A3/171717?text=COITT&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                        />
+                        <div class="flex-grow">
+                            <p class="text-lg text-text-main">National Award for the Best Degree Project by ETSIST</p>
+                        </div>
+                        <span
+                            class="text-sm font-semibold text-secondary bg-neutral-200 px-3 py-1 rounded-full border border-neutral-300"
+                            >2017</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-neutral-200/50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Contact Me</h2>
+                    <p class="text-lg text-text-secondary mb-10">
+                        Let's connect and explore how I can help your organization thrive in the digital age. Fill out
+                        the form, and I'll respond within 24 hours.
                     </p>
-                     <div class="mt-auto border-t border-border-color pt-6">
-                        <div class="flex items-center">
-                            <img src="./img/cef_logo.png" alt="CEF Client" class="w-14 h-14 rounded-full mr-4 border-2 border-neutral-300 filter grayscale" onerror="this.src='https://placehold.co/60x60/A3A3A3/171717?text=Client3&font=inter'; this.onerror=null; this.classList.add('filter','grayscale');"/>
-                            <div>
-                                <h4 class="font-semibold text-text-headings text-lg">Technology Director</h4>
-                                <p class="text-sm text-text-secondary">International Academic Study Center</p>
-                            </div>
+                </div>
+                <div class="max-w-xl mx-auto bg-card-bg p-8 md:p-10 rounded-xl shadow-2xl border border-border-color">
+                    <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-text-main mb-1">Full Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Your Name"
+                                required
+                                class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300"
+                            />
                         </div>
-                    </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-text-main mb-1"
+                                >Email Address</label
+                            >
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Your Email"
+                                required
+                                class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300"
+                            />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-text-main mb-1">Message</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows="5"
+                                placeholder="Your Message"
+                                required
+                                class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300"
+                            ></textarea>
+                        </div>
+                        <div>
+                            <button
+                                type="submit"
+                                class="w-full bg-neutral-800 hover:bg-neutral-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl"
+                            >
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="experience" class="py-16 md:py-24 bg-custom-bg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Success Stories & Experience</h2>
-                <p class="text-lg text-text-secondary max-w-3xl mx-auto">As an AI consultant and technology leader, I've helped organizations across industries implement cutting-edge solutions that drive measurable business outcomes. Here's how I've transformed challenges into opportunities.</p>
+        <footer class="py-10 bg-neutral-100 border-t border-border-color">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-secondary">
+                <p>&copy; <span id="currentYearPortfolio"></span> Carlos I. Pérez-Sechi. All rights reserved.</p>
+                <p class="text-sm mt-2">Pioneering AI Solutions and Driving Digital Transformation.</p>
             </div>
-            <div class="space-y-12">
-                <div class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color">
-                    <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
-                        <img src="img/knauf_logo.png" alt="Knauf Logo" class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale" onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=Knauf&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');">
-                        <h3 class="text-xl font-semibold text-text-headings">Knauf</h3>
-                        <p class="text-sm text-secondary">Remote | Mar 2025 – Present</p>
-                        <p class="text-xs text-neutral-500 mt-1">Freelance AI Optimization Consultant</p>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-2xl font-bold text-primary mb-3">AI Chatbot Optimization & Enterprise Knowledge Retrieval</h4>
-                        <p class="text-text-main mb-4"><b>Working with Knauf to enhance their LLM-powered chat system for improved documentation search, organizational knowledge retrieval, and image generation.</b></p>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Fine-tuned LLM assistant for documentation, knowledge retrieval, and image generation.</li>
-                                <li>Optimized prompt engineering and retrieval mechanisms.</li>
-                                <li>Enhanced user experience within LibreChat.</li>
-                                <li>Aligned AI assistant with Knauf's internal processes.</li>
-                            </ul>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Streamlined knowledge access in a global organization.</li>
-                                <li>Improved AI assistant response accuracy and relevance.</li>
-                                <li>Enhanced enterprise-wide AI adoption.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">LibreChat</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">GPT-4o Mini</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">LangChain</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">RAG</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">MongoDB</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Python</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">AI Optimization</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">LLM Implementation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </footer>
 
-                <div class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color" style="animation-delay: 0.1s;">
-                    <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
-                        <img src="img/hyteams_logo.png" alt="hyTeams Logo" class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale" onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=hyTeams&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');">
-                        <h3 class="text-xl font-semibold text-text-headings">hyTeams</h3>
-                        <p class="text-sm text-secondary">Madrid | Jan 2022 – Mar 2025</p>
-                         <p class="text-xs text-neutral-500 mt-1">AI Solutions Architect</p>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-2xl font-bold text-primary mb-3">AI-Powered Workplace Analytics Platform</h4>
-                        <p class="text-text-main mb-4"><b>Partnered with hyTeams to architect and implement an innovative AI platform that revolutionized how IBEX 35 companies manage hybrid workplaces, boosting employee satisfaction and operational efficiency.</b></p>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Designed AI workplace analytics solution for data-driven resource optimization.</li>
-                                <li>Coordinated remote development teams across three countries.</li>
-                                <li>Implemented privacy-preserving LLM architecture (ISO27001 certified).</li>
-                                <li>Delivered AI chatbots reducing support costs by 40%.</li>
-                                <li>Set up scalable AI deployments (Ollama, Llama 3, VertexAI).</li>
-                            </ul>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>81% platform adoption (10,000+ users).</li>
-                                <li>Transformed workspace management for 10+ IBEX 35/EURO STOXX 50 corps.</li>
-                                <li>Established client as an innovation leader.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Python 3.+</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">LangChain</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">LlamaIndex</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Pandas</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">React Native</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">React</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Ollama</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">GCP Vertex AI</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Business Development</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">International PM</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Operations Analytics</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color" style="animation-delay: 0.2s;">
-                    <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
-                        <img src="img/bicg_logo.jpg" alt="bicg Logo" class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale" onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=bicg&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');">
-                        <h3 class="text-xl font-semibold text-text-headings">bicg</h3>
-                        <p class="text-sm text-secondary">Madrid | Aug 2019 – March 2025</p>
-                        <p class="text-xs text-neutral-500 mt-1">Senior AI & Digital Transformation Consultant</p>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-2xl font-bold text-primary mb-3">Enterprise Digital Transformation Consultancy</h4>
-                        <p class="text-text-main mb-4"><b>Consulted with Fortune 500 clients to implement AI-driven digital transformation initiatives that enhanced data analytics capabilities and streamlined operations.</b></p>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Developed custom AI models for real estate optimization and employee relationship mapping, delivering actionable insights for strategic decision-making.</li>
-                                <li>Created interactive data visualization dashboards that made complex information accessible to 50,000+ users across client organizations.</li>
-                                <li>Implemented advanced customer segmentation using machine learning algorithms, enabling targeted marketing strategies.</li>
-                                <li>Automated routine HR processes with conversational AI, allowing client teams to focus on high-value activities.</li>
-                            </ul>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>15+ successful transformation projects delivered on time and within budget.</li>
-                                <li>20-30% productivity improvement through optimized collaborative environments.</li>
-                                <li>Empowered 50,000+ users with data-driven insights for better decision-making.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">PowerBI</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Tableau</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Python 3.+</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">React</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Big Query</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Autodesk Platform Services</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Digital Consultancy</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">ML Modeling</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">People Analytics</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <script>
+            // Set current year in footer
+            document.getElementById('currentYearPortfolio').textContent = new Date().getFullYear();
 
-                <div class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color" style="animation-delay: 0.3s;">
-                    <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
-                        <img src="img/decathlon_logo.jpg" alt="Decathlon Logo" class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale" onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=Decathlon&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');">
-                        <h3 class="text-xl font-semibold text-text-headings">Decathlon</h3>
-                        <p class="text-sm text-secondary">Madrid | Jun 2017 – Jul 2019</p>
-                        <p class="text-xs text-neutral-500 mt-1">Digital Transformation Program Manager</p>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-2xl font-bold text-primary mb-3">Enterprise-Scale Digital Transformation Program</h4>
-                        <p class="text-text-main mb-4"><b>Led Decathlon Spain's comprehensive digital transformation initiative, creating a tech-focused culture and implementing solutions that significantly enhanced operational efficiency.</b></p>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Established and nurtured an open-source community of 100+ developers, fostering innovation and knowledge sharing.</li>
-                                <li>Orchestrated full GDPR compliance implementation, protecting 5M+ customer records and mitigating legal risks.</li>
-                                <li>Engineered data processing pipelines handling 1TB+ daily inventory data, enabling real-time business insights.</li>
-                                <li>Implemented containerized application deployment, dramatically improving scalability and reliability.</li>
-                                <li>Introduced automated testing frameworks that reduced production incidents by 75%, improving customer experience.</li>
-                            </ul>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Created a sustainable tech community that continues to drive innovation.</li>
-                                <li>Achieved full GDPR compliance with 80% reduction in data breach risk.</li>
-                                <li>Delivered 70% infrastructure efficiency improvements, reducing operational costs.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">AWS</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Kubernetes</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Jenkins</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">GDPR</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">PHP</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">DevOps & Data Engineering</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Risk Management</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            // Intersection Observer for fade-in animations
+            document.addEventListener('DOMContentLoaded', function () {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('active');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.05,
+                    }
+                );
 
-                <div class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color" style="animation-delay: 0.4s;">
-                    <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
-                        <img src="img/decathlon_logo.jpg" alt="Decathlon Logo" class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale" onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=Decathlon&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');">
-                        <h3 class="text-xl font-semibold text-text-headings">Decathlon</h3>
-                        <p class="text-sm text-secondary">Madrid | Feb 2015 – Jun 2017</p>
-                        <p class="text-xs text-neutral-500 mt-1">Software Engineer & Tech Lead</p>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-2xl font-bold text-primary mb-3">Cloud Migration & System Modernization Project</h4>
-                        <p class="text-text-main mb-4"><b>Guided Decathlon Spain through a complex legacy-to-cloud migration, implementing modern microservices architecture and developing critical workforce management systems.</b></p>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Architected and executed migration from legacy monolith to AWS microservices architecture with 99.999% reliability.</li>
-                                <li>Created workforce planning solution that optimized scheduling for 13,000+ employees across multiple locations.</li>
-                                <li>Implemented modern CI/CD pipelines that accelerated deployment cycles from hours to minutes.</li>
-                                <li>Conducted cloud cost optimization analysis that identified significant savings opportunities.</li>
-                            </ul>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>300% improvement in deployment velocity through automated processes.</li>
-                                <li>40% reduction in cloud infrastructure costs through optimization.</li>
-                                <li>Seamless workforce management for 13,000+ employees nationwide.</li>
-                                <li>Enhanced system stability with containerized, scalable architecture.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">AWS</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Kubernetes</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Jenkins</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">PHP</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Cloud Migration</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">CI/CD Automation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color" style="animation-delay: 0.5s;">
-                    <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
-                        <img src="img/sicpa_logo.png" alt="SICPA Logo" class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale" onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=SICPA&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');">
-                        <h3 class="text-xl font-semibold text-text-headings">SICPA</h3>
-                        <p class="text-sm text-secondary">Madrid & Lausanne | Mar 2013 – Feb 2015</p>
-                        <p class="text-xs text-neutral-500 mt-1">Software Engineer & Tech Lead</p>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-2xl font-bold text-primary mb-3">Supply Chain Security & Traceability Platform</h4>
-                        <p class="text-text-main mb-4"><b>Delivered mission-critical secure systems for government and enterprise clients, implementing advanced data visualization and security engineering that safeguarded vital supply chains against counterfeit risks.</b></p>
-                         <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Designed intuitive front-end interfaces for complex security/traceability solutions, enhancing usability for government stakeholders.</li>
-                                <li>Engineered sophisticated product traceability dashboards with OLAP Cube integration, providing real-time visibility into supply chain movements.</li>
-                                <li>Introduced robust testing frameworks that improved code quality by 25%, ensuring system reliability in critical applications.</li>
-                                <li>Optimized development lifecycle through structured methodologies, accelerating time-to-market for security solutions.</li>
-                            </ul>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Enhanced system reliability reducing tracking errors by 15%, protecting client revenue and reputation.</li>
-                                <li>Standardized testing processes across 5 product teams, creating sustainable quality assurance practices.</li>
-                                <li>Strengthened supply chain security for national-level initiatives in multiple countries.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Drupal 7</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">AngularJS</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">PostgreSQL</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">OLAP Cubes</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Security Engineering</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">QA Automation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                document.querySelectorAll('.fade-in').forEach((element) => {
+                    observer.observe(element);
+                });
 
-                <div class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color" style="animation-delay: 0.6s;">
-                    <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
-                        <img src="img/cef_logo.png" alt="CEF Logo" class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale" onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=CEF&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');">
-                        <h3 class="text-xl font-semibold text-text-headings">Centro de Estudios Financieros (CEF)</h3>
-                        <p class="text-sm text-secondary">Madrid | Jan 2011 – Mar 2013</p>
-                        <p class="text-xs text-neutral-500 mt-1">Software Engineer</p>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-2xl font-bold text-primary mb-3">High-Traffic Career Portal & Educational Platform</h4>
-                        <p class="text-text-main mb-4"><b>Partnered with this leading educational institution to develop and optimize a scalable career portal that connected thousands of students with employment opportunities while streamlining educational resource delivery.</b></p>
-                         <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Architected and implemented a robust full-stack career portal capable of handling 3,000+ concurrent users with zero downtime.</li>
-                                <li>Conducted comprehensive stakeholder workshops to gather precise requirements, ensuring alignment with educational objectives.</li>
-                                <li>Delivered a custom CMS solution that efficiently managed 400+ active job listings with minimal administrative overhead.</li>
-                                <li>Provided responsive technical support for students and corporate partners, ensuring seamless platform adoption.</li>
-                            </ul>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Successfully launched platform supporting 15,000+ active users, becoming a critical recruitment channel.</li>
-                                <li>Achieved 40% faster application response times through database query optimization, enhancing user experience.</li>
-                                <li>Created a sustainable talent pipeline between educational institution and industry partners.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">PHP</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Symfony</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">MySQL</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Drupal</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Full-Stack Development</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color" style="animation-delay: 0.7s;">
-                    <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
-                        <img src="img/hli_logo.jpg" alt="HLi Logo" class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale" onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=HLi&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');">
-                        <h3 class="text-xl font-semibold text-text-headings">HLi</h3>
-                        <p class="text-sm text-secondary">Madrid & Paris | Mar 2008 – Mar 2010</p>
-                         <p class="text-xs text-neutral-500 mt-1">Software Engineer</p>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-2xl font-bold text-primary mb-3">Cross-Border E-Commerce & Network Infrastructure Project</h4>
-                        <p class="text-text-main mb-4"><b>Delivered critical technical expertise for a Franco-Spanish telecommunications initiative, developing scalable e-commerce infrastructure and implementing cross-country network solutions for mobile commerce applications.</b></p>
-                         <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Engineered robust backend services for M6 Mobile e-commerce platform, enabling secure transaction processing across multiple countries.</li>
-                                <li>Designed and implemented cross-border network infrastructure connecting Paris-Madrid operations, ensuring seamless communication.</li>
-                                <li>Developed sophisticated monitoring solutions for distributed systems, allowing for proactive issue resolution.</li>
-                                <li>Optimized CI/CD pipelines for telecom applications, significantly reducing deployment times and technical risk.</li>
-                            </ul>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
-                            <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                <li>Reduced network downtime by 30% through strategic infrastructure improvements, enhancing operational reliability.</li>
-                                <li>Successfully scaled mobile commerce platform to handle 50,000+ monthly transactions with 99.9% uptime.</li>
-                                <li>Enabled client's successful expansion into new European markets through reliable technical infrastructure.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">.Net Framework</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">SQL Server</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Cisco Networking</span>
-                                <span class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300">Network Architecture</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section py-16 md:py-24 bg-neutral-700 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Revolutionize Your Organization?</h2>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-neutral-200">
-                Book a free 15-minutes strategy session to discuss how custom AI solutions can address your specific business challenges and drive innovation.
-            </p>
-            <a href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink" class="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block">
-                Schedule Your Consultation Now <i class="fas fa-calendar-check ml-2"></i>
-            </a>
-            <div class="mt-12 space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center items-center">
-                <a href="mailto:carlos@perez-sechi.com" class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300">
-                    <i class="fas fa-envelope text-xl mr-2"></i> carlos@perez-sechi.com
-                </a>
-                <span class="hidden sm:inline text-neutral-400">|</span>
-                <a href="tel:+34605566929" class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300">
-                    <i class="fas fa-phone text-xl mr-2"></i> +34 605 566 929
-                </a>
-                 <span class="hidden sm:inline text-neutral-400">|</span>
-                <a href="https://linkedin.com/in/perez-sechi" target="_blank" class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300">
-                    <i class="fab fa-linkedin text-xl mr-2"></i> LinkedIn Profile
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-16 md:py-24 bg-custom-bg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Start the Conversation</h2>
-                <p class="text-lg text-text-secondary mb-10">Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo or strategy session.</p>
-            </div>
-            <div class="max-w-xl mx-auto bg-card-bg p-8 md:p-10 rounded-xl shadow-2xl border border-border-color">
-                <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-text-main mb-1">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300" />
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-text-main mb-1">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300" />
-                    </div>
-                    <div>
-                        <label for="service" class="block text-sm font-medium text-text-main mb-1">Service of Interest</label>
-                        <select name="service" id="service" required class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300 appearance-none">
-                            <option value="" disabled selected>Select Service</option>
-                            <option value="Performance Optimization">Performance Optimization</option>
-                            <option value="AI Chatbots">AI Chatbots & Assistants</option>
-                            <option value="Intelligent Document Repositories">Intelligent Document Repositories</option>
-                            <option value="Custom Solution">Custom AI Solution</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-text-main mb-1">Project Details</label>
-                        <textarea name="message" id="message" rows="5" placeholder="Tell me about your project needs..." required class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl">
-                            Request Consultation <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-10 bg-neutral-100 border-t border-border-color">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-secondary">
-            <p>&copy; <span id="currentYear"></span> Carlos I. Pérez-Sechi. All rights reserved.</p>
-            <p class="text-sm mt-2">Pioneering AI Solutions for a Smarter Future.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Intersection Observer for fade-in animations
-        document.addEventListener('DOMContentLoaded', function () {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            observer.unobserve(entry.target); 
+                // Mobile menu toggle
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (mobileMenu.classList.contains('hidden')) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        } else {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
                         }
                     });
-                },
-                {
-                    threshold: 0.05, // Adjusted for potentially larger experience cards
                 }
-            );
-
-            document.querySelectorAll('.fade-in').forEach((element) => {
-                observer.observe(element);
-            });
-
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    if (mobileMenu.classList.contains('hidden')) {
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach((link) => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
                         icon.classList.remove('fa-times');
                         icon.classList.add('fa-bars');
-                    } else {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    }
-                });
-            }
-
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
+                    });
                 });
             });
-        });
-    </script>
-    <script type="text/javascript">
-        _linkedin_partner_id = '8206961';
-        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script>
-    <script type="text/javascript">
-        (function (l) {
-            if (!l) {
-                window.lintrk = function (a, b) {
-                    window.lintrk.q.push([a, b]);
-                };
-                window.lintrk.q = [];
-            }
-            var s = document.getElementsByTagName('script')[0];
-            var b = document.createElement('script');
-            b.type = 'text/javascript';
-            b.async = true;
-            b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
-            s.parentNode.insertBefore(b, s);
-        })(window.lintrk);
-    </script>
-    <noscript>
-        <img
-            height="1"
-            width="1"
-            style="display: none"
-            alt=""
-            src="https://px.ads.linkedin.com/collect/?pid=8206961&fmt=gif"
-        />
-    </noscript>
-</body>
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const updatesContainer = document.getElementById('updates-container');
+                const loadPrevButton = document.getElementById('load-prev');
+                const loadNextButton = document.getElementById('load-next');
+
+                if (!updatesContainer || !loadPrevButton || !loadNextButton) {
+                    console.warn('Updates section elements not found. Skipping updates script.');
+                    return;
+                }
+
+                let currentPage = 1;
+                const updatesPerPage = 3;
+
+                const sampleUpdates = [
+                    {
+                        title: 'Returning to +FuzzyMAD 2024: Another Year of Fuzzy Logic and Collaboration in Madrid!',
+                        content:
+                            "I'm thrilled to be heading back to the UCM Facultad de Ciencias Matemáticas on December 13th for the 17th edition of +FuzzyMAD, reconnecting with colleagues, sharing research, and exploring new collaborations in the field of fuzzy logic.",
+                        imageUrl: 'img/FuzzyMAD-2024.jpg',
+                        date: '2024-12-13',
+                        link: 'https://eventos.ucm.es/125571/detail/fuzzymad-2024.html',
+                    },
+                    {
+                        title: 'My Experience at +FuzzyMAD 2023: Celebrating 16 Years of Fuzzy Logic and Soft Computing in Madrid.',
+                        content:
+                            'I joined fellow researchers and professionals at the UCM Facultad de Ciencias Matemáticas to celebrate the 16th edition of +FuzzyMAD, where we explored fuzzy sets, soft computing, and collaborative projects.',
+                        imageUrl: 'img/FuzzyMAD-2023.jpg',
+                        date: '2023-11-17',
+                        link: 'https://eventos.ucm.es/105243/detail/fuzzymad-2023.html',
+                    },
+                    {
+                        title: 'Announcing the Release of the CGT Library on GitHub.',
+                        content:
+                            "We've launched the CGT library on GitHub! It's a Python toolkit for Cooperative Game Theory, enabling computations and visualizations of Shapley values, Grabisch interactions, and more. CGT includes modules for data exploration and features SHAP analysis for feature importance.",
+                        imageUrl: 'img/github_logo.png',
+                        date: '2023-10-30',
+                        link: 'https://github.com/perez-sechi/cgt',
+                    },
+                    {
+                        title: 'Launched the hyTeams app: Empowering Businesses with Dynamic Workspaces.',
+                        content:
+                            'Oversaw the complete lifecycle of hyTeams, a new digital workspace management solution, from initial design to successful launch in May 2022. hyTeams, developed by BICG, leverages 25+ years of experience to empower businesses to create flexible, efficient, and dynamic work environments through advanced technology and strategic insights.',
+                        imageUrl: 'img/hyteams_logo.png',
+                        date: '2022-05-17',
+                        link: 'https://hyteams.app/',
+                    },
+                    {
+                        title: 'Publication: Predicting User Engagement in Online News Through Behavior Analysis',
+                        content:
+                            "Published my Master's Thesis investigating user behavior in online news consumption. The thesis explores methods to predict user clicks on news articles by analyzing user interaction history and news features, addressing the cold-start problem in news recommendation. It leverages feature engineering and inference techniques, moving beyond traditional collaborative filtering approaches to improve the accuracy of news recommendations and user engagement.",
+                        imageUrl: 'img/mind.png',
+                        date: '2021-07-07',
+                        link: 'https://docta.ucm.es/entities/publication/a455257d-12ac-4867-905e-48f7501cc966',
+                    },
+                    {
+                        title: 'Graduated with MSc in Data Science and Business Intelligence - Universidad Complutense de Madrid',
+                        content:
+                            'Successfully completed the Master of Science in Data Science and Business Intelligence program at the Universidad Complutense de Madrid, specializing in advanced data analysis and its application in business strategy. The program culminated in the development of a comprehensive research project, demonstrating proficiency in applying data science methodologies to solve real-world business problems.',
+                        imageUrl: 'img/ucm_logo.png',
+                        date: '2021-06-22',
+                        link: 'https://estudiosestadisticos.ucm.es/master-cienciadatos',
+                    },
+                ];
+
+                function loadUpdates(page) {
+                    const start = (page - 1) * updatesPerPage;
+                    const end = start + updatesPerPage;
+                    const currentUpdates = sampleUpdates.slice(start, end);
+
+                    updatesContainer.innerHTML = '';
+
+                    currentUpdates.forEach((update) => {
+                        const updateElement = document.createElement('div');
+                        // Updated classes for light grayscale theme
+                        updateElement.className =
+                            'bg-card-bg rounded-xl shadow-xl overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-neutral-400/30 transform hover:-translate-y-1 fade-in border border-border-color';
+
+                        const formattedDate = new Date(update.date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                        });
+
+                        let shortContent = update.content;
+                        if (shortContent.length > 512) {
+                            shortContent = shortContent.substring(0, 512) + '...';
+                        }
+
+                        updateElement.innerHTML = `
+                        <img src="${update.imageUrl}" alt="${update.title}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 filter grayscale group-hover:filter-none" onerror="this.src='https://placehold.co/600x400/A3A3A3/171717?text=Image+Error&font=inter'; this.onerror=null; this.classList.add('filter','grayscale');">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="block mb-2 group-hover:text-text-headings transition-colors">
+                                <h3 class="text-xl font-semibold text-text-headings group-hover:text-primary transition-colors">${update.title}</h3>
+                            </a>
+                            <p class="text-sm text-neutral-500 mb-3">${formattedDate}</p>
+                            <p class="text-text-secondary mb-4 text-sm leading-relaxed flex-grow">${shortContent}</p>
+                            <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark font-medium transition duration-300 mt-auto self-start">
+                                Read More <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    `;
+                        updatesContainer.appendChild(updateElement);
+                    });
+
+                    setTimeout(() => {
+                        document
+                            .querySelectorAll('#updates-container .fade-in:not(.active)')
+                            .forEach((el) => el.classList.add('active'));
+                    }, 50);
+
+                    loadPrevButton.disabled = page === 1;
+                    loadNextButton.disabled = end >= sampleUpdates.length;
+                }
+
+                loadUpdates(currentPage);
+
+                loadNextButton.addEventListener('click', () => {
+                    if (currentPage * updatesPerPage < sampleUpdates.length) {
+                        currentPage++;
+                        loadUpdates(currentPage);
+                    }
+                });
+
+                loadPrevButton.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        loadUpdates(currentPage);
+                    }
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            _linkedin_partner_id = '8206961';
+            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        </script>
+        <script type="text/javascript">
+            (function (l) {
+                if (!l) {
+                    window.lintrk = function (a, b) {
+                        window.lintrk.q.push([a, b]);
+                    };
+                    window.lintrk.q = [];
+                }
+                var s = document.getElementsByTagName('script')[0];
+                var b = document.createElement('script');
+                b.type = 'text/javascript';
+                b.async = true;
+                b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+                s.parentNode.insertBefore(b, s);
+            })(window.lintrk);
+        </script>
+        <noscript>
+            <img
+                height="1"
+                width="1"
+                style="display: none"
+                alt=""
+                src="https://px.ads.linkedin.com/collect/?pid=8206961&fmt=gif"
+            />
+        </noscript>
+    </body>
 </html>
