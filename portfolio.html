@@ -33,6 +33,20 @@
                 @apply bg-neutral-100 text-neutral-800; /* Base light gray theme */
             }
 
+            /* Animation for service icons */
+            .floating {
+                animation: float 3s ease-in-out infinite;
+            }
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
             /* Fade-in animation styles */
             .fade-in {
                 opacity: 0;
@@ -43,6 +57,7 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+
             /* Custom scrollbar (optional - light theme) */
             ::-webkit-scrollbar {
                 width: 8px;
@@ -56,6 +71,16 @@
             }
             ::-webkit-scrollbar-thumb:hover {
                 background: #737373; /* neutral-500 */
+            }
+            /* Ensure Tailwind JIT generates necessary classes */
+            .group:hover .group-hover\:opacity-100 {
+                opacity: 1;
+            }
+            .group:hover .group-hover\:translate-y-0 {
+                transform: translateY(0px);
+            }
+            .group:hover .group-hover\:scale-105 {
+                transform: scale(1.05);
             }
         </style>
         <script>
@@ -71,28 +96,66 @@
                             'secondary-dark': '#525252', // Medium-dark gray (neutral-600) - for hover states
 
                             neutral: {
-                                // Tailwind's default grays are excellent
                                 50: '#fafafa',
-                                100: '#f5f5f5', // Main background
-                                200: '#e5e5e5', // Card background
+                                100: '#f5f5f5',
+                                200: '#e5e5e5',
                                 300: '#d4d4d4',
                                 400: '#a3a3a3',
-                                500: '#737373', // Our secondary
-                                600: '#525252', // Our secondary-dark
-                                700: '#404040', // Our primary
-                                800: '#262626', // Our primary-dark, default body text
+                                500: '#737373',
+                                600: '#525252',
+                                700: '#404040',
+                                800: '#262626',
                                 900: '#171717',
                                 950: '#0a0a0a',
                             },
-                            'custom-bg': '#f5f5f5', // Main background (neutral-100)
-                            'card-bg': '#ffffff', // Card backgrounds (white) or neutral-50/neutral-100 for slight off-white
-                            'border-color': '#d4d4d4', // Border color (neutral-300)
+                            'custom-bg': '#f5f5f5',
+                            'card-bg': '#ffffff',
+                            'section-alt-bg': '#e5e5e5',
+                            'border-color': '#d4d4d4',
+                            'text-main': '#262626',
+                            'text-secondary': '#525252',
+                            'text-headings': '#171717',
+                            'accent-purple': '#525252',
+                            'accent-teal': '#737373', // Border color (neutral-300)
                             'accent-highlight': '#171717', // A very dark gray for highlights if needed (neutral-900)
                             'text-main': '#262626', // Main text color (neutral-800)
                             'text-secondary': '#525252', // Secondary text color (neutral-600)
-                            'text-headings': '#171717', // Heading text color (neutral-900)
+                            'text-headings': '#171717',
                         },
-                        // Animations and keyframes remain the same as they are not color-dependent
+                        animation: {
+                            'gradient-pulse': 'gradientPulse 6s ease infinite',
+                            'text-focus-in': 'text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
+                            'slide-in-elliptic-top-fwd':
+                                'slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+                        },
+                        keyframes: {
+                            gradientPulse: {
+                                '0%, 100%': { 'background-position': '0% 50%' },
+                                '50%': { 'background-position': '100% 50%' },
+                            },
+                            'text-focus-in': {
+                                '0%': {
+                                    filter: 'blur(12px)',
+                                    opacity: '0',
+                                },
+                                to: {
+                                    filter: 'blur(0)',
+                                    opacity: '1',
+                                },
+                            },
+                            'slide-in-elliptic-top-fwd': {
+                                '0%': {
+                                    transform: 'translateY(-600px) rotateX(-30deg) scale(0)',
+                                    'transform-origin': '50% 100%',
+                                    opacity: '0',
+                                },
+                                to: {
+                                    transform: 'translateY(0) rotateX(0) scale(1)',
+                                    'transform-origin': '50% 1400px',
+                                    opacity: '1',
+                                },
+                            },
+                        },
                     },
                 },
             };
@@ -112,6 +175,7 @@
                             />
                         </a>
                     </div>
+                    
                     <nav class="hidden md:flex space-x-6">
                         <a
                             href="index.html#services"
@@ -126,10 +190,27 @@
                         <a
                             href="index.html#testimonials"
                             class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
-                            >Client Success</a
+                            >Testimonials</a
                         >
-                        <a href="portfolio.html" class="text-text-headings font-semibold px-3 py-2 rounded-md text-sm"
+                        <a
+                            href="portfolio.html#skills"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Core Competencies</a
+                        >
+                        <a
+                            href="portfolio.html#experience"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Success Stories</a
+                        >
+                        <a
+                            href="portfolio.html"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
                             >Portfolio</a
+                        >
+                        <a
+                            href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink"
+                            class="bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg"
+                            >Book a session</a
                         >
                         <a
                             href="index.html#contact"
@@ -149,25 +230,27 @@
             </div>
             <div id="mobile-menu" class="md:hidden hidden bg-neutral-50 border-t border-border-color">
                 <a
-                    href="index.html#services"
+                    href="#services"
                     class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
                     >Services</a
                 >
                 <a
-                    href="index.html#results"
+                    href="#results"
                     class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
                     >Results</a
                 >
                 <a
-                    href="index.html#testimonials"
+                    href="#testimonials"
                     class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
                     >Client Success</a
                 >
-                <a href="portfolio.html" class="block text-text-headings bg-neutral-200 px-4 py-3 text-sm font-medium"
+                <a
+                    href="portfolio.html"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
                     >Portfolio</a
                 >
                 <a
-                    href="index.html#contact"
+                    href="#contact"
                     class="block bg-neutral-800 hover:bg-neutral-700 text-white text-center mx-4 my-3 px-4 py-3 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg"
                     >Contact</a
                 >
@@ -312,8 +395,8 @@
                             <img
                                 src="img/knauf_logo.png"
                                 alt="Knauf Logo"
-                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale"
-                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=Knauf&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=Knauf&font=inter'; this.onerror=null; this.classList.add('filter');"
                             />
                             <h3 class="text-xl font-semibold text-text-headings">Knauf</h3>
                             <p class="text-sm text-secondary">Remote | Mar 2025 – Present</p>
@@ -324,8 +407,10 @@
                                 AI Chatbot Optimization & Enterprise Knowledge Retrieval
                             </h4>
                             <p class="text-text-main mb-4">
-                                Working with Knauf to enhance their LLM-powered chat system for improved documentation
-                                search, organizational knowledge retrieval, and image generation.
+                                <b
+                                    >Working with Knauf to enhance their LLM-powered chat system for improved
+                                    documentation search, organizational knowledge retrieval, and image generation.</b
+                                >
                             </p>
                             <div class="mb-4">
                                 <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
@@ -366,6 +451,22 @@
                                         class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
                                         >RAG</span
                                     >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >MongoDB</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Python</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >AI Optimization</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >LLM Implementation</span
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -379,8 +480,8 @@
                             <img
                                 src="img/hyteams_logo.png"
                                 alt="hyTeams Logo"
-                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter grayscale"
-                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=hyTeams&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=hyTeams&font=inter'; this.onerror=null; this.classList.add('filter');"
                             />
                             <h3 class="text-xl font-semibold text-text-headings">hyTeams</h3>
                             <p class="text-sm text-secondary">Madrid | Jan 2022 – Mar 2025</p>
@@ -391,23 +492,29 @@
                                 AI-Powered Workplace Analytics Platform
                             </h4>
                             <p class="text-text-main mb-4">
-                                Architected and implemented an AI platform for hybrid workplace management for IBEX 35
-                                companies, boosting satisfaction and efficiency.
+                                <b
+                                    >Partnered with hyTeams to architect and implement an innovative AI platform that
+                                    revolutionized how IBEX 35 companies manage hybrid workplaces, boosting employee
+                                    satisfaction and operational efficiency.</b
+                                >
                             </p>
                             <div class="mb-4">
                                 <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
                                 <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                    <li>Designed AI workplace analytics solution.</li>
-                                    <li>Coordinated remote development teams.</li>
-                                    <li>Implemented ISO27001 certified LLM architecture.</li>
+                                    <li>
+                                        Designed AI workplace analytics solution for data-driven resource optimization.
+                                    </li>
+                                    <li>Coordinated remote development teams across three countries.</li>
+                                    <li>Implemented privacy-preserving LLM architecture (ISO27001 certified).</li>
                                     <li>Delivered AI chatbots reducing support costs by 40%.</li>
+                                    <li>Set up scalable AI deployments (Ollama, Llama 3, VertexAI).</li>
                                 </ul>
                             </div>
                             <div class="mb-4">
                                 <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
                                 <ul class="list-disc list-inside text-text-secondary space-y-1">
                                     <li>81% platform adoption (10,000+ users).</li>
-                                    <li>Transformed workspace management for 10+ large corps.</li>
+                                    <li>Transformed workspace management for 10+ IBEX 35/EURO STOXX 50 corps.</li>
                                     <li>Established client as an innovation leader.</li>
                                 </ul>
                             </div>
@@ -416,19 +523,614 @@
                                 <div class="flex flex-wrap gap-2">
                                     <span
                                         class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
-                                        >Python</span
+                                        >Python 3.+</span
                                     >
                                     <span
                                         class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
-                                        >VertexAI</span
+                                        >LangChain</span
                                     >
                                     <span
                                         class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
-                                        >GCP</span
+                                        >LlamaIndex</span
                                     >
                                     <span
                                         class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
-                                        >ISO27001</span
+                                        >Pandas</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >React Native</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >React</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Ollama</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >GCP Vertex AI</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Business Development</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >International PM</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Operations Analytics</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color"
+                        style="animation-delay: 0.2s"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
+                            <img
+                                src="img/bicg_logo.jpg"
+                                alt="bicg Logo"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=bicg&font=inter'; this.onerror=null; this.classList.add('filter');"
+                            />
+                            <h3 class="text-xl font-semibold text-text-headings">bicg</h3>
+                            <p class="text-sm text-secondary">Madrid | Aug 2019 – March 2025</p>
+                            <p class="text-xs text-neutral-500 mt-1">Senior AI & Digital Transformation Consultant</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-primary mb-3">
+                                Enterprise Digital Transformation Consultancy
+                            </h4>
+                            <p class="text-text-main mb-4">
+                                <b
+                                    >Consulted with Fortune 500 clients to implement AI-driven digital transformation
+                                    initiatives that enhanced data analytics capabilities and streamlined operations.</b
+                                >
+                            </p>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Developed custom AI models for real estate optimization and employee
+                                        relationship mapping, delivering actionable insights for strategic
+                                        decision-making.
+                                    </li>
+                                    <li>
+                                        Created interactive data visualization dashboards that made complex information
+                                        accessible to 50,000+ users across client organizations.
+                                    </li>
+                                    <li>
+                                        Implemented advanced customer segmentation using machine learning algorithms,
+                                        enabling targeted marketing strategies.
+                                    </li>
+                                    <li>
+                                        Automated routine HR processes with conversational AI, allowing client teams to
+                                        focus on high-value activities.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>15+ successful transformation projects delivered on time and within budget.</li>
+                                    <li>
+                                        20-30% productivity improvement through optimized collaborative environments.
+                                    </li>
+                                    <li>
+                                        Empowered 50,000+ users with data-driven insights for better decision-making.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >PowerBI</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Tableau</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Python 3.+</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >React</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Big Query</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Autodesk Platform Services</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Digital Consultancy</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >ML Modeling</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >People Analytics</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color"
+                        style="animation-delay: 0.3s"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
+                            <img
+                                src="img/decathlon_logo.png"
+                                alt="Decathlon Logo"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=Decathlon&font=inter'; this.onerror=null; this.classList.add('filter');"
+                            />
+                            <h3 class="text-xl font-semibold text-text-headings">Decathlon</h3>
+                            <p class="text-sm text-secondary">Madrid | Jun 2017 – Jul 2019</p>
+                            <p class="text-xs text-neutral-500 mt-1">Digital Transformation Program Manager</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-primary mb-3">
+                                Enterprise-Scale Digital Transformation Program
+                            </h4>
+                            <p class="text-text-main mb-4">
+                                <b
+                                    >Led Decathlon Spain's comprehensive digital transformation initiative, creating a
+                                    tech-focused culture and implementing solutions that significantly enhanced
+                                    operational efficiency.</b
+                                >
+                            </p>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Established and nurtured an open-source community of 100+ developers, fostering
+                                        innovation and knowledge sharing.
+                                    </li>
+                                    <li>
+                                        Orchestrated full GDPR compliance implementation, protecting 5M+ customer
+                                        records and mitigating legal risks.
+                                    </li>
+                                    <li>
+                                        Engineered data processing pipelines handling 1TB+ daily inventory data,
+                                        enabling real-time business insights.
+                                    </li>
+                                    <li>
+                                        Implemented containerized application deployment, dramatically improving
+                                        scalability and reliability.
+                                    </li>
+                                    <li>
+                                        Introduced automated testing frameworks that reduced production incidents by
+                                        75%, improving customer experience.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>Created a sustainable tech community that continues to drive innovation.</li>
+                                    <li>Achieved full GDPR compliance with 80% reduction in data breach risk.</li>
+                                    <li>
+                                        Delivered 70% infrastructure efficiency improvements, reducing operational
+                                        costs.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >AWS</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Kubernetes</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Jenkins</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >GDPR</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >PHP</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >DevOps & Data Engineering</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Risk Management</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color"
+                        style="animation-delay: 0.4s"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
+                            <img
+                                src="img/decathlon_logo.png"
+                                alt="Decathlon Logo"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=Decathlon&font=inter'; this.onerror=null; this.classList.add('filter');"
+                            />
+                            <h3 class="text-xl font-semibold text-text-headings">Decathlon</h3>
+                            <p class="text-sm text-secondary">Madrid | Feb 2015 – Jun 2017</p>
+                            <p class="text-xs text-neutral-500 mt-1">Software Engineer & Tech Lead</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-primary mb-3">
+                                Cloud Migration & System Modernization Project
+                            </h4>
+                            <p class="text-text-main mb-4">
+                                <b
+                                    >Guided Decathlon Spain through a complex legacy-to-cloud migration, implementing
+                                    modern microservices architecture and developing critical workforce management
+                                    systems.</b
+                                >
+                            </p>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Architected and executed migration from legacy monolith to AWS microservices
+                                        architecture with 99.999% reliability.
+                                    </li>
+                                    <li>
+                                        Created workforce planning solution that optimized scheduling for 13,000+
+                                        employees across multiple locations.
+                                    </li>
+                                    <li>
+                                        Implemented modern CI/CD pipelines that accelerated deployment cycles from hours
+                                        to minutes.
+                                    </li>
+                                    <li>
+                                        Conducted cloud cost optimization analysis that identified significant savings
+                                        opportunities.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>300% improvement in deployment velocity through automated processes.</li>
+                                    <li>40% reduction in cloud infrastructure costs through optimization.</li>
+                                    <li>Seamless workforce management for 13,000+ employees nationwide.</li>
+                                    <li>Enhanced system stability with containerized, scalable architecture.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >AWS</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Kubernetes</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Jenkins</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >PHP</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Cloud Migration</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >CI/CD Automation</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color"
+                        style="animation-delay: 0.5s"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
+                            <img
+                                src="img/sicpa_logo.png"
+                                alt="SICPA Logo"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=SICPA&font=inter'; this.onerror=null; this.classList.add('filter');"
+                            />
+                            <h3 class="text-xl font-semibold text-text-headings">SICPA</h3>
+                            <p class="text-sm text-secondary">Madrid & Lausanne | Mar 2013 – Feb 2015</p>
+                            <p class="text-xs text-neutral-500 mt-1">Software Engineer & Tech Lead</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-primary mb-3">
+                                Supply Chain Security & Traceability Platform
+                            </h4>
+                            <p class="text-text-main mb-4">
+                                <b
+                                    >Delivered mission-critical secure systems for government and enterprise clients,
+                                    implementing advanced data visualization and security engineering that safeguarded
+                                    vital supply chains against counterfeit risks.</b
+                                >
+                            </p>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Designed intuitive front-end interfaces for complex security/traceability
+                                        solutions, enhancing usability for government stakeholders.
+                                    </li>
+                                    <li>
+                                        Engineered sophisticated product traceability dashboards with OLAP Cube
+                                        integration, providing real-time visibility into supply chain movements.
+                                    </li>
+                                    <li>
+                                        Introduced robust testing frameworks that improved code quality by 25%, ensuring
+                                        system reliability in critical applications.
+                                    </li>
+                                    <li>
+                                        Optimized development lifecycle through structured methodologies, accelerating
+                                        time-to-market for security solutions.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Enhanced system reliability reducing tracking errors by 15%, protecting client
+                                        revenue and reputation.
+                                    </li>
+                                    <li>
+                                        Standardized testing processes across 5 product teams, creating sustainable
+                                        quality assurance practices.
+                                    </li>
+                                    <li>
+                                        Strengthened supply chain security for national-level initiatives in multiple
+                                        countries.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Drupal 7</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >AngularJS</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >PostgreSQL</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >OLAP Cubes</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Security Engineering</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >QA Automation</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color"
+                        style="animation-delay: 0.6s"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
+                            <img
+                                src="img/cef_logo.png"
+                                alt="CEF Logo"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=CEF&font=inter'; this.onerror=null; this.classList.add('filter');"
+                            />
+                            <h3 class="text-xl font-semibold text-text-headings">
+                                Centro de Estudios Financieros (CEF)
+                            </h3>
+                            <p class="text-sm text-secondary">Madrid | Jan 2011 – Mar 2013</p>
+                            <p class="text-xs text-neutral-500 mt-1">Software Engineer</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-primary mb-3">
+                                High-Traffic Career Portal & Educational Platform
+                            </h4>
+                            <p class="text-text-main mb-4">
+                                <b
+                                    >Partnered with this leading educational institution to develop and optimize a
+                                    scalable career portal that connected thousands of students with employment
+                                    opportunities while streamlining educational resource delivery.</b
+                                >
+                            </p>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Architected and implemented a robust full-stack career portal capable of
+                                        handling 3,000+ concurrent users with zero downtime.
+                                    </li>
+                                    <li>
+                                        Conducted comprehensive stakeholder workshops to gather precise requirements,
+                                        ensuring alignment with educational objectives.
+                                    </li>
+                                    <li>
+                                        Delivered a custom CMS solution that efficiently managed 400+ active job
+                                        listings with minimal administrative overhead.
+                                    </li>
+                                    <li>
+                                        Provided responsive technical support for students and corporate partners,
+                                        ensuring seamless platform adoption.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Successfully launched platform supporting 15,000+ active users, becoming a
+                                        critical recruitment channel.
+                                    </li>
+                                    <li>
+                                        Achieved 40% faster application response times through database query
+                                        optimization, enhancing user experience.
+                                    </li>
+                                    <li>
+                                        Created a sustainable talent pipeline between educational institution and
+                                        industry partners.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >PHP</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Symfony</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >MySQL</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Drupal</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Full-Stack Development</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item fade-in bg-card-bg p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-start border border-border-color"
+                        style="animation-delay: 0.7s"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left">
+                            <img
+                                src="img/hli_logo.jpg"
+                                alt="HLi Logo"
+                                class="w-24 h-24 mx-auto md:mx-0 mb-4 rounded-lg object-contain filter"
+                                onerror="this.src='https://placehold.co/100x100/A3A3A3/171717?text=HLi&font=inter'; this.onerror=null; this.classList.add('filter');"
+                            />
+                            <h3 class="text-xl font-semibold text-text-headings">HLi</h3>
+                            <p class="text-sm text-secondary">Madrid & Paris | Mar 2008 – Mar 2010</p>
+                            <p class="text-xs text-neutral-500 mt-1">Software Engineer</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-primary mb-3">
+                                Cross-Border E-Commerce & Network Infrastructure Project
+                            </h4>
+                            <p class="text-text-main mb-4">
+                                <b
+                                    >Delivered critical technical expertise for a Franco-Spanish telecommunications
+                                    initiative, developing scalable e-commerce infrastructure and implementing
+                                    cross-country network solutions for mobile commerce applications.</b
+                                >
+                            </p>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">How I Helped:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Engineered robust backend services for M6 Mobile e-commerce platform, enabling
+                                        secure transaction processing across multiple countries.
+                                    </li>
+                                    <li>
+                                        Designed and implemented cross-border network infrastructure connecting
+                                        Paris-Madrid operations, ensuring seamless communication.
+                                    </li>
+                                    <li>
+                                        Developed sophisticated monitoring solutions for distributed systems, allowing
+                                        for proactive issue resolution.
+                                    </li>
+                                    <li>
+                                        Optimized CI/CD pipelines for telecom applications, significantly reducing
+                                        deployment times and technical risk.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="font-semibold text-text-headings mb-2">Outcomes:</h5>
+                                <ul class="list-disc list-inside text-text-secondary space-y-1">
+                                    <li>
+                                        Reduced network downtime by 30% through strategic infrastructure improvements,
+                                        enhancing operational reliability.
+                                    </li>
+                                    <li>
+                                        Successfully scaled mobile commerce platform to handle 50,000+ monthly
+                                        transactions with 99.9% uptime.
+                                    </li>
+                                    <li>
+                                        Enabled client's successful expansion into new European markets through reliable
+                                        technical infrastructure.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-text-headings mb-2">Technologies & Skills:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >.Net Framework</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >SQL Server</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Cisco Networking</span
+                                    >
+                                    <span
+                                        class="bg-neutral-200 text-xs text-neutral-700 px-2 py-1 rounded-full border border-neutral-300"
+                                        >Network Architecture</span
                                     >
                                 </div>
                             </div>
@@ -450,8 +1152,8 @@
                         <img
                             src="img/ucm_logo_strecht.png"
                             alt="UCM Logo"
-                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter grayscale"
-                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UCM&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter"
+                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UCM&font=inter'; this.onerror=null; this.classList.add('filter');"
                         />
                         <div>
                             <h3 class="text-xl font-semibold text-primary">PhD. Data Science</h3>
@@ -470,8 +1172,8 @@
                         <img
                             src="img/ucm_logo_strecht.png"
                             alt="UCM Logo"
-                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter grayscale"
-                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UCM&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter"
+                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UCM&font=inter'; this.onerror=null; this.classList.add('filter');"
                         />
                         <div>
                             <h3 class="text-xl font-semibold text-primary">MSc. Data Mining & Business Intelligence</h3>
@@ -485,8 +1187,8 @@
                         <img
                             src="img/upm_logo_strecht.png"
                             alt="UPM Logo"
-                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter grayscale"
-                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UPM&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                            class="h-16 w-16 object-contain flex-shrink-0 rounded-md filter"
+                            onerror="this.src='https://placehold.co/64x64/A3A3A3/171717?text=UPM&font=inter'; this.onerror=null; this.classList.add('filter');"
                         />
                         <div>
                             <h3 class="text-xl font-semibold text-primary">BSc. Telecommunications Engineering</h3>
@@ -509,8 +1211,8 @@
                         <img
                             src="img/sas_logo.png"
                             alt="SAS Logo"
-                            class="h-12 w-12 object-contain flex-shrink-0 rounded-md filter grayscale"
-                            onerror="this.src='https://placehold.co/48x48/A3A3A3/171717?text=SAS&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                            class="h-12 w-12 object-contain flex-shrink-0 rounded-md filter"
+                            onerror="this.src='https://placehold.co/48x48/A3A3A3/171717?text=SAS&font=inter'; this.onerror=null; this.classList.add('filter');"
                         />
                         <div class="flex-grow">
                             <p class="text-lg text-text-main">
@@ -529,8 +1231,8 @@
                         <img
                             src="img/coitt_logo.jpg"
                             alt="COITT Logo"
-                            class="h-12 w-12 object-contain flex-shrink-0 rounded-md filter grayscale"
-                            onerror="this.src='https://placehold.co/48x48/A3A3A3/171717?text=COITT&font=inter'; this.onerror=null; this.classList.add('filter', 'grayscale');"
+                            class="h-12 w-12 object-contain flex-shrink-0 rounded-md filter"
+                            onerror="this.src='https://placehold.co/48x48/A3A3A3/171717?text=COITT&font=inter'; this.onerror=null; this.classList.add('filter');"
                         />
                         <div class="flex-grow">
                             <p class="text-lg text-text-main">National Award for the Best Degree Project by ETSIST</p>
@@ -544,13 +1246,56 @@
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-24 bg-neutral-200/50">
+        <section class="cta-section py-16 md:py-24 bg-neutral-700 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+                    Ready to Revolutionize Your Organization?
+                </h2>
+                <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-neutral-200">
+                    Book a free 15-minutes strategy session to discuss how custom AI solutions can address your specific
+                    business challenges and drive innovation.
+                </p>
+                <a
+                    href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink"
+                    class="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block"
+                >
+                    Schedule Your Consultation Now <i class="fas fa-calendar-check ml-2"></i>
+                </a>
+                <div
+                    class="mt-12 space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center items-center"
+                >
+                    <a
+                        href="mailto:carlos@perez-sechi.com"
+                        class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300"
+                    >
+                        <i class="fas fa-envelope text-xl mr-2"></i> carlos@perez-sechi.com
+                    </a>
+                    <span class="hidden sm:inline text-neutral-400">|</span>
+                    <a
+                        href="tel:+34605566929"
+                        class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300"
+                    >
+                        <i class="fas fa-phone text-xl mr-2"></i> +34 605 566 929
+                    </a>
+                    <span class="hidden sm:inline text-neutral-400">|</span>
+                    <a
+                        href="https://linkedin.com/in/perez-sechi"
+                        target="_blank"
+                        class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300"
+                    >
+                        <i class="fab fa-linkedin text-xl mr-2"></i> LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-custom-bg">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-2xl mx-auto text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Contact Me</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Start the Conversation</h2>
                     <p class="text-lg text-text-secondary mb-10">
-                        Let's connect and explore how I can help your organization thrive in the digital age. Fill out
-                        the form, and I'll respond within 24 hours.
+                        Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo or
+                        strategy session.
                     </p>
                 </div>
                 <div class="max-w-xl mx-auto bg-card-bg p-8 md:p-10 rounded-xl shadow-2xl border border-border-color">
@@ -580,12 +1325,33 @@
                             />
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-text-main mb-1">Message</label>
+                            <label for="service" class="block text-sm font-medium text-text-main mb-1"
+                                >Service of Interest</label
+                            >
+                            <select
+                                name="service"
+                                id="service"
+                                required
+                                class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300 appearance-none"
+                            >
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="Performance Optimization">Performance Optimization</option>
+                                <option value="AI Chatbots">AI Chatbots & Assistants</option>
+                                <option value="Intelligent Document Repositories">
+                                    Intelligent Document Repositories
+                                </option>
+                                <option value="Custom Solution">Custom AI Solution</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-text-main mb-1"
+                                >Project Details</label
+                            >
                             <textarea
                                 name="message"
                                 id="message"
                                 rows="5"
-                                placeholder="Your Message"
+                                placeholder="Tell me about your project needs..."
                                 required
                                 class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300"
                             ></textarea>
@@ -593,9 +1359,9 @@
                         <div>
                             <button
                                 type="submit"
-                                class="w-full bg-neutral-800 hover:bg-neutral-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl"
+                                class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl"
                             >
-                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                                Request Consultation <i class="fas fa-paper-plane ml-2"></i>
                             </button>
                         </div>
                     </form>
@@ -605,14 +1371,14 @@
 
         <footer class="py-10 bg-neutral-100 border-t border-border-color">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-secondary">
-                <p>&copy; <span id="currentYearPortfolio"></span> Carlos I. Pérez-Sechi. All rights reserved.</p>
-                <p class="text-sm mt-2">Pioneering AI Solutions and Driving Digital Transformation.</p>
+                <p>&copy; <span id="currentYear"></span> Carlos I. Pérez-Sechi. All rights reserved.</p>
+                <p class="text-sm mt-2">Pioneering AI Solutions for a Smarter Future.</p>
             </div>
         </footer>
 
         <script>
             // Set current year in footer
-            document.getElementById('currentYearPortfolio').textContent = new Date().getFullYear();
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
 
             // Intersection Observer for fade-in animations
             document.addEventListener('DOMContentLoaded', function () {
@@ -626,7 +1392,7 @@
                         });
                     },
                     {
-                        threshold: 0.05,
+                        threshold: 0.05, // Adjusted for potentially larger experience cards
                     }
                 );
 
@@ -650,6 +1416,7 @@
                         }
                     });
                 }
+
                 const mobileMenuLinks = mobileMenu.querySelectorAll('a');
                 mobileMenuLinks.forEach((link) => {
                     link.addEventListener('click', () => {
@@ -661,6 +1428,7 @@
                 });
             });
         </script>
+
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -752,7 +1520,7 @@
                         }
 
                         updateElement.innerHTML = `
-                        <img src="${update.imageUrl}" alt="${update.title}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 filter grayscale group-hover:filter-none" onerror="this.src='https://placehold.co/600x400/A3A3A3/171717?text=Image+Error&font=inter'; this.onerror=null; this.classList.add('filter','grayscale');">
+                        <img src="${update.imageUrl}" alt="${update.title}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 filter group-hover:filter-none" onerror="this.src='https://placehold.co/600x400/A3A3A3/171717?text=Image+Error&font=inter'; this.onerror=null; this.classList.add('filter','grayscale');">
                         <div class="p-6 flex flex-col flex-grow">
                             <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="block mb-2 group-hover:text-text-headings transition-colors">
                                 <h3 class="text-xl font-semibold text-text-headings group-hover:text-primary transition-colors">${update.title}</h3>
