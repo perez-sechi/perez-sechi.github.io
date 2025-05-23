@@ -1,332 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta
-            name="description"
-            content="Carlos I. Pérez-Sechi - Expert in AI applications, LLMs, and digital transformation. Helping organizations deploy and optimize AI solutions."
-        />
-        <meta
-            name="keywords"
-            content="AI applications, LLMs, chatbots, digital transformation, knowledge portals, performance optimization"
-        />
-        <meta name="author" content="Carlos I. Pérez-Sechi" />
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos I. Pérez-Sechi - AI Solutions Expert</title>
+    <meta
+        name="description"
+        content="Carlos I. Pérez-Sechi - Expert in AI applications, LLMs, and digital transformation. Helping organizations deploy and optimize AI solutions."
+    />
+    <meta
+        name="keywords"
+        content="AI applications, LLMs, chatbots, digital transformation, knowledge portals, performance optimization, AI Engineer, AI Consultant"
+    />
+    <meta name="author" content="Carlos I. Pérez-Sechi" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-8QPR7MQ5QD');
+    </script>
+    <style>
+        /* Custom global styles */
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter as a modern font, Tailwind will provide fallbacks */
+            @apply bg-slate-900 text-slate-300; /* Dark theme base */
+        }
+
+        /* Animation for service icons */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Fade-in animation styles */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom scrollbar (optional, for a more modern look) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b; /* slate-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5; /* indigo-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1; /* indigo-500 */
+        }
+        /* Ensure Tailwind JIT generates necessary classes, especially for dynamic content or specific needs */
+        .group:hover .group-hover\:opacity-100 { opacity: 1; }
+        .group:hover .group-hover\:translate-y-0 { transform: translateY(0px); }
+        .group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#6366F1', // Indigo-500
+              'primary-dark': '#4F46E5', // Indigo-600
+              secondary: '#10B981', // Emerald-500
+              'secondary-dark': '#059669', // Emerald-600
+              neutral: {
+                light: '#F3F4F6', // Gray-100
+                DEFAULT: '#6B7280', // Gray-500
+                dark: '#1F2937' // Gray-800
+              },
+              'custom-bg': '#0F172A', // Slate-900 (main background)
+              'card-bg': '#1E293B', // Slate-800 (card backgrounds)
+              'accent-purple': '#8B5CF6', // Violet-500
+              'accent-teal': '#2DD4BF', // Teal-400
+            },
+            animation: {
+              'gradient-pulse': 'gradientPulse 6s ease infinite',
+              'text-focus-in': 'text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
+              'slide-in-elliptic-top-fwd': 'slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
+            },
+            keyframes: {
+              gradientPulse: {
+                '0%, 100%': { 'background-position': '0% 50%' },
+                '50%': { 'background-position': '100% 50%' },
+              },
+               'text-focus-in': {
+                    '0%': {
+                        filter: 'blur(12px)',
+                        opacity: '0'
+                    },
+                    to: {
+                        filter: 'blur(0)',
+                        opacity: '1'
+                    }
+                },
+                'slide-in-elliptic-top-fwd': {
+                    '0%': {
+                        transform: 'translateY(-600px) rotateX(-30deg) scale(0)',
+                        'transform-origin': '50% 100%',
+                        opacity: '0'
+                    },
+                    to: {
+                        transform: 'translateY(0) rotateX(0) scale(1)',
+                        'transform-origin': '50% 1400px',
+                        opacity: '1'
+                    }
+                }
             }
-            gtag('js', new Date());
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-custom-bg text-slate-300 antialiased">
 
-            gtag('config', 'G-8QPR7MQ5QD');
-        </script>
-        <!-- End Google tag -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Carlos I. Pérez-Sechi - AI Solutions Expert</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <div class="profile">
-                    <img src="profile.png" alt="Carlos I. Pérez-Sechi" class="profile-pic" />
-                    <h1>Carlos I. Pérez-Sechi</h1>
-                    <p>AI Solutions Expert | Enterprise LLM Implementation | Digital Transformation</p>
-                    <a href="#contact" class="cta-button">Book a Consultation</a>
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white">
+                        Carlos I. Pérez<span class="text-primary">-Sechi</span>
+                    </a>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#results">Results</a></li>
-                        <li><a href="#testimonials">Client Success</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                    </ul>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#services" class="text-slate-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="#results" class="text-slate-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Results</a>
+                    <a href="#testimonials" class="text-slate-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Client Success</a>
+                    <a href="portfolio.html" class="text-slate-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                    <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">Contact</a>
                 </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-        </header>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-800">
+            <a href="#services" class="block text-slate-300 hover:bg-slate-700 hover:text-primary px-4 py-3 text-sm font-medium">Services</a>
+            <a href="#results" class="block text-slate-300 hover:bg-slate-700 hover:text-primary px-4 py-3 text-sm font-medium">Results</a>
+            <a href="#testimonials" class="block text-slate-300 hover:bg-slate-700 hover:text-primary px-4 py-3 text-sm font-medium">Client Success</a>
+            <a href="portfolio.html" class="block text-slate-300 hover:bg-slate-700 hover:text-primary px-4 py-3 text-sm font-medium">Portfolio</a>
+            <a href="#contact" class="block bg-primary hover:bg-primary-dark text-white text-center mx-4 my-3 px-4 py-3 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">Contact</a>
+        </div>
+    </header>
 
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Transform Your Business with Custom AI Solutions</h1>
-                    <p>
-                        I help organizations implement powerful AI tools that drive real business outcomes. From
-                        optimizing internal systems to building intelligent chatbots, I deliver solutions that provide
-                        immediate ROI.
+    <section class="relative py-20 md:py-32 bg-gradient-to-br from-slate-900 via-custom-bg to-slate-800 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-purple rounded-full filter blur-3xl animate-gradient-pulse"></div>
+             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-teal rounded-full filter blur-3xl animate-gradient-pulse animation-delay-3000"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="max-w-3xl mx-auto">
+                <img src="./profile.png" alt="Carlos I. Pérez-Sechi" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-8 shadow-2xl border-4 border-slate-700 animate-slide-in-elliptic-top-fwd" onerror="this.src='https://placehold.co/150x150/7F00FF/FFFFFF?text=CPS&font=inter'; this.onerror=null;"/>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 animate-text-focus-in">
+                    Carlos I. Pérez-Sechi
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto animate-text-focus-in" style="animation-delay: 0.3s;">
+                    AI Solutions Expert | Enterprise LLM Implementation | Digital Transformation
+                </p>
+                <p class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 animate-text-focus-in" style="animation-delay: 0.5s;">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-accent-purple to-accent-teal">
+                        Transform Your Business with Custom AI Solutions
+                    </span>
+                </p>
+                <p class="text-md sm:text-lg text-slate-400 mb-12 max-w-xl mx-auto animate-text-focus-in" style="animation-delay: 0.7s;">
+                    I architect and deploy powerful AI tools that drive tangible business outcomes, from optimizing internal systems to building intelligent, scalable chatbots.
+                </p>
+                <div class="animate-text-focus-in" style="animation-delay: 0.9s;">
+                    <a href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink" class="bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block">
+                        Book a Free Strategy Session <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">My Core AI Services</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Tailored AI consulting to address your unique organizational needs and unlock new potentials.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="service-icon floating text-5xl text-primary mb-6">
+                        <i class="fas fa-cogs"></i> </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Performance Optimization</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Boost corporate application and internal system performance. I identify bottlenecks, optimize processes, and implement AI-driven solutions for significant speed and efficiency enhancements.
                     </p>
-                    <a href="#contact" class="btn-primary">Schedule Your Free Strategy Session</a>
+                    <a href="#contact" class="text-primary hover:text-accent-teal font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
                 </div>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <h2>My Services</h2>
-                    <p>I offer specialized AI consulting services tailored to your organization's specific needs</p>
-                </div>
-                <div class="services-container">
-                    <div class="service-card fade-in">
-                        <div class="service-icon floating">
-                            <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Performance Optimization</h3>
-                            <p>
-                                Boost the performance of your corporate applications and internal information systems. I
-                                identify bottlenecks, optimize processes, and implement AI-driven solutions that
-                                significantly enhance speed and efficiency.
-                            </p>
-                            <a href="#contact" class="service-cta">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="service-card fade-in">
-                        <div class="service-icon floating">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>AI Chatbots & Assistants</h3>
-                            <p>
-                                Design, implementation, and optimization of scalable AI chatbots and Copilot-style
-                                assistants. Create powerful tools that enhance customer service, streamline operations,
-                                and provide 24/7 intelligent support.
-                            </p>
-                            <a href="#contact" class="service-cta">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="service-card fade-in">
-                        <div class="service-icon floating">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Intelligent Document Repositories</h3>
-                            <p>
-                                Implementation of advanced retrieval-augmented generation (RAG) systems for optimal
-                                management of corporate documentation. Make your knowledge easily accessible and
-                                actionable throughout your organization.
-                            </p>
-                            <a href="#contact" class="service-cta">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="results" class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <h2>Measurable Results</h2>
-                    <p>Numbers that demonstrate the impact of my solutions</p>
-                </div>
-                <div class="results-container">
-                    <div class="result-item fade-in">
-                        <span class="result-number">40%</span>
-                        <span class="result-label">Average Reduction in Support Costs</span>
-                    </div>
-                    <div class="result-item fade-in">
-                        <span class="result-number">70%</span>
-                        <span class="result-label">Infrastructure Efficiency Improvement</span>
-                    </div>
-                    <div class="result-item fade-in">
-                        <span class="result-number">85%</span>
-                        <span class="result-label">User Adoption Rate for AI Solutions</span>
-                    </div>
-                    <div class="result-item fade-in">
-                        <span class="result-number">15+</span>
-                        <span class="result-label">Enterprise Transformations Completed</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <h2>Client Success Stories</h2>
-                    <p>Hear from organizations that have transformed their operations with my solutions</p>
-                </div>
-                <div class="testimonial-slider">
-                    <div class="testimonial fade-in">
-                        <p class="testimonial-content">
-                            Carlos implemented a privacy-preserving LLM architecture that achieved ISO27001
-                            certification and reduced our support costs. His expertise in AI has been transformative for
-                            our business.
-                        </p>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <img src="img/hyteams_logo.png" alt="hyTeams Client" />
-                            </div>
-                            <div class="client-details">
-                                <h4>Chief Financial Officer</h4>
-                                <p>Solution provider for IBEX35 companies</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial fade-in">
-                        <p class="testimonial-content">
-                            Carlos orchestrated our cloud migration and digital transformation with exceptional vision.
-                            His implementation of containerized architecture and automated testing reduced deployment
-                            time, while cutting our infrastructure costs. The workforce planning system he developed
-                            continues to be a critical asset for our 13,000+ employees across Spain.
-                        </p>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <img src="img/decathlon_logo.jpg" alt="Decathlon Client" />
-                            </div>
-                            <div class="client-details">
-                                <h4>Digital Solutions Manager</h4>
-                                <p>Global Producer and Retailer of Sporting Goods</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial fade-in">
-                        <p class="testimonial-content">
-                            Carlos revolutionized our educational platform. His implementation improved student
-                            engagement and reduced course dropout rates. The scalable architecture he designed now
-                            supports over 3,000 concurrent users across our global platform without performance
-                            degradation.
-                        </p>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <img src="img/cef_logo.png" alt="CEF Client" />
-                            </div>
-                            <div class="client-details">
-                                <h4>Technology Director</h4>
-                                <p>International Academic Study Center</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Transform Your Organization?</h2>
-                    <p>
-                        Book a free 30-minute strategy session to discuss how custom AI solutions can address your
-                        specific business challenges.
+                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 group" style="animation-delay: 0.2s;">
+                    <div class="service-icon floating text-5xl text-primary mb-6">
+                        <i class="fas fa-brain"></i> </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">AI Chatbots & Assistants</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Design, implementation, and optimization of scalable AI chatbots and Copilot-style assistants. Create powerful tools to enhance customer service and streamline operations.
                     </p>
-                    <a href="#contact" class="btn-primary">Schedule Your Consultation Now</a>
+                    <a href="#contact" class="text-primary hover:text-accent-teal font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
+                </div>
+                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 group" style="animation-delay: 0.4s;">
+                    <div class="service-icon floating text-5xl text-primary mb-6">
+                        <i class="fas fa-archive"></i> </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Intelligent Document Repositories</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Implementation of advanced Retrieval-Augmented Generation (RAG) systems for optimal corporate documentation management. Make knowledge easily accessible and actionable.
+                    </p>
+                    <a href="#contact" class="text-primary hover:text-accent-teal font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="contact-methods">
-                        <a href="mailto:c.perez@yahoo.es" class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            c.perez@yahoo.es
-                        </a>
-                        <a href="tel:+34605566929" class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            +34 605 566 929
-                        </a>
-                        <a href="https://linkedin.com/in/perez-sechi" target="_blank" class="contact-method">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn
-                        </a>
+    <section id="results" class="py-16 md:py-24 bg-custom-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Measurable Impact</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Demonstrable results showcasing the transformative power of AI solutions.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">40%</span>
+                    <span class="block text-sm md:text-base text-slate-400">Avg. Reduction in Support Costs</span>
+                </div>
+                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" style="animation-delay: 0.15s;">
+                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">70%</span>
+                    <span class="block text-sm md:text-base text-slate-400">Infrastructure Efficiency Up</span>
+                </div>
+                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" style="animation-delay: 0.3s;">
+                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">85%</span>
+                    <span class="block text-sm md:text-base text-slate-400">User Adoption for AI Solutions</span>
+                </div>
+                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" style="animation-delay: 0.45s;">
+                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">15+</span>
+                    <span class="block text-sm md:text-base text-slate-400">Enterprise Transformations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16 md:py-24 bg-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Client Success Stories</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Hear from organizations that have transformed their operations with my AI solutions.</p>
+            </div>
+            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col">
+                    <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
+                    <p class="text-slate-300 mb-6 italic flex-grow">
+                        "Carlos implemented a privacy-preserving LLM architecture that achieved ISO27001 certification and reduced our support costs. His expertise in AI has been transformative for our business."
+                    </p>
+                    <div class="mt-auto border-t border-slate-700 pt-6">
+                        <div class="flex items-center">
+                            <img src="./img/hyteams_logo.png" alt="hyTeams Client" class="w-14 h-14 rounded-full mr-4 border-2 border-primary" onerror="this.src='https://placehold.co/60x60/CCCCCC/FFFFFF?text=Client1&font=inter'; this.onerror=null;"/>
+                            <div>
+                                <h4 class="font-semibold text-white text-lg">Chief Financial Officer</h4>
+                                <p class="text-sm text-slate-400">Solution provider for IBEX35 companies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col" style="animation-delay: 0.2s;">
+                     <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
+                    <p class="text-slate-300 mb-6 italic flex-grow">
+                        "Carlos orchestrated our cloud migration and digital transformation with exceptional vision. His implementation of containerized architecture and automated testing reduced deployment time, while cutting our infrastructure costs. The workforce planning system he developed continues to be a critical asset for our 13,000+ employees across Spain."
+                    </p>
+                     <div class="mt-auto border-t border-slate-700 pt-6">
+                        <div class="flex items-center">
+                            <img src="./img/decathlon_logo.png" alt="Decathlon Client" class="w-14 h-14 rounded-full mr-4 border-2 border-primary" onerror="this.src='https://placehold.co/60x60/CCCCCC/FFFFFF?text=Client2&font=inter'; this.onerror=null;"/>
+                            <div>
+                                <h4 class="font-semibold text-white text-lg">Digital Solutions Manager</h4>
+                                <p class="text-sm text-slate-400">Global Producer and Retailer of Sporting Goods</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col" style="animation-delay: 0.4s;">
+                     <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
+                    <p class="text-slate-300 mb-6 italic flex-grow">
+                        "Carlos revolutionized our educational platform. His implementation improved student engagement and reduced course dropout rates. The scalable architecture he designed now supports over 3,000 concurrent users across our global platform without performance degradation."
+                    </p>
+                     <div class="mt-auto border-t border-slate-700 pt-6">
+                        <div class="flex items-center">
+                            <img src="./img/cef_logo.png" alt="CEF Client" class="w-14 h-14 rounded-full mr-4 border-2 border-primary" onerror="this.src='https://placehold.co/60x60/CCCCCC/FFFFFF?text=Client3&font=inter'; this.onerror=null;"/>
+                            <div>
+                                <h4 class="font-semibold text-white text-lg">Technology Director</h4>
+                                <p class="text-sm text-slate-400">International Academic Study Center</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="section">
-            <div class="container contact">
-                <h2 class="section-title">Start the Conversation</h2>
-                <p>Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo.</p>
-                <div class="contact-grid">
-                    <form action="https://formspree.io/f/xblggora" method="POST" class="contact-form">
-                        <input type="text" name="name" placeholder="Your Name" required />
-                        <input type="email" name="email" placeholder="Your Email" required />
-                        <select name="service" required>
-                            <option value="" disabled selected>Select Service of Interest</option>
+    <section class="cta-section py-16 md:py-24 bg-gradient-to-r from-primary to-accent-purple text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Revolutionize Your Organization?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-indigo-100">
+                Book a free 15-minutes strategy session to discuss how custom AI solutions can address your specific business challenges and drive innovation.
+            </p>
+            <a href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink" class="bg-white hover:bg-slate-100 text-primary font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block">
+                Schedule Your Consultation Now <i class="fas fa-calendar-check ml-2"></i>
+            </a>
+            <div class="mt-12 space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center items-center">
+                <a href="mailto:carlos@perez-sechi.com" class="contact-method inline-flex items-center text-indigo-200 hover:text-white transition duration-300">
+                    <i class="fas fa-envelope text-xl mr-2"></i> carlos@perez-sechi.com
+                </a>
+                <span class="hidden sm:inline text-indigo-300">|</span>
+                <a href="tel:+34605566929" class="contact-method inline-flex items-center text-indigo-200 hover:text-white transition duration-300">
+                    <i class="fas fa-phone text-xl mr-2"></i> +34 605 566 929
+                </a>
+                 <span class="hidden sm:inline text-indigo-300">|</span>
+                <a href="https://linkedin.com/in/perez-sechi" target="_blank" class="contact-method inline-flex items-center text-indigo-200 hover:text-white transition duration-300">
+                    <i class="fab fa-linkedin text-xl mr-2"></i> LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-custom-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Start the Conversation</h2>
+                <p class="text-lg text-slate-400 mb-10">Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo or strategy session.</p>
+            </div>
+            <div class="max-w-xl mx-auto bg-card-bg p-8 md:p-10 rounded-xl shadow-2xl">
+                <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-300 mb-1">Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-slate-700 text-white placeholder-slate-400 border-slate-600 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300" />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-1">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-slate-700 text-white placeholder-slate-400 border-slate-600 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300" />
+                    </div>
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-slate-300 mb-1">Service of Interest</label>
+                        <select name="service" id="service" required class="w-full bg-slate-700 text-white placeholder-slate-400 border-slate-600 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300 appearance-none">
+                            <option value="" disabled selected>Select Service</option>
                             <option value="Performance Optimization">Performance Optimization</option>
                             <option value="AI Chatbots">AI Chatbots & Assistants</option>
                             <option value="Intelligent Document Repositories">Intelligent Document Repositories</option>
-                            <option value="Custom Solution">Custom Solution</option>
+                            <option value="Custom Solution">Custom AI Solution</option>
                         </select>
-                        <textarea
-                            name="message"
-                            rows="5"
-                            placeholder="Tell me about your project needs"
-                            required
-                        ></textarea>
-                        <button type="submit" class="cta-button">Request Consultation</button>
-                    </form>
-                </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-1">Project Details</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Tell me about your project needs..." required class="w-full bg-slate-700 text-white placeholder-slate-400 border-slate-600 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl">
+                            Request Consultation <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer>
-            <div class="container">
-                <p>&copy; 2025 Carlos I. Pérez-Sechi. All rights reserved.</p>
-            </div>
-        </footer>
+    <footer class="py-10 bg-slate-900 border-t border-slate-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
+            <p>&copy; <span id="currentYear"></span> Carlos I. Pérez-Sechi. All rights reserved.</p>
+            <p class="text-sm mt-2">Pioneering AI Solutions for a Smarter Future.</p>
+        </div>
+    </footer>
 
-        <script src="script.js"></script>
-        <script>
-            // Intersection Observer for fade-in animations
-            document.addEventListener('DOMContentLoaded', function () {
-                const observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('active');
-                            }
-                        });
-                    },
-                    {
-                        threshold: 0.1,
-                    }
-                );
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-                document.querySelectorAll('.fade-in').forEach((element) => {
-                    observer.observe(element);
-                });
-
-                // Existing script functionality for updates
-                const updatesContainer = document.getElementById('updates-container');
-                const loadPrevButton = document.getElementById('load-prev');
-                const loadNextButton = document.getElementById('load-next');
-
-                if (updatesContainer && loadPrevButton && loadNextButton) {
-                    // The original script.js functionality will handle this
+        // Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            observer.unobserve(entry.target); // Optional: unobserve after animation
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1, // Trigger when 10% of the element is visible
                 }
+            );
+
+            document.querySelectorAll('.fade-in').forEach((element) => {
+                observer.observe(element);
             });
-        </script>
-        <script type="text/javascript">
-            _linkedin_partner_id = '8206961';
-            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-        </script>
-        <script type="text/javascript">
-            (function (l) {
-                if (!l) {
-                    window.lintrk = function (a, b) {
-                        window.lintrk.q.push([a, b]);
-                    };
-                    window.lintrk.q = [];
-                }
-                var s = document.getElementsByTagName('script')[0];
-                var b = document.createElement('script');
-                b.type = 'text/javascript';
-                b.async = true;
-                b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
-                s.parentNode.insertBefore(b, s);
-            })(window.lintrk);
-        </script>
-        <noscript>
-            <img
-                height="1"
-                width="1"
-                style="display: none"
-                alt=""
-                src="https://px.ads.linkedin.com/collect/?pid=8206961&fmt=gif"
-            />
-        </noscript>
-    </body>
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    // Optional: Change icon on toggle
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    }
+                });
+            }
+
+            // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+
+            // The following section was related to 'updatesContainer', 'load-prev', 'load-next'
+            // which were not fully defined in the original HTML and script.js was not provided.
+            // If you have specific functionality for these, it can be re-integrated here.
+            /*
+            const updatesContainer = document.getElementById('updates-container');
+            const loadPrevButton = document.getElementById('load-prev');
+            const loadNextButton = document.getElementById('load-next');
+
+            if (updatesContainer && loadPrevButton && loadNextButton) {
+                // Original script.js functionality would handle this
+                console.log("Updates container and buttons found, but script.js logic is not present in this version.");
+            }
+            */
+        });
+    </script>
+    <script type="text/javascript">
+        _linkedin_partner_id = '8206961';
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function (l) {
+            if (!l) {
+                window.lintrk = function (a, b) {
+                    window.lintrk.q.push([a, b]);
+                };
+                window.lintrk.q = [];
+            }
+            var s = document.getElementsByTagName('script')[0];
+            var b = document.createElement('script');
+            b.type = 'text/javascript';
+            b.async = true;
+            b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
+    <noscript>
+        <img
+            height="1"
+            width="1"
+            style="display: none"
+            alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=8206961&fmt=gif"
+        />
+    </noscript>
+</body>
 </html>
