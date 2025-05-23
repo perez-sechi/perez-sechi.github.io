@@ -1,491 +1,729 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlos I. Pérez-Sechi - AI Solutions Expert</title>
-    <meta
-        name="description"
-        content="Carlos I. Pérez-Sechi - Expert in AI applications, LLMs, and digital transformation. Helping organizations deploy and optimize AI solutions."
-    />
-    <meta
-        name="keywords"
-        content="AI applications, LLMs, chatbots, digital transformation, knowledge portals, performance optimization, AI Engineer, AI Consultant"
-    />
-    <meta name="author" content="Carlos I. Pérez-Sechi" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Carlos I. Pérez-Sechi - AI Solutions Expert</title>
+        <meta
+            name="description"
+            content="Carlos I. Pérez-Sechi - Expert in AI applications, LLMs, and digital transformation. Helping organizations deploy and optimize AI solutions."
+        />
+        <meta
+            name="keywords"
+            content="AI applications, LLMs, chatbots, digital transformation, knowledge portals, performance optimization, AI Engineer, AI Consultant"
+        />
+        <meta name="author" content="Carlos I. Pérez-Sechi" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-8QPR7MQ5QD');
-    </script>
-    <style>
-        /* Custom global styles */
-        body {
-            font-family: 'Inter', sans-serif; /* Using Inter as a modern font, Tailwind will provide fallbacks */
-            @apply bg-slate-900 text-slate-300; /* Dark theme base */
-        }
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-8QPR7MQ5QD');
+        </script>
+        <style>
+            /* Custom global styles */
+            body {
+                font-family: 'Inter', sans-serif;
+                @apply bg-neutral-100 text-neutral-800; /* Base light gray theme */
+            }
 
-        /* Animation for service icons */
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Fade-in animation styles */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Custom scrollbar (optional, for a more modern look) */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1e293b; /* slate-800 */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4f46e5; /* indigo-600 */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6366f1; /* indigo-500 */
-        }
-        /* Ensure Tailwind JIT generates necessary classes, especially for dynamic content or specific needs */
-        .group:hover .group-hover\:opacity-100 { opacity: 1; }
-        .group:hover .group-hover\:translate-y-0 { transform: translateY(0px); }
-        .group:hover .group-hover\:scale-105 { transform: scale(1.05); }
-
-    </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#6366F1', // Indigo-500
-              'primary-dark': '#4F46E5', // Indigo-600
-              secondary: '#10B981', // Emerald-500
-              'secondary-dark': '#059669', // Emerald-600
-              neutral: {
-                light: '#F3F4F6', // Gray-100
-                DEFAULT: '#6B7280', // Gray-500
-                dark: '#1F2937' // Gray-800
-              },
-              'custom-bg': '#0F172A', // Slate-900 (main background)
-              'card-bg': '#1E293B', // Slate-800 (card backgrounds)
-              'accent-purple': '#8B5CF6', // Violet-500
-              'accent-teal': '#2DD4BF', // Teal-400
-            },
-            animation: {
-              'gradient-pulse': 'gradientPulse 6s ease infinite',
-              'text-focus-in': 'text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
-              'slide-in-elliptic-top-fwd': 'slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
-            },
-            keyframes: {
-              gradientPulse: {
-                '0%, 100%': { 'background-position': '0% 50%' },
-                '50%': { 'background-position': '100% 50%' },
-              },
-               'text-focus-in': {
-                    '0%': {
-                        filter: 'blur(12px)',
-                        opacity: '0'
-                    },
-                    to: {
-                        filter: 'blur(0)',
-                        opacity: '1'
-                    }
-                },
-                'slide-in-elliptic-top-fwd': {
-                    '0%': {
-                        transform: 'translateY(-600px) rotateX(-30deg) scale(0)',
-                        'transform-origin': '50% 100%',
-                        opacity: '0'
-                    },
-                    to: {
-                        transform: 'translateY(0) rotateX(0) scale(1)',
-                        'transform-origin': '50% 1400px',
-                        opacity: '1'
-                    }
+            /* Animation for service icons */
+            .floating {
+                animation: float 3s ease-in-out infinite;
+            }
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
                 }
             }
-          }
-        }
-      }
-    </script>
-</head>
-<body class="bg-custom-bg text-slate-300 antialiased">
 
-    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md shadow-lg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold text-white">
-                        Carlos I. Pérez<span class="text-primary">-Sechi</span>
-                    </a>
-                </div>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#services" class="text-slate-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                    <a href="#results" class="text-slate-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Results</a>
-                    <a href="#testimonials" class="text-slate-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Client Success</a>
-                    <a href="portfolio.html" class="text-slate-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
-                    <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-slate-300 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="md:hidden hidden bg-slate-800">
-            <a href="#services" class="block text-slate-300 hover:bg-slate-700 hover:text-primary px-4 py-3 text-sm font-medium">Services</a>
-            <a href="#results" class="block text-slate-300 hover:bg-slate-700 hover:text-primary px-4 py-3 text-sm font-medium">Results</a>
-            <a href="#testimonials" class="block text-slate-300 hover:bg-slate-700 hover:text-primary px-4 py-3 text-sm font-medium">Client Success</a>
-            <a href="portfolio.html" class="block text-slate-300 hover:bg-slate-700 hover:text-primary px-4 py-3 text-sm font-medium">Portfolio</a>
-            <a href="#contact" class="block bg-primary hover:bg-primary-dark text-white text-center mx-4 my-3 px-4 py-3 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">Contact</a>
-        </div>
-    </header>
+            /* Fade-in animation styles */
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .fade-in.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-    <section class="relative py-20 md:py-32 bg-gradient-to-br from-slate-900 via-custom-bg to-slate-800 overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-purple rounded-full filter blur-3xl animate-gradient-pulse"></div>
-             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-teal rounded-full filter blur-3xl animate-gradient-pulse animation-delay-3000"></div>
-        </div>
+            /* Custom scrollbar (optional - light theme) */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #e5e5e5; /* neutral-200 */
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #a3a3a3; /* neutral-400 */
+                border-radius: 4px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #737373; /* neutral-500 */
+            }
+            /* Ensure Tailwind JIT generates necessary classes */
+            .group:hover .group-hover\:opacity-100 {
+                opacity: 1;
+            }
+            .group:hover .group-hover\:translate-y-0 {
+                transform: translateY(0px);
+            }
+            .group:hover .group-hover\:scale-105 {
+                transform: scale(1.05);
+            }
+        </style>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#404040', // Dark gray (neutral-700) - for primary text/elements on light bg
+                            'primary-dark': '#262626', // Darker gray (neutral-800) - for hover states
+                            secondary: '#737373', // Medium gray (neutral-500) - for secondary text/elements
+                            'secondary-dark': '#525252', // Medium-dark gray (neutral-600) - for hover states
 
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="max-w-3xl mx-auto">
-                <img src="./profile.png" alt="Carlos I. Pérez-Sechi" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-8 shadow-2xl border-4 border-slate-700 animate-slide-in-elliptic-top-fwd" onerror="this.src='https://placehold.co/150x150/7F00FF/FFFFFF?text=CPS&font=inter'; this.onerror=null;"/>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 animate-text-focus-in">
-                    Carlos I. Pérez-Sechi
-                </h1>
-                <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto animate-text-focus-in" style="animation-delay: 0.3s;">
-                    AI Solutions Expert | Enterprise LLM Implementation | Digital Transformation
-                </p>
-                <p class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 animate-text-focus-in" style="animation-delay: 0.5s;">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-accent-purple to-accent-teal">
-                        Transform Your Business with Custom AI Solutions
-                    </span>
-                </p>
-                <p class="text-md sm:text-lg text-slate-400 mb-12 max-w-xl mx-auto animate-text-focus-in" style="animation-delay: 0.7s;">
-                    I architect and deploy powerful AI tools that drive tangible business outcomes, from optimizing internal systems to building intelligent, scalable chatbots.
-                </p>
-                <div class="animate-text-focus-in" style="animation-delay: 0.9s;">
-                    <a href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink" class="bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block">
-                        Book a Free Strategy Session <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-16 md:py-24 bg-slate-800/50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">My Core AI Services</h2>
-                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Tailored AI consulting to address your unique organizational needs and unlock new potentials.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 group">
-                    <div class="service-icon floating text-5xl text-primary mb-6">
-                        <i class="fas fa-cogs"></i> </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Performance Optimization</h3>
-                    <p class="text-slate-400 mb-6 leading-relaxed">
-                        Boost corporate application and internal system performance. I identify bottlenecks, optimize processes, and implement AI-driven solutions for significant speed and efficiency enhancements.
-                    </p>
-                    <a href="#contact" class="text-primary hover:text-accent-teal font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
-                </div>
-                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 group" style="animation-delay: 0.2s;">
-                    <div class="service-icon floating text-5xl text-primary mb-6">
-                        <i class="fas fa-brain"></i> </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">AI Chatbots & Assistants</h3>
-                    <p class="text-slate-400 mb-6 leading-relaxed">
-                        Design, implementation, and optimization of scalable AI chatbots and Copilot-style assistants. Create powerful tools to enhance customer service and streamline operations.
-                    </p>
-                    <a href="#contact" class="text-primary hover:text-accent-teal font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
-                </div>
-                <div class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 group" style="animation-delay: 0.4s;">
-                    <div class="service-icon floating text-5xl text-primary mb-6">
-                        <i class="fas fa-archive"></i> </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Intelligent Document Repositories</h3>
-                    <p class="text-slate-400 mb-6 leading-relaxed">
-                        Implementation of advanced Retrieval-Augmented Generation (RAG) systems for optimal corporate documentation management. Make knowledge easily accessible and actionable.
-                    </p>
-                    <a href="#contact" class="text-primary hover:text-accent-teal font-medium transition duration-300 group-hover:underline">Learn More <i class="fas fa-angle-right ml-1"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="results" class="py-16 md:py-24 bg-custom-bg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Measurable Impact</h2>
-                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Demonstrable results showcasing the transformative power of AI solutions.</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">40%</span>
-                    <span class="block text-sm md:text-base text-slate-400">Avg. Reduction in Support Costs</span>
-                </div>
-                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" style="animation-delay: 0.15s;">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">70%</span>
-                    <span class="block text-sm md:text-base text-slate-400">Infrastructure Efficiency Up</span>
-                </div>
-                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" style="animation-delay: 0.3s;">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">85%</span>
-                    <span class="block text-sm md:text-base text-slate-400">User Adoption for AI Solutions</span>
-                </div>
-                <div class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" style="animation-delay: 0.45s;">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">15+</span>
-                    <span class="block text-sm md:text-base text-slate-400">Enterprise Transformations</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="py-16 md:py-24 bg-slate-800/50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Client Success Stories</h2>
-                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Hear from organizations that have transformed their operations with my AI solutions.</p>
-            </div>
-            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col">
-                    <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
-                    <p class="text-slate-300 mb-6 italic flex-grow">
-                        "Carlos implemented a privacy-preserving LLM architecture that achieved ISO27001 certification and reduced our support costs. His expertise in AI has been transformative for our business."
-                    </p>
-                    <div class="mt-auto border-t border-slate-700 pt-6">
-                        <div class="flex items-center">
-                            <img src="./img/hyteams_logo.png" alt="hyTeams Client" class="w-14 h-14 rounded-full mr-4 border-2 border-primary" onerror="this.src='https://placehold.co/60x60/CCCCCC/FFFFFF?text=Client1&font=inter'; this.onerror=null;"/>
-                            <div>
-                                <h4 class="font-semibold text-white text-lg">Chief Financial Officer</h4>
-                                <p class="text-sm text-slate-400">Solution provider for IBEX35 companies</p>
-                            </div>
-                        </div>
+                            neutral: {
+                                // Tailwind's default grays are excellent
+                                50: '#fafafa',
+                                100: '#f5f5f5', // Main background
+                                200: '#e5e5e5', // Card background / Section alternate background
+                                300: '#d4d4d4',
+                                400: '#a3a3a3',
+                                500: '#737373', // Our secondary
+                                600: '#525252', // Our secondary-dark
+                                700: '#404040', // Our primary
+                                800: '#262626', // Our primary-dark, default body text
+                                900: '#171717',
+                                950: '#0a0a0a',
+                            },
+                            'custom-bg': '#f5f5f5', // Main background (neutral-100)
+                            'card-bg': '#ffffff', // Card backgrounds (white)
+                            'section-alt-bg': '#e5e5e5', // Alternate section background (neutral-200)
+                            'border-color': '#d4d4d4', // Border color (neutral-300)
+                            'text-main': '#262626', // Main text color (neutral-800)
+                            'text-secondary': '#525252', // Secondary text color (neutral-600)
+                            'text-headings': '#171717', // Heading text color (neutral-900)
+                            // Gradients will be less effective, use solid colors or subtle gray gradients
+                            'accent-purple': '#525252', // Was Violet-500, now neutral-600
+                            'accent-teal': '#737373', // Was Teal-400, now neutral-500
+                        },
+                        animation: {
+                            // Animations remain the same
+                            'gradient-pulse': 'gradientPulse 6s ease infinite',
+                            'text-focus-in': 'text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
+                            'slide-in-elliptic-top-fwd':
+                                'slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+                        },
+                        keyframes: {
+                            gradientPulse: {
+                                '0%, 100%': { 'background-position': '0% 50%' },
+                                '50%': { 'background-position': '100% 50%' },
+                            },
+                            'text-focus-in': {
+                                '0%': {
+                                    filter: 'blur(12px)',
+                                    opacity: '0',
+                                },
+                                to: {
+                                    filter: 'blur(0)',
+                                    opacity: '1',
+                                },
+                            },
+                            'slide-in-elliptic-top-fwd': {
+                                '0%': {
+                                    transform: 'translateY(-600px) rotateX(-30deg) scale(0)',
+                                    'transform-origin': '50% 100%',
+                                    opacity: '0',
+                                },
+                                to: {
+                                    transform: 'translateY(0) rotateX(0) scale(1)',
+                                    'transform-origin': '50% 1400px',
+                                    opacity: '1',
+                                },
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="bg-custom-bg text-text-main antialiased">
+        <header class="sticky top-0 z-50 bg-neutral-100/80 backdrop-blur-md shadow-lg border-b border-border-color">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0">
+                        <a href="#" class="text-2xl font-bold text-text-headings">
+                            <img
+                                src="./logo.svg"
+                                alt="Logo"
+                                class="h-10 w-auto"
+                                onerror="this.src='https://placehold.co/150x50/A3A3A3/171717?text=Logo&font=inter'; this.onerror=null;"
+                            />
+                        </a>
                     </div>
-                </div>
-                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col" style="animation-delay: 0.2s;">
-                     <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
-                    <p class="text-slate-300 mb-6 italic flex-grow">
-                        "Carlos orchestrated our cloud migration and digital transformation with exceptional vision. His implementation of containerized architecture and automated testing reduced deployment time, while cutting our infrastructure costs. The workforce planning system he developed continues to be a critical asset for our 13,000+ employees across Spain."
-                    </p>
-                     <div class="mt-auto border-t border-slate-700 pt-6">
-                        <div class="flex items-center">
-                            <img src="./img/decathlon_logo.png" alt="Decathlon Client" class="w-14 h-14 rounded-full mr-4 border-2 border-primary" onerror="this.src='https://placehold.co/60x60/CCCCCC/FFFFFF?text=Client2&font=inter'; this.onerror=null;"/>
-                            <div>
-                                <h4 class="font-semibold text-white text-lg">Digital Solutions Manager</h4>
-                                <p class="text-sm text-slate-400">Global Producer and Retailer of Sporting Goods</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col" style="animation-delay: 0.4s;">
-                     <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
-                    <p class="text-slate-300 mb-6 italic flex-grow">
-                        "Carlos revolutionized our educational platform. His implementation improved student engagement and reduced course dropout rates. The scalable architecture he designed now supports over 3,000 concurrent users across our global platform without performance degradation."
-                    </p>
-                     <div class="mt-auto border-t border-slate-700 pt-6">
-                        <div class="flex items-center">
-                            <img src="./img/cef_logo.png" alt="CEF Client" class="w-14 h-14 rounded-full mr-4 border-2 border-primary" onerror="this.src='https://placehold.co/60x60/CCCCCC/FFFFFF?text=Client3&font=inter'; this.onerror=null;"/>
-                            <div>
-                                <h4 class="font-semibold text-white text-lg">Technology Director</h4>
-                                <p class="text-sm text-slate-400">International Academic Study Center</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section py-16 md:py-24 bg-gradient-to-r from-primary to-accent-purple text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Revolutionize Your Organization?</h2>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-indigo-100">
-                Book a free 15-minutes strategy session to discuss how custom AI solutions can address your specific business challenges and drive innovation.
-            </p>
-            <a href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink" class="bg-white hover:bg-slate-100 text-primary font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block">
-                Schedule Your Consultation Now <i class="fas fa-calendar-check ml-2"></i>
-            </a>
-            <div class="mt-12 space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center items-center">
-                <a href="mailto:carlos@perez-sechi.com" class="contact-method inline-flex items-center text-indigo-200 hover:text-white transition duration-300">
-                    <i class="fas fa-envelope text-xl mr-2"></i> carlos@perez-sechi.com
-                </a>
-                <span class="hidden sm:inline text-indigo-300">|</span>
-                <a href="tel:+34605566929" class="contact-method inline-flex items-center text-indigo-200 hover:text-white transition duration-300">
-                    <i class="fas fa-phone text-xl mr-2"></i> +34 605 566 929
-                </a>
-                 <span class="hidden sm:inline text-indigo-300">|</span>
-                <a href="https://linkedin.com/in/perez-sechi" target="_blank" class="contact-method inline-flex items-center text-indigo-200 hover:text-white transition duration-300">
-                    <i class="fab fa-linkedin text-xl mr-2"></i> LinkedIn Profile
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-16 md:py-24 bg-custom-bg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Start the Conversation</h2>
-                <p class="text-lg text-slate-400 mb-10">Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo or strategy session.</p>
-            </div>
-            <div class="max-w-xl mx-auto bg-card-bg p-8 md:p-10 rounded-xl shadow-2xl">
-                <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-slate-300 mb-1">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-slate-700 text-white placeholder-slate-400 border-slate-600 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300" />
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-slate-300 mb-1">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-slate-700 text-white placeholder-slate-400 border-slate-600 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300" />
-                    </div>
-                    <div>
-                        <label for="service" class="block text-sm font-medium text-slate-300 mb-1">Service of Interest</label>
-                        <select name="service" id="service" required class="w-full bg-slate-700 text-white placeholder-slate-400 border-slate-600 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300 appearance-none">
-                            <option value="" disabled selected>Select Service</option>
-                            <option value="Performance Optimization">Performance Optimization</option>
-                            <option value="AI Chatbots">AI Chatbots & Assistants</option>
-                            <option value="Intelligent Document Repositories">Intelligent Document Repositories</option>
-                            <option value="Custom Solution">Custom AI Solution</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-slate-300 mb-1">Project Details</label>
-                        <textarea name="message" id="message" rows="5" placeholder="Tell me about your project needs..." required class="w-full bg-slate-700 text-white placeholder-slate-400 border-slate-600 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl">
-                            Request Consultation <i class="fas fa-paper-plane ml-2"></i>
+                    <nav class="hidden md:flex space-x-6">
+                        <a
+                            href="index.html#services"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Services</a
+                        >
+                        <a
+                            href="index.html#results"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Results</a
+                        >
+                        <a
+                            href="index.html#testimonials"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Testimonials</a
+                        >
+                        <a
+                            href="portfolio.html#skills"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Core Competencies</a
+                        >
+                        <a
+                            href="portfolio.html#experience"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Success Stories</a
+                        >
+                        <a
+                            href="portfolio.html"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            >Portfolio</a
+                        >
+                        <a
+                            href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink"
+                            class="bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg"
+                            >Book a session</a
+                        >
+                        <a
+                            href="index.html#contact"
+                            class="bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg"
+                            >Contact</a
+                        >
+                    </nav>
+                    <div class="md:hidden">
+                        <button
+                            id="mobile-menu-button"
+                            class="text-text-secondary hover:text-text-headings focus:outline-none"
+                        >
+                            <i class="fas fa-bars text-2xl"></i>
                         </button>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </section>
+            <div id="mobile-menu" class="md:hidden hidden bg-neutral-50 border-t border-border-color">
+                <a
+                    href="#services"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
+                    >Services</a
+                >
+                <a
+                    href="#results"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
+                    >Results</a
+                >
+                <a
+                    href="#testimonials"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
+                    >Client Success</a
+                >
+                <a
+                    href="portfolio.html"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
+                    >Portfolio</a
+                >
+                <a
+                    href="#contact"
+                    class="block bg-neutral-800 hover:bg-neutral-700 text-white text-center mx-4 my-3 px-4 py-3 rounded-lg text-sm font-medium transition duration-300 shadow-md hover:shadow-lg"
+                    >Contact</a
+                >
+            </div>
+        </header>
 
-    <footer class="py-10 bg-slate-900 border-t border-slate-700">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
-            <p>&copy; <span id="currentYear"></span> Carlos I. Pérez-Sechi. All rights reserved.</p>
-            <p class="text-sm mt-2">Pioneering AI Solutions for a Smarter Future.</p>
-        </div>
-    </footer>
+        <section
+            class="relative py-20 md:py-32 bg-gradient-to-br from-neutral-100 via-custom-bg to-neutral-200 overflow-hidden"
+        >
+            <div class="absolute inset-0 opacity-30">
+                <div
+                    class="absolute top-1/4 left-1/4 w-96 h-96 bg-neutral-300 rounded-full filter blur-3xl animate-gradient-pulse"
+                ></div>
+                <div
+                    class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neutral-400 rounded-full filter blur-3xl animate-gradient-pulse animation-delay-3000"
+                ></div>
+            </div>
 
-    <script>
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="max-w-3xl mx-auto">
+                    <img
+                        src="./profile.png"
+                        alt="Carlos I. Pérez-Sechi"
+                        class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-8 shadow-2xl border-4 border-neutral-300 animate-slide-in-elliptic-top-fwd filter"
+                        onerror="this.src='https://placehold.co/150x150/A3A3A3/171717?text=CPS&font=inter'; this.onerror=null; this.classList.add('filter');"
+                    />
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-text-headings mb-6 animate-text-focus-in"
+                    >
+                        Carlos I. Pérez-Sechi
+                    </h1>
+                    <p
+                        class="text-lg sm:text-xl text-text-secondary mb-10 max-w-2xl mx-auto animate-text-focus-in"
+                        style="animation-delay: 0.3s"
+                    >
+                        AI Solutions Expert | Enterprise LLM Implementation | Digital Transformation
+                    </p>
+                    <p
+                        class="text-xl sm:text-2xl md:text-3xl font-bold text-text-headings mb-6 animate-text-focus-in"
+                        style="animation-delay: 0.5s"
+                    >
+                        <span class="text-primary"> Transform Your Business with Custom AI Solutions </span>
+                    </p>
+                    <p
+                        class="text-md sm:text-lg text-text-secondary mb-12 max-w-xl mx-auto animate-text-focus-in"
+                        style="animation-delay: 0.7s"
+                    >
+                        I architect and deploy powerful AI tools that drive tangible business outcomes, from optimizing
+                        internal systems to building intelligent, scalable chatbots.
+                    </p>
+                    <div class="animate-text-focus-in" style="animation-delay: 0.9s">
+                        <a
+                            href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink"
+                            class="bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block"
+                        >
+                            Book a Free Strategy Session <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        // Intersection Observer for fade-in animations
-        document.addEventListener('DOMContentLoaded', function () {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            observer.unobserve(entry.target); // Optional: unobserve after animation
+        <section id="services" class="py-16 md:py-24 bg-section-alt-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">My Core AI Services</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Tailored AI consulting to address your unique organizational needs and unlock new potentials.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-neutral-400/30 transition-all duration-300 transform hover:-translate-y-1 group border border-border-color"
+                    >
+                        <div class="service-icon floating text-5xl text-primary mb-6">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-text-headings mb-3">Performance Optimization</h3>
+                        <p class="text-text-secondary mb-6 leading-relaxed">
+                            Boost corporate application and internal system performance. I identify bottlenecks,
+                            optimize processes, and implement AI-driven solutions for significant speed and efficiency
+                            enhancements.
+                        </p>
+                        <a
+                            href="#contact"
+                            class="text-primary hover:text-primary-dark font-medium transition duration-300 group-hover:underline"
+                            >Learn More <i class="fas fa-angle-right ml-1"></i
+                        ></a>
+                    </div>
+                    <div
+                        class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-neutral-400/30 transition-all duration-300 transform hover:-translate-y-1 group border border-border-color"
+                        style="animation-delay: 0.2s"
+                    >
+                        <div class="service-icon floating text-5xl text-primary mb-6">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-text-headings mb-3">AI Chatbots & Assistants</h3>
+                        <p class="text-text-secondary mb-6 leading-relaxed">
+                            Design, implementation, and optimization of scalable AI chatbots and Copilot-style
+                            assistants. Create powerful tools to enhance customer service and streamline operations.
+                        </p>
+                        <a
+                            href="#contact"
+                            class="text-primary hover:text-primary-dark font-medium transition duration-300 group-hover:underline"
+                            >Learn More <i class="fas fa-angle-right ml-1"></i
+                        ></a>
+                    </div>
+                    <div
+                        class="service-card fade-in bg-card-bg p-8 rounded-xl shadow-2xl hover:shadow-neutral-400/30 transition-all duration-300 transform hover:-translate-y-1 group border border-border-color"
+                        style="animation-delay: 0.4s"
+                    >
+                        <div class="service-icon floating text-5xl text-primary mb-6">
+                            <i class="fas fa-archive"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-text-headings mb-3">
+                            Intelligent Document Repositories
+                        </h3>
+                        <p class="text-text-secondary mb-6 leading-relaxed">
+                            Implementation of advanced Retrieval-Augmented Generation (RAG) systems for optimal
+                            corporate documentation management. Make knowledge easily accessible and actionable.
+                        </p>
+                        <a
+                            href="#contact"
+                            class="text-primary hover:text-primary-dark font-medium transition duration-300 group-hover:underline"
+                            >Learn More <i class="fas fa-angle-right ml-1"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="py-16 md:py-24 bg-custom-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Measurable Impact</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Demonstrable results showcasing the transformative power of AI solutions.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <div
+                        class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 border border-border-color"
+                    >
+                        <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">40%</span>
+                        <span class="block text-sm md:text-base text-text-secondary"
+                            >Avg. Reduction in Support Costs</span
+                        >
+                    </div>
+                    <div
+                        class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 border border-border-color"
+                        style="animation-delay: 0.15s"
+                    >
+                        <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">70%</span>
+                        <span class="block text-sm md:text-base text-text-secondary">Infrastructure Efficiency Up</span>
+                    </div>
+                    <div
+                        class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 border border-border-color"
+                        style="animation-delay: 0.3s"
+                    >
+                        <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">85%</span>
+                        <span class="block text-sm md:text-base text-text-secondary"
+                            >User Adoption for AI Solutions</span
+                        >
+                    </div>
+                    <div
+                        class="result-item fade-in bg-card-bg p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 border border-border-color"
+                        style="animation-delay: 0.45s"
+                    >
+                        <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">15+</span>
+                        <span class="block text-sm md:text-base text-text-secondary">Enterprise Transformations</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16 md:py-24 bg-section-alt-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Client Success Stories</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Hear from organizations that have transformed their operations with my AI solutions.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div
+                        class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col border border-border-color"
+                    >
+                        <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
+                        <p class="text-text-main mb-6 italic flex-grow">
+                            "Carlos implemented a privacy-preserving LLM architecture that achieved ISO27001
+                            certification and reduced our support costs. His expertise in AI has been transformative for
+                            our business."
+                        </p>
+                        <div class="mt-auto border-t border-border-color pt-6">
+                            <div class="flex items-center">
+                                <img
+                                    src="./img/hyteams_logo.png"
+                                    alt="hyTeams Client"
+                                    class="w-14 h-14 rounded-full mr-4 border-2 border-neutral-300 filter"
+                                    onerror="this.src='https://placehold.co/60x60/A3A3A3/171717?text=Client1&font=inter'; this.onerror=null; this.classList.add('filter');"
+                                />
+                                <div>
+                                    <h4 class="font-semibold text-text-headings text-lg">Chief Financial Officer</h4>
+                                    <p class="text-sm text-text-secondary">Solution provider for IBEX35 companies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col border border-border-color"
+                        style="animation-delay: 0.2s"
+                    >
+                        <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
+                        <p class="text-text-main mb-6 italic flex-grow">
+                            "Carlos orchestrated our cloud migration and digital transformation with exceptional vision.
+                            His implementation of containerized architecture and automated testing reduced deployment
+                            time, while cutting our infrastructure costs. The workforce planning system he developed
+                            continues to be a critical asset for our 13,000+ employees across Spain."
+                        </p>
+                        <div class="mt-auto border-t border-border-color pt-6">
+                            <div class="flex items-center">
+                                <img
+                                    src="./img/decathlon_logo.png"
+                                    alt="Decathlon Client"
+                                    class="w-14 h-14 rounded-full mr-4 border-2 border-neutral-300 filter"
+                                    onerror="this.src='https://placehold.co/60x60/A3A3A3/171717?text=Client2&font=inter'; this.onerror=null; this.classList.add('filter');"
+                                />
+                                <div>
+                                    <h4 class="font-semibold text-text-headings text-lg">Digital Solutions Manager</h4>
+                                    <p class="text-sm text-text-secondary">
+                                        Global Producer and Retailer of Sporting Goods
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="testimonial fade-in bg-card-bg p-8 rounded-xl shadow-xl flex flex-col border border-border-color"
+                        style="animation-delay: 0.4s"
+                    >
+                        <i class="fas fa-quote-left text-3xl text-primary mb-4"></i>
+                        <p class="text-text-main mb-6 italic flex-grow">
+                            "Carlos revolutionized our educational platform. His implementation improved student
+                            engagement and reduced course dropout rates. The scalable architecture he designed now
+                            supports over 3,000 concurrent users across our global platform without performance
+                            degradation."
+                        </p>
+                        <div class="mt-auto border-t border-border-color pt-6">
+                            <div class="flex items-center">
+                                <img
+                                    src="./img/cef_logo.png"
+                                    alt="CEF Client"
+                                    class="w-14 h-14 rounded-full mr-4 border-2 border-neutral-300 filter"
+                                    onerror="this.src='https://placehold.co/60x60/A3A3A3/171717?text=Client3&font=inter'; this.onerror=null; this.classList.add('filter');"
+                                />
+                                <div>
+                                    <h4 class="font-semibold text-text-headings text-lg">Technology Director</h4>
+                                    <p class="text-sm text-text-secondary">International Academic Study Center</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section py-16 md:py-24 bg-neutral-700 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+                    Ready to Revolutionize Your Organization?
+                </h2>
+                <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-neutral-200">
+                    Book a free 15-minutes strategy session to discuss how custom AI solutions can address your specific
+                    business challenges and drive innovation.
+                </p>
+                <a
+                    href="https://outlook.office.com/bookwithme/user/05e29ec35837482d8ecfa3c87bb23f67@perez-sechi.com/meetingtype/FfqHIxcGRUarkFQ7HkmAGA2?anonymous&ep=mlink"
+                    class="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block"
+                >
+                    Schedule Your Consultation Now <i class="fas fa-calendar-check ml-2"></i>
+                </a>
+                <div
+                    class="mt-12 space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center items-center"
+                >
+                    <a
+                        href="mailto:carlos@perez-sechi.com"
+                        class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300"
+                    >
+                        <i class="fas fa-envelope text-xl mr-2"></i> carlos@perez-sechi.com
+                    </a>
+                    <span class="hidden sm:inline text-neutral-400">|</span>
+                    <a
+                        href="tel:+34605566929"
+                        class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300"
+                    >
+                        <i class="fas fa-phone text-xl mr-2"></i> +34 605 566 929
+                    </a>
+                    <span class="hidden sm:inline text-neutral-400">|</span>
+                    <a
+                        href="https://linkedin.com/in/perez-sechi"
+                        target="_blank"
+                        class="contact-method inline-flex items-center text-neutral-300 hover:text-white transition duration-300"
+                    >
+                        <i class="fab fa-linkedin text-xl mr-2"></i> LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-custom-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">Start the Conversation</h2>
+                    <p class="text-lg text-text-secondary mb-10">
+                        Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo or
+                        strategy session.
+                    </p>
+                </div>
+                <div class="max-w-xl mx-auto bg-card-bg p-8 md:p-10 rounded-xl shadow-2xl border border-border-color">
+                    <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-text-main mb-1">Full Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Your Name"
+                                required
+                                class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300"
+                            />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-text-main mb-1"
+                                >Email Address</label
+                            >
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Your Email"
+                                required
+                                class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300"
+                            />
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-text-main mb-1"
+                                >Service of Interest</label
+                            >
+                            <select
+                                name="service"
+                                id="service"
+                                required
+                                class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300 appearance-none"
+                            >
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="Performance Optimization">Performance Optimization</option>
+                                <option value="AI Chatbots">AI Chatbots & Assistants</option>
+                                <option value="Intelligent Document Repositories">
+                                    Intelligent Document Repositories
+                                </option>
+                                <option value="Custom Solution">Custom AI Solution</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-text-main mb-1"
+                                >Project Details</label
+                            >
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows="5"
+                                placeholder="Tell me about your project needs..."
+                                required
+                                class="w-full bg-neutral-100 text-text-main placeholder-neutral-500 border-neutral-300 rounded-lg p-3 focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 transition duration-300"
+                            ></textarea>
+                        </div>
+                        <div>
+                            <button
+                                type="submit"
+                                class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl"
+                            >
+                                Request Consultation <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-10 bg-neutral-100 border-t border-border-color">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-secondary">
+                <p>&copy; <span id="currentYear"></span> Carlos I. Pérez-Sechi. All rights reserved.</p>
+                <p class="text-sm mt-2">Pioneering AI Solutions for a Smarter Future.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Intersection Observer for fade-in animations
+            document.addEventListener('DOMContentLoaded', function () {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('active');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.1,
+                    }
+                );
+
+                document.querySelectorAll('.fade-in').forEach((element) => {
+                    observer.observe(element);
+                });
+
+                // Mobile menu toggle
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (mobileMenu.classList.contains('hidden')) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        } else {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
                         }
                     });
-                },
-                {
-                    threshold: 0.1, // Trigger when 10% of the element is visible
                 }
-            );
 
-            document.querySelectorAll('.fade-in').forEach((element) => {
-                observer.observe(element);
-            });
-
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    // Optional: Change icon on toggle
-                    const icon = mobileMenuButton.querySelector('i');
-                    if (mobileMenu.classList.contains('hidden')) {
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach((link) => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
                         icon.classList.remove('fa-times');
                         icon.classList.add('fa-bars');
-                    } else {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    }
-                });
-            }
-
-            // Close mobile menu when a link is clicked
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
+                    });
                 });
             });
-
-
-            // The following section was related to 'updatesContainer', 'load-prev', 'load-next'
-            // which were not fully defined in the original HTML and script.js was not provided.
-            // If you have specific functionality for these, it can be re-integrated here.
-            /*
-            const updatesContainer = document.getElementById('updates-container');
-            const loadPrevButton = document.getElementById('load-prev');
-            const loadNextButton = document.getElementById('load-next');
-
-            if (updatesContainer && loadPrevButton && loadNextButton) {
-                // Original script.js functionality would handle this
-                console.log("Updates container and buttons found, but script.js logic is not present in this version.");
-            }
-            */
-        });
-    </script>
-    <script type="text/javascript">
-        _linkedin_partner_id = '8206961';
-        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script>
-    <script type="text/javascript">
-        (function (l) {
-            if (!l) {
-                window.lintrk = function (a, b) {
-                    window.lintrk.q.push([a, b]);
-                };
-                window.lintrk.q = [];
-            }
-            var s = document.getElementsByTagName('script')[0];
-            var b = document.createElement('script');
-            b.type = 'text/javascript';
-            b.async = true;
-            b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
-            s.parentNode.insertBefore(b, s);
-        })(window.lintrk);
-    </script>
-    <noscript>
-        <img
-            height="1"
-            width="1"
-            style="display: none"
-            alt=""
-            src="https://px.ads.linkedin.com/collect/?pid=8206961&fmt=gif"
-        />
-    </noscript>
-</body>
+        </script>
+        <script type="text/javascript">
+            _linkedin_partner_id = '8206961';
+            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        </script>
+        <script type="text/javascript">
+            (function (l) {
+                if (!l) {
+                    window.lintrk = function (a, b) {
+                        window.lintrk.q.push([a, b]);
+                    };
+                    window.lintrk.q = [];
+                }
+                var s = document.getElementsByTagName('script')[0];
+                var b = document.createElement('script');
+                b.type = 'text/javascript';
+                b.async = true;
+                b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+                s.parentNode.insertBefore(b, s);
+            })(window.lintrk);
+        </script>
+        <noscript>
+            <img
+                height="1"
+                width="1"
+                style="display: none"
+                alt=""
+                src="https://px.ads.linkedin.com/collect/?pid=8206961&fmt=gif"
+            />
+        </noscript>
+    </body>
 </html>
