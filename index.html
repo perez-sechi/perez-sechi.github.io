@@ -172,35 +172,40 @@
                             />
                         </a>
                     </div>
-                    <nav class="hidden md:flex space-x-6">
+                    <nav class="hidden lg:flex lg:space-x-1 xl:space-x-6">
                         <a
                             href="index.html#services"
-                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-1.5 xl:px-3 py-2 rounded-md text-sm font-medium"
                             >Services</a
                         >
                         <a
                             href="index.html#results"
-                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-1.5 xl:px-3 py-2 rounded-md text-sm font-medium"
                             >Results</a
                         >
                         <a
                             href="index.html#testimonials"
-                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-1.5 xl:px-3 py-2 rounded-md text-sm font-medium"
                             >Testimonials</a
                         >
                         <a
+                            href="index.html#white-papers"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-1.5 xl:px-3 py-2 rounded-md text-sm font-medium"
+                            >White Papers</a
+                        >
+                        <a
                             href="portfolio.html#skills"
-                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-1.5 xl:px-3 py-2 rounded-md text-sm font-medium"
                             >Core Competencies</a
                         >
                         <a
                             href="portfolio.html#experience"
-                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-1.5 xl:px-3 py-2 rounded-md text-sm font-medium"
                             >Success Stories</a
                         >
                         <a
                             href="portfolio.html"
-                            class="text-text-secondary hover:text-text-headings transition duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                            class="text-text-secondary hover:text-text-headings transition duration-300 px-1.5 xl:px-3 py-2 rounded-md text-sm font-medium"
                             >Portfolio</a
                         >
                         <a
@@ -214,7 +219,7 @@
                             >Contact</a
                         >
                     </nav>
-                    <div class="md:hidden">
+                    <div class="lg:hidden">
                         <button
                             id="mobile-menu-button"
                             class="text-text-secondary hover:text-text-headings focus:outline-none"
@@ -224,7 +229,7 @@
                     </div>
                 </div>
             </div>
-            <div id="mobile-menu" class="md:hidden hidden bg-neutral-50 border-t border-border-color">
+            <div id="mobile-menu" class="lg:hidden hidden bg-neutral-50 border-t border-border-color">
                 <a
                     href="index.html#services"
                     class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
@@ -239,6 +244,11 @@
                     href="index.html#testimonials"
                     class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
                     >Testimonials</a
+                >
+                <a
+                    href="index.html#white-papers"
+                    class="block text-text-secondary hover:bg-neutral-200 hover:text-text-headings px-4 py-3 text-sm font-medium"
+                    >White Papers</a
                 >
                 <a
                     href="portfolio.html#skills"
@@ -524,6 +534,62 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="white-papers" class="py-16 md:py-24 bg-custom-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-headings mb-4">White Papers</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Practical guides and frameworks from my work taking enterprise AI from pilot to production.
+                    </p>
+                </div>
+                <!-- To add a white paper: drop the PDF and its cover PNG in /white-papers and copy an <article> below -->
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <article
+                        class="fade-in bg-card-bg rounded-xl shadow-xl overflow-hidden flex flex-col sm:flex-row border border-border-color"
+                    >
+                        <a
+                            href="white-papers/del-piloto-a-produccion-en-azure.pdf"
+                            target="_blank"
+                            class="sm:w-56 flex-shrink-0 bg-neutral-800"
+                        >
+                            <img
+                                src="white-papers/del-piloto-a-produccion-en-azure.png"
+                                alt="Cover: Del piloto a producción en Azure"
+                                class="w-full h-full object-cover aspect-[4/5]"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="p-6 md:p-8 flex flex-col">
+                            <p class="text-sm text-text-secondary mb-2">October 2026 · 12 pages · Spanish</p>
+                            <h3 class="text-2xl font-semibold text-text-headings mb-3">
+                                Del piloto a producción en Azure
+                            </h3>
+                            <p class="text-text-secondary mb-6 leading-relaxed flex-grow">
+                                A practical guide and checklist for taking a generative AI app from pilot to production
+                                in a corporate Azure landing zone: the three phases and what to promise in each, a
+                                12-dimension gap map, 20 go-live checks, cost by design, measurable quality, what to
+                                bring to security and the steering committee, and AI Act Article 50 by role.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a
+                                    href="white-papers/del-piloto-a-produccion-en-azure.pdf"
+                                    target="_blank"
+                                    class="bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-5 rounded-lg transition duration-300 shadow-md hover:shadow-lg"
+                                    >Read PDF <i class="fas fa-file-pdf ml-1"></i
+                                ></a>
+                                <a
+                                    href="white-papers/del-piloto-a-produccion-en-azure.pdf"
+                                    download
+                                    class="text-primary hover:text-primary-dark font-medium py-2 transition duration-300 hover:underline"
+                                    >Download <i class="fas fa-download ml-1"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
