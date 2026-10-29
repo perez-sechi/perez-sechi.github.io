@@ -1,0 +1,339 @@
+/*
+  Visual identity shared with the marketing material and white papers
+  (kit-contenido-ia-azure/05-material/_estilo/brand.css). Keep the tokens in sync with that file.
+*/
+
+:root {
+    /* Brand */
+    --ink-950: #060f1d;
+    --ink-900: #0a1628;
+    --ink-800: #12233d;
+    --ink-700: #1c3354;
+    --ink-600: #2b4670;
+    --blue-600: #1c5cab;
+    --blue-500: #2a78d6;
+    --blue-400: #3987e5;
+    --blue-100: #e3eefc;
+    --cyan-400: #4cc9f0;
+    --amber-400: #ffb020;
+    --amber-100: #fff4dc;
+
+    /* Surfaces and text */
+    --paper: #f7f6f2;
+    --surface: #ffffff;
+    --surface-2: #f1f0eb;
+    --line: #e1e0d9;
+    --line-strong: #c3c2b7;
+    --text: #0b0b0b;
+    --text-2: #52514e;
+    --text-3: #898781;
+    --text-inv: #f4f7fb;
+    --text-inv-2: #b7c3d6;
+    --text-inv-3: #7f8ea6;
+
+    --font: 'Segoe UI Variable Display', 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-text: 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --mono: 'Cascadia Code', 'Cascadia Mono', Consolas, ui-monospace, monospace;
+
+    --radius-s: 8px;
+    --radius-m: 14px;
+    --shadow-1: 0 1px 2px rgba(10, 22, 40, 0.06), 0 4px 14px rgba(10, 22, 40, 0.08);
+    --shadow-2: 0 2px 6px rgba(10, 22, 40, 0.1), 0 18px 48px rgba(10, 22, 40, 0.18);
+}
+
+body {
+    font-family: var(--font-text);
+    background: var(--paper);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+    background: rgba(247, 246, 242, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+}
+.nav-link {
+    color: var(--text-2);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.nav-link:hover {
+    color: var(--blue-500);
+}
+
+/* ---------- Sections ---------- */
+.dark {
+    background: var(--ink-900);
+    color: var(--text-inv);
+}
+.grid-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+.kicker {
+    font-family: var(--font);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue-500);
+}
+.dark .kicker {
+    color: var(--cyan-400);
+}
+.section-title {
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: clamp(1.875rem, 4vw, 2.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+.dark .section-title {
+    color: #fff;
+}
+.hero-title {
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    color: #fff;
+}
+.lead {
+    font-size: 1.125rem;
+    line-height: 1.55;
+    color: var(--text-2);
+}
+.dark .lead {
+    color: var(--text-inv-2);
+}
+.accent {
+    color: var(--blue-500);
+}
+.dark .accent {
+    color: var(--cyan-400);
+}
+.label {
+    font-family: var(--font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+}
+.dark .label {
+    color: var(--text-inv-3);
+}
+.mono {
+    font-family: var(--mono);
+}
+.quote {
+    font-family: var(--font);
+    font-weight: 700;
+    line-height: 1.2;
+    border-left: 6px solid var(--amber-400);
+    padding-left: 1.25rem;
+}
+
+/* ---------- Blocks ---------- */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-1);
+}
+.dark .card {
+    background: var(--ink-800);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+}
+.card.info {
+    border-left: 6px solid var(--blue-500);
+}
+.icon-tile {
+    width: 3.25rem;
+    height: 3.25rem;
+    flex: none;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    font-size: 1.375rem;
+    background: var(--blue-100);
+    color: var(--blue-600);
+}
+.dark .icon-tile {
+    background: rgba(76, 201, 240, 0.14);
+    color: var(--cyan-400);
+}
+.logo-tile {
+    display: grid;
+    place-items: center;
+    flex: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--blue-100);
+    color: var(--blue-600);
+}
+.chip.amber {
+    background: var(--amber-100);
+    color: #8a5a00;
+}
+.stat {
+    font-family: var(--font);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--blue-500);
+}
+.bullet-list > li {
+    position: relative;
+    padding-left: 1.25rem;
+}
+.bullet-list > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: var(--blue-500);
+}
+.text-link {
+    color: var(--blue-500);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.text-link:hover {
+    color: var(--blue-600);
+}
+
+/* ---------- Buttons and forms ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-s);
+    font-weight: 600;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.btn-primary {
+    background: var(--blue-500);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: var(--blue-600);
+}
+.btn-outline {
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    color: var(--text);
+}
+.btn-outline:hover {
+    border-color: var(--blue-500);
+    color: var(--blue-500);
+}
+.cta-banner {
+    background: linear-gradient(100deg, var(--blue-500), #248fd2 55%, #46b6e6);
+    color: #fff;
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-2);
+    transition: transform 0.25s;
+}
+.cta-banner:hover {
+    transform: translateY(-2px);
+}
+.field {
+    width: 100%;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-s);
+    padding: 0.75rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field::placeholder {
+    color: var(--text-3);
+}
+.field:focus {
+    outline: none;
+    border-color: var(--blue-500);
+    box-shadow: 0 0 0 3px rgba(42, 120, 214, 0.18);
+}
+
+/* ---------- Footer ---------- */
+.monogram {
+    width: 2.75rem;
+    height: 2.75rem;
+    flex: none;
+    border-radius: 26%;
+    background: #fff url('../img/brand/simbolo-negro.svg') center / 52% no-repeat;
+}
+
+/* ---------- Motion ---------- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Declared after .fade-in so the hover lift wins over the settled fade-in transform */
+.card-hover,
+.card-hover.fade-in.active {
+    transition: opacity 0.6s ease-out, transform 0.25s, box-shadow 0.25s;
+}
+.card-hover:hover,
+.card-hover.fade-in.active:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-2);
+}
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--surface-2);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--line-strong);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-3);
+}
