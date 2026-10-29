@@ -802,7 +802,7 @@
                                 <span class="mono text-sm text-subtle">Nov 2022 – May 2026</span>
                                 <span class="chip amber">Cum Laude</span>
                             </div>
-                            <p class="text-sm text-muted italic mt-3">Thesis: Explainable Communities Based on Network Visualizations</p>
+                            <p class="text-sm text-muted italic mt-3">Thesis: Análisis de Teoría de Juegos Cooperativos mediante Redes Sociales</p>
                         </div>
                     </div>
                     <div
@@ -1120,7 +1120,64 @@
                 let currentPage = 1;
                 const updatesPerPage = 3;
 
+                // Newest first. Use dateLabel instead of a day-precise date when the item has none (e.g. projects).
                 const sampleUpdates = [
+                    {
+                        title: 'Book chapter: Network Visualization of a Fuzzy Measure',
+                        content:
+                            'Our chapter in "Computational Intelligence and Mathematics for Tackling Complex Problems 7" (Springer, Studies in Computational Intelligence) uses graph representations and network analysis to interpret fuzzy measures. Building on the Shapley index and the Murofushi-Grabisch interaction index, it makes the interactions between many elements easier to read and supports decision-making in complex systems.',
+                        imageUrl: 'img/updates/springer-sci-2026.svg',
+                        date: '2026-08-02',
+                        link: 'https://doi.org/10.1007/978-3-032-20725-8_8',
+                    },
+                    {
+                        title: 'PhD in Data Science defended with Cum Laude',
+                        content:
+                            'I defended my doctoral thesis, "Análisis de Teoría de Juegos Cooperativos mediante Redes Sociales", at the Faculty of Statistical Studies of the Complutense University of Madrid, supervised by Javier Castro Cantalejo. Traditional Explainable AI methods often stop at global importance metrics; the thesis combines cooperative game theory, fuzzy measures and network analysis to make the interactions between variables visible and interpretable. The dissertation is open access.',
+                        imageUrl: 'img/updates/phd-thesis-2026.svg',
+                        date: '2026-05-20',
+                        link: 'https://hdl.handle.net/20.500.14352/139709',
+                    },
+                    {
+                        title: 'Journal article: From fuzzy modeling to explanation, in the International Journal of Approximate Reasoning',
+                        content:
+                            'We propose a framework for Explainable AI based on Multi-Measure Fuzzy Systems, where each agent represents a distinct perspective of the model with its own fuzzy measure capturing uncertainty, relevance and local interactions. It addresses the limits of Shapley-value explanations, which can ignore feature interactions, are computationally expensive and hide instance-level variability behind global averages.',
+                        imageUrl: 'img/updates/ijar-2026.svg',
+                        date: '2026-03-17',
+                        link: 'https://doi.org/10.1016/j.ijar.2026.109670',
+                    },
+                    {
+                        title: 'FUZZ-IEEE 2025: On the role of relations and interactions in fuzzy systems for machine learning',
+                        content:
+                            'Published at the 2025 IEEE International Conference on Fuzzy Systems (Reims, France). We introduce KWSHAP, an algorithm based on the Kruskal-Wallis test that applies to any machine learning model, and a method to define model variables when the input includes several fuzzy measures over a set of agents, using Shapley values and interaction indices. Together with a graph representation, they explain the role and importance of feature interactions.',
+                        imageUrl: 'img/updates/fuzz-ieee-2025.svg',
+                        date: '2025-07-06',
+                        link: 'https://doi.org/10.1109/FUZZ62266.2025.11152169',
+                    },
+                    {
+                        title: 'Research project PID2021-122905NB-C21: Modelos para el procesamiento de información compleja y aplicaciones a problemas de redes',
+                        content:
+                            'Research project on models for processing complex information and their applications to network problems, funded by the Spanish State Research Agency (AEI) under the State Plan for Scientific and Technical Research and Innovation 2021-2023, with the Complutense University of Madrid as beneficiary. It funded my work on fuzzy systems for machine learning (FUZZ-IEEE 2025) and on the network visualization of cooperative games (Applied Sciences, 2025).',
+                        imageUrl: 'img/updates/project-pid2021.svg',
+                        dateLabel: 'AEI research project · 2021 call',
+                        link: 'https://buscador.recolecta.fecyt.es/buscador-recolecta-proyecto-detalle?projectcode=PID2021-122905NB-C21',
+                    },
+                    {
+                        title: 'Journal article: Network Visualization of Cooperative Games, in Applied Sciences',
+                        content:
+                            'Cooperative game theory has focused on characteristic functions and on how to distribute value among players, with less attention to how players interact. Using the player interaction index, our article represents those interactions as a graph and applies network analysis to visualize them, deepening the understanding of player relationships, synergies and coalition formation.',
+                        imageUrl: 'img/updates/applied-sciences-2025.svg',
+                        date: '2025-03-31',
+                        link: 'https://doi.org/10.3390/app15073825',
+                    },
+                    {
+                        title: 'Research project PID2020-116884GB-I00: Modelos de atribución juego-teóricos y aplicaciones: redes sociales, marketing y machine learning',
+                        content:
+                            'Research project on game-theoretic attribution models and their applications to social networks, marketing and machine learning, funded by the Spanish State Research Agency (AEI) under the State R&D&I Programme Oriented to the Challenges of Society, with the Complutense University of Madrid as beneficiary. It funded my article on the network visualization of cooperative games (Applied Sciences, 2025).',
+                        imageUrl: 'img/updates/project-pid2020.svg',
+                        dateLabel: 'AEI research project · 2020 call',
+                        link: 'https://buscador.recolecta.fecyt.es/buscador-recolecta-proyecto-detalle?projectcode=PID2020-116884GB-I00',
+                    },
                     {
                         title: 'Returning to +FuzzyMAD 2024: Another Year of Fuzzy Logic and Collaboration in Madrid!',
                         content:
@@ -1183,11 +1240,13 @@
                         updateElement.className =
                             'card card-hover overflow-hidden flex flex-col group fade-in';
 
-                        const formattedDate = new Date(update.date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                        });
+                        const formattedDate =
+                            update.dateLabel ||
+                            new Date(update.date).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                            });
 
                         let shortContent = update.content;
                         if (shortContent.length > 512) {
