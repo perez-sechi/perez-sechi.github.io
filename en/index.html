@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Carlos I. Pérez-Sechi - Generative AI: from pilot to production</title>
+        <meta
+            name="description"
+            content="Carlos I. Pérez-Sechi - Freelance architect for CIOs and Heads of AI. I take generative AI for medium and large enterprises from the pilot phase to production on Microsoft Azure: secure, governed, measurable and with costs under control."
+        />
+        <meta
+            name="keywords"
+            content="Generative AI, pilot to production, Azure, GenAI platform, AI security, AI governance, FinOps, LLMs, RAG, chatbots, AI Architect, AI Consultant"
+        />
+        <meta name="author" content="Carlos I. Pérez-Sechi" />
+        <link rel="canonical" href="https://perez-sechi.com/en/" />
+        <link rel="alternate" hreflang="es" href="https://perez-sechi.com/" />
+        <link rel="alternate" hreflang="en" href="https://perez-sechi.com/en/" />
+        <link rel="alternate" hreflang="x-default" href="https://perez-sechi.com/" />
+        <meta name="theme-color" content="#0a1628" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="../js/tailwind-config.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        <link rel="stylesheet" href="../css/brand.css" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-8QPR7MQ5QD');
+        </script>
+    </head>
+    <body class="antialiased">
+        <header class="site-header sticky top-0 z-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <a href="index.html" class="flex-shrink-0">
+                        <img src="../logo.svg" alt="perez-sechi" class="h-9 w-auto" />
+                    </a>
+                    <nav class="hidden xl:flex xl:items-center xl:ml-auto xl:space-x-4">
+                        <a href="index.html#services" class="nav-link px-2 py-2">Services</a>
+                        <a href="index.html#results" class="nav-link px-2 py-2">Results</a>
+                        <a href="index.html#white-papers" class="nav-link px-2 py-2">White Papers</a>
+                        <a href="portfolio.html#skills" class="nav-link px-2 py-2">Core Competencies</a>
+                        <a href="portfolio.html#experience" class="nav-link px-2 py-2">Success Stories</a>
+                        <a href="portfolio.html" class="nav-link px-2 py-2">Portfolio</a>
+                        <a
+                            href="https://calendly.com/carlos-perez-sechi/30min"
+                            class="btn btn-primary px-4 py-2 text-sm"
+                            >Book a session</a
+                        >
+                        <a href="index.html#contact" class="btn btn-outline px-4 py-2 text-sm">Contact</a>
+                    </nav>
+                    <div class="flex items-center gap-4 xl:ml-6">
+                        <div class="lang-switch" role="group" aria-label="Language">
+                            <a href="../index.html" hreflang="es" lang="es">ES</a>
+                            <a href="index.html" hreflang="en" lang="en" aria-current="page">EN</a>
+                        </div>
+                        <button
+                            id="mobile-menu-button"
+                            class="xl:hidden text-muted hover:text-main focus:outline-none"
+                            aria-label="Toggle menu"
+                        >
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="xl:hidden hidden bg-paper border-t border-line">
+                <a href="index.html#services" class="nav-link block px-4 py-3 hover:bg-surface-2">Services</a>
+                <a href="index.html#results" class="nav-link block px-4 py-3 hover:bg-surface-2">Results</a>
+                <a href="index.html#white-papers" class="nav-link block px-4 py-3 hover:bg-surface-2">White Papers</a>
+                <a href="portfolio.html#skills" class="nav-link block px-4 py-3 hover:bg-surface-2">Core Competencies</a>
+                <a href="portfolio.html#experience" class="nav-link block px-4 py-3 hover:bg-surface-2"
+                    >Success Stories</a
+                >
+                <a href="portfolio.html" class="nav-link block px-4 py-3 hover:bg-surface-2">Portfolio</a>
+                <div class="px-4 pt-2 pb-4 space-y-3">
+                    <a
+                        href="https://calendly.com/carlos-perez-sechi/30min"
+                        class="btn btn-primary w-full px-4 py-3 text-sm"
+                        >Book a session</a
+                    >
+                    <a href="#contact" class="btn btn-outline w-full px-4 py-3 text-sm">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="dark grid-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7">
+                        <p class="kicker mb-6">Freelance architect for CIOs and Heads of AI</p>
+                        <h1 class="hero-title mb-8">
+                            Generative AI: <span class="accent">from pilot to production</span>
+                        </h1>
+                        <p class="lead max-w-xl mb-10">
+                            I take generative AI for medium and large enterprises from the pilot phase to production on
+                            Microsoft Azure: secure, governed, measurable and with costs under control.
+                        </p>
+                        <a
+                            href="https://calendly.com/carlos-perez-sechi/30min"
+                            class="btn btn-primary px-7 py-4 text-lg shadow-lg"
+                        >
+                            Book a Free Strategy Session <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="card p-6 sm:p-8 max-w-md mx-auto lg:mr-0">
+                            <div class="flex items-center gap-5 mb-8">
+                                <img
+                                    src="../profile.png"
+                                    alt="Carlos I. Pérez-Sechi"
+                                    class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-cyan-400"
+                                    onerror="this.src='https://placehold.co/150x150/12233D/4CC9F0?text=CPS&font=inter'; this.onerror=null;"
+                                />
+                                <div>
+                                    <p class="text-xl sm:text-2xl font-extrabold text-white leading-tight">
+                                        Carlos I. Pérez-Sechi
+                                    </p>
+                                    <p class="text-sm text-inv-muted mt-1">
+                                        GenAI platform, security, governance and FinOps
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="label mb-3">What I do</p>
+                            <ul class="space-y-3">
+                                <li
+                                    class="flex items-center gap-4 rounded-lg border border-white/10 bg-ink-900/60 px-4 py-3"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fas fa-cogs"></i></span>
+                                    <span class="font-semibold">Performance Optimization</span>
+                                </li>
+                                <li
+                                    class="flex items-center gap-4 rounded-lg border border-white/10 bg-ink-900/60 px-4 py-3"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fas fa-brain"></i></span>
+                                    <span class="font-semibold">AI Chatbots & Assistants</span>
+                                </li>
+                                <li
+                                    class="flex items-center gap-4 rounded-lg border border-white/10 bg-ink-900/60 px-4 py-3"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"
+                                        ><i class="fas fa-archive"></i
+                                    ></span>
+                                    <span class="font-semibold">Intelligent Document Repositories</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 md:py-24 bg-paper">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <p class="kicker mb-3">Services</p>
+                    <h2 class="section-title mb-4">My Core AI Services</h2>
+                    <p class="lead">
+                        Tailored AI consulting to address your unique organizational needs and unlock new potentials.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card card-hover fade-in p-8 flex flex-col">
+                        <div class="icon-tile mb-6"><i class="fas fa-cogs"></i></div>
+                        <h3 class="text-2xl font-bold mb-3">Performance Optimization</h3>
+                        <p class="text-muted mb-6 leading-relaxed flex-grow">
+                            Boost corporate application and internal system performance. I identify bottlenecks,
+                            optimize processes, and implement AI-driven solutions for significant speed and efficiency
+                            enhancements.
+                        </p>
+                        <a href="#contact" class="text-link">Learn More <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+                    <div class="card card-hover fade-in p-8 flex flex-col">
+                        <div class="icon-tile mb-6"><i class="fas fa-brain"></i></div>
+                        <h3 class="text-2xl font-bold mb-3">AI Chatbots & Assistants</h3>
+                        <p class="text-muted mb-6 leading-relaxed flex-grow">
+                            Design, implementation, and optimization of scalable AI chatbots and Copilot-style
+                            assistants. Create powerful tools to enhance customer service and streamline operations.
+                        </p>
+                        <a href="#contact" class="text-link">Learn More <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+                    <div class="card card-hover fade-in p-8 flex flex-col">
+                        <div class="icon-tile mb-6"><i class="fas fa-archive"></i></div>
+                        <h3 class="text-2xl font-bold mb-3">Intelligent Document Repositories</h3>
+                        <p class="text-muted mb-6 leading-relaxed flex-grow">
+                            Implementation of advanced Retrieval-Augmented Generation (RAG) systems for optimal
+                            corporate documentation management. Make knowledge easily accessible and actionable.
+                        </p>
+                        <a href="#contact" class="text-link">Learn More <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="py-16 md:py-24 bg-surface-2 border-y border-line">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <p class="kicker mb-3">Results</p>
+                    <h2 class="section-title mb-4">Measurable Impact</h2>
+                    <p class="lead">Demonstrable results showcasing the transformative power of AI solutions.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    <div class="card fade-in p-5 md:p-6">
+                        <span class="stat block text-4xl md:text-5xl mb-3">100K+</span>
+                        <span class="block text-sm md:text-base text-muted">Users on Governed Enterprise AI</span>
+                    </div>
+                    <div class="card fade-in p-5 md:p-6" style="transition-delay: 0.1s">
+                        <span class="stat block text-4xl md:text-5xl mb-3">70%</span>
+                        <span class="block text-sm md:text-base text-muted">Infrastructure Efficiency Up</span>
+                    </div>
+                    <div class="card fade-in p-5 md:p-6" style="transition-delay: 0.2s">
+                        <span class="stat block text-4xl md:text-5xl mb-3">40K+</span>
+                        <span class="block text-sm md:text-base text-muted">Employees Served by Enterprise RAG</span>
+                    </div>
+                    <div class="card fade-in p-5 md:p-6" style="transition-delay: 0.3s">
+                        <span class="stat block text-4xl md:text-5xl mb-3">15+</span>
+                        <span class="block text-sm md:text-base text-muted">Enterprise Transformations</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="white-papers" class="py-16 md:py-24 bg-paper">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+                    <div class="lg:col-span-4">
+                        <p class="kicker mb-3">Guides</p>
+                        <h2 class="section-title mb-4">White Papers</h2>
+                        <p class="lead">
+                            Practical guides and frameworks from my work taking enterprise AI from pilot to production.
+                        </p>
+                    </div>
+                    <!-- To add a white paper: drop the PDF and its cover PNG in /white-papers and copy an <article> below -->
+                    <div class="lg:col-span-8 space-y-8">
+                        <article class="card fade-in overflow-hidden flex flex-col sm:flex-row">
+                            <a
+                                href="../white-papers/del-piloto-a-produccion-en-azure.pdf"
+                                target="_blank"
+                                class="sm:w-56 flex-shrink-0 bg-ink-900"
+                            >
+                                <img
+                                    src="../white-papers/del-piloto-a-produccion-en-azure.png"
+                                    alt="Cover: Del piloto a producción en Azure"
+                                    class="w-full h-full object-cover aspect-[4/5]"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="p-6 md:p-8 flex flex-col">
+                                <p class="mono text-sm text-subtle mb-2">October 2026 · 12 pages · Spanish</p>
+                                <h3 class="text-2xl font-bold mb-3">Del piloto a producción en Azure</h3>
+                                <p class="text-muted mb-6 leading-relaxed flex-grow">
+                                    A practical guide and checklist for taking a generative AI app from pilot to production
+                                    in a corporate Azure landing zone: the three phases and what to promise in each, a
+                                    12-dimension gap map, 20 go-live checks, cost by design, measurable quality, what to
+                                    bring to security and the steering committee, and AI Act Article 50 by role.
+                                </p>
+                                <div class="flex flex-wrap items-center gap-5">
+                                    <a
+                                        href="../white-papers/del-piloto-a-produccion-en-azure.pdf"
+                                        target="_blank"
+                                        class="btn btn-primary px-5 py-2.5"
+                                        >Read PDF <i class="fas fa-file-pdf"></i
+                                    ></a>
+                                    <a href="../white-papers/del-piloto-a-produccion-en-azure.pdf" download class="text-link"
+                                        >Download <i class="fas fa-download ml-1"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section dark grid-bg py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                    <div class="lg:col-span-6">
+                        <p class="kicker mb-3">Next step</p>
+                        <h2 class="section-title mb-4">Ready to Revolutionize Your Organization?</h2>
+                        <p class="lead max-w-xl">
+                            Book a free 30-minute strategy session to discuss how custom AI solutions can address
+                            your specific business challenges and drive innovation.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <div class="card p-6 md:p-8">
+                            <a
+                                href="https://calendly.com/carlos-perez-sechi/30min"
+                                class="cta-banner flex items-center gap-5 p-5 md:p-6"
+                            >
+                                <span class="icon-tile !bg-white/20 !text-white"><i class="fas fa-calendar-check"></i></span>
+                                <span class="text-lg md:text-xl font-bold">Schedule Your Consultation Now</span>
+                                <i class="fas fa-arrow-right ml-auto text-xl"></i>
+                            </a>
+                            <div class="mt-8 space-y-4">
+                                <a
+                                    href="mailto:carlos@perez-sechi.com"
+                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fas fa-envelope"></i></span>
+                                    carlos@perez-sechi.com
+                                </a>
+                                <a
+                                    href="tel:+34605566929"
+                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fas fa-phone"></i></span>
+                                    +34 605 566 929
+                                </a>
+                                <a
+                                    href="https://linkedin.com/in/perez-sechi"
+                                    target="_blank"
+                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fab fa-linkedin"></i></span>
+                                    LinkedIn Profile
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-paper">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="max-w-xl">
+                        <p class="kicker mb-3">Contact</p>
+                        <h2 class="section-title mb-4">Start the Conversation</h2>
+                        <p class="lead">
+                            Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo
+                            or strategy session.
+                        </p>
+                    </div>
+                    <div class="card p-8 md:p-10">
+                        <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold mb-1">Full Name</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="Your Name"
+                                    required
+                                    class="field"
+                                />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-semibold mb-1">Email Address</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Your Email"
+                                    required
+                                    class="field"
+                                />
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-semibold mb-1"
+                                    >Service of Interest</label
+                                >
+                                <select name="service" id="service" required class="field appearance-none">
+                                    <option value="" disabled selected>Select Service</option>
+                                    <option value="Performance Optimization">Performance Optimization</option>
+                                    <option value="AI Chatbots">AI Chatbots & Assistants</option>
+                                    <option value="Intelligent Document Repositories">
+                                        Intelligent Document Repositories
+                                    </option>
+                                    <option value="Custom Solution">Custom AI Solution</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-semibold mb-1">Project Details</label>
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    rows="5"
+                                    placeholder="Tell me about your project needs..."
+                                    required
+                                    class="field"
+                                ></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary w-full px-6 py-3 text-lg">
+                                    Request Consultation <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-ink-950 text-inv py-10">
+            <div
+                class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-5 text-center sm:text-left"
+            >
+                <span class="monogram" aria-hidden="true"></span>
+                <div class="leading-tight">
+                    <p class="font-bold text-white">Carlos I. Pérez-Sechi</p>
+                    <p class="text-sm text-inv-muted mt-1">Pioneering AI Solutions for a Smarter Future.</p>
+                </div>
+                <p class="sm:ml-auto mono text-sm text-inv-subtle">
+                    &copy; <span id="currentYear"></span> All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Intersection Observer for fade-in animations
+            document.addEventListener('DOMContentLoaded', function () {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('active');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.1,
+                    }
+                );
+
+                document.querySelectorAll('.fade-in').forEach((element) => {
+                    observer.observe(element);
+                });
+
+                // Keep the visitor on the same section when switching language
+                document.querySelectorAll('.lang-switch a').forEach((link) => {
+                    link.addEventListener('click', () => {
+                        link.hash = window.location.hash;
+                    });
+                });
+
+                // Mobile menu toggle
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (mobileMenu.classList.contains('hidden')) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        } else {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        }
+                    });
+                }
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach((link) => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            _linkedin_partner_id = '8206961';
+            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        </script>
+        <script type="text/javascript">
+            (function (l) {
+                if (!l) {
+                    window.lintrk = function (a, b) {
+                        window.lintrk.q.push([a, b]);
+                    };
+                    window.lintrk.q = [];
+                }
+                var s = document.getElementsByTagName('script')[0];
+                var b = document.createElement('script');
+                b.type = 'text/javascript';
+                b.async = true;
+                b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+                s.parentNode.insertBefore(b, s);
+            })(window.lintrk);
+        </script>
+        <noscript>
+            <img
+                height="1"
+                width="1"
+                style="display: none"
+                alt=""
+                src="https://px.ads.linkedin.com/collect/?pid=8206961&fmt=gif"
+            />
+        </noscript>
+    </body>
+</html>

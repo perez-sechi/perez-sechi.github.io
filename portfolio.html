@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio - Carlos I. Pérez-Sechi</title>
+        <title>Porfolio - Carlos I. Pérez-Sechi</title>
         <meta
             name="description"
-            content="Portfolio and detailed experience of Carlos I. Pérez-Sechi, showcasing AI projects, LLM implementations, skills, education, awards, and digital transformation successes."
+            content="Porfolio y experiencia detallada de Carlos I. Pérez-Sechi: proyectos de IA, implantaciones de LLM, competencias, formación, premios y casos de éxito en transformación digital."
         />
         <meta
             name="keywords"
-            content="AI portfolio, LLM projects, data science projects, digital transformation examples, Carlos I. Pérez-Sechi projects, AI skills, AI experience, AI education, AI news, AI updates"
+            content="porfolio de IA, proyectos LLM, proyectos de ciencia de datos, casos de transformación digital, proyectos de Carlos I. Pérez-Sechi, competencias en IA, experiencia en IA, formación en IA, novedades de IA"
         />
         <meta name="author" content="Carlos I. Pérez-Sechi" />
+        <link rel="canonical" href="https://perez-sechi.com/portfolio.html" />
+        <link rel="alternate" hreflang="es" href="https://perez-sechi.com/portfolio.html" />
+        <link rel="alternate" hreflang="en" href="https://perez-sechi.com/en/portfolio.html" />
+        <link rel="alternate" hreflang="x-default" href="https://perez-sechi.com/portfolio.html" />
 
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="js/tailwind-config.js"></script>
@@ -36,47 +40,51 @@
                     <a href="index.html" class="flex-shrink-0">
                         <img src="./logo.svg" alt="perez-sechi" class="h-9 w-auto" />
                     </a>
-                    <nav class="hidden lg:flex lg:items-center lg:space-x-1 xl:space-x-4">
-                        <a href="index.html#services" class="nav-link px-1.5 xl:px-2 py-2">Services</a>
-                        <a href="index.html#results" class="nav-link px-1.5 xl:px-2 py-2">Results</a>
-                        <a href="index.html#white-papers" class="nav-link px-1.5 xl:px-2 py-2">White Papers</a>
-                        <a href="portfolio.html#skills" class="nav-link px-1.5 xl:px-2 py-2">Core Competencies</a>
-                        <a href="portfolio.html#experience" class="nav-link px-1.5 xl:px-2 py-2">Success Stories</a>
-                        <a href="portfolio.html" class="nav-link px-1.5 xl:px-2 py-2">Portfolio</a>
+                    <nav class="hidden xl:flex xl:items-center xl:ml-auto xl:space-x-4">
+                        <a href="index.html#services" class="nav-link px-2 py-2">Servicios</a>
+                        <a href="index.html#results" class="nav-link px-2 py-2">Resultados</a>
+                        <a href="index.html#white-papers" class="nav-link px-2 py-2">White papers</a>
+                        <a href="portfolio.html#skills" class="nav-link px-2 py-2">Competencias</a>
+                        <a href="portfolio.html#experience" class="nav-link px-2 py-2">Casos de éxito</a>
+                        <a href="portfolio.html" class="nav-link px-2 py-2">Porfolio</a>
                         <a
                             href="https://calendly.com/carlos-perez-sechi/30min"
                             class="btn btn-primary px-4 py-2 text-sm"
-                            >Book a session</a
+                            >Reservar sesión</a
                         >
-                        <a href="index.html#contact" class="btn btn-outline px-4 py-2 text-sm">Contact</a>
+                        <a href="index.html#contact" class="btn btn-outline px-4 py-2 text-sm">Contacto</a>
                     </nav>
-                    <div class="lg:hidden">
+                    <div class="flex items-center gap-4 xl:ml-6">
+                        <div class="lang-switch" role="group" aria-label="Idioma">
+                            <a href="portfolio.html" hreflang="es" lang="es" aria-current="page">ES</a>
+                            <a href="en/portfolio.html" hreflang="en" lang="en">EN</a>
+                        </div>
                         <button
                             id="mobile-menu-button"
-                            class="text-muted hover:text-main focus:outline-none"
-                            aria-label="Toggle menu"
+                            class="xl:hidden text-muted hover:text-main focus:outline-none"
+                            aria-label="Abrir o cerrar el menú"
                         >
                             <i class="fas fa-bars text-2xl"></i>
                         </button>
                     </div>
                 </div>
             </div>
-            <div id="mobile-menu" class="lg:hidden hidden bg-paper border-t border-line">
-                <a href="index.html#services" class="nav-link block px-4 py-3 hover:bg-surface-2">Services</a>
-                <a href="index.html#results" class="nav-link block px-4 py-3 hover:bg-surface-2">Results</a>
-                <a href="index.html#white-papers" class="nav-link block px-4 py-3 hover:bg-surface-2">White Papers</a>
-                <a href="portfolio.html#skills" class="nav-link block px-4 py-3 hover:bg-surface-2">Core Competencies</a>
+            <div id="mobile-menu" class="xl:hidden hidden bg-paper border-t border-line">
+                <a href="index.html#services" class="nav-link block px-4 py-3 hover:bg-surface-2">Servicios</a>
+                <a href="index.html#results" class="nav-link block px-4 py-3 hover:bg-surface-2">Resultados</a>
+                <a href="index.html#white-papers" class="nav-link block px-4 py-3 hover:bg-surface-2">White papers</a>
+                <a href="portfolio.html#skills" class="nav-link block px-4 py-3 hover:bg-surface-2">Competencias</a>
                 <a href="portfolio.html#experience" class="nav-link block px-4 py-3 hover:bg-surface-2"
-                    >Success Stories</a
+                    >Casos de éxito</a
                 >
-                <a href="portfolio.html" class="nav-link block px-4 py-3 hover:bg-surface-2">Portfolio</a>
+                <a href="portfolio.html" class="nav-link block px-4 py-3 hover:bg-surface-2">Porfolio</a>
                 <div class="px-4 pt-2 pb-4 space-y-3">
                     <a
                         href="https://calendly.com/carlos-perez-sechi/30min"
                         class="btn btn-primary w-full px-4 py-3 text-sm"
-                        >Book a session</a
+                        >Reservar sesión</a
                     >
-                    <a href="#contact" class="btn btn-outline w-full px-4 py-3 text-sm">Contact</a>
+                    <a href="#contact" class="btn btn-outline w-full px-4 py-3 text-sm">Contacto</a>
                 </div>
             </div>
         </header>
@@ -84,27 +92,27 @@
         <section id="updates" class="py-16 md:py-24 bg-surface-2 border-b border-line">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Updates</p>
-                    <h2 class="section-title mb-4">Latest Updates & Insights</h2>
+                    <p class="kicker mb-3">Novedades</p>
+                    <h2 class="section-title mb-4">Últimas novedades y reflexiones</h2>
                     <p class="lead">
-                        Stay informed with my latest articles, project milestones, and thoughts on AI and technology.
+                        Mis últimos artículos, hitos de proyectos y reflexiones sobre IA y tecnología.
                     </p>
                 </div>
                 <div id="updates-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8"></div>
                 <div class="pagination flex justify-center gap-4">
                     <button
                         id="load-prev"
-                        aria-label="Previous Updates"
+                        aria-label="Novedades anteriores"
                         class="btn btn-outline px-4 py-2 disabled:opacity-40 disabled:cursor-not-allowed"
                     >
-                        <i class="fas fa-chevron-left"></i>Prev
+                        <i class="fas fa-chevron-left"></i>Anteriores
                     </button>
                     <button
                         id="load-next"
-                        aria-label="Next Updates"
+                        aria-label="Novedades siguientes"
                         class="btn btn-outline px-4 py-2 disabled:opacity-40 disabled:cursor-not-allowed"
                     >
-                        Next<i class="fas fa-chevron-right"></i>
+                        Siguientes<i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
@@ -113,76 +121,77 @@
         <section id="skills" class="py-16 md:py-24 bg-paper">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Skills</p>
-                    <h2 class="section-title mb-4">Core Competencies</h2>
+                    <p class="kicker mb-3">Competencias</p>
+                    <h2 class="section-title mb-4">Competencias clave</h2>
                     <p class="lead">
-                        A blend of technical expertise, strategic thinking, and leadership to drive innovation.
+                        Una combinación de conocimiento técnico, visión estratégica y liderazgo para impulsar la
+                        innovación.
                     </p>
                 </div>
                 <div class="grid lg:grid-cols-3 gap-8">
                     <div class="card fade-in p-6 md:p-8">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="icon-tile"><i class="fas fa-layer-group"></i></span>
-                            <h3 class="text-xl font-bold">Technology & Tools</h3>
+                            <h3 class="text-xl font-bold">Tecnología y herramientas</h3>
                         </div>
                         <ul class="bullet-list space-y-3 text-muted">
                             <li>
-                                <b class="text-main">Generative AI:</b> LLMs, RAG, NLP, Prompt Engineering, AI Chatbots & Virtual Assistants
+                                <b class="text-main">IA generativa:</b> LLM, RAG, PLN, ingeniería de prompts, chatbots y asistentes virtuales de IA
                             </li>
                             <li>
-                                <b class="text-main">AI Frameworks & APIs:</b> LangChain, LlamaIndex, OpenAI / GPT API
+                                <b class="text-main">Frameworks y APIs de IA:</b> LangChain, LlamaIndex, OpenAI / GPT API
                             </li>
                             <li>
-                                <b class="text-main">Machine Learning:</b> TensorFlow / PyTorch, AI Model Fine-Tuning, Model Training
+                                <b class="text-main">Machine learning:</b> TensorFlow / PyTorch, fine-tuning de modelos de IA, entrenamiento de modelos
                             </li>
-                            <li><b class="text-main">MLOps & LLMOps</b></li>
-                            <li><b class="text-main">Cloud Computing:</b> AWS, Azure, GCP, Azure Functions</li>
+                            <li><b class="text-main">MLOps y LLMOps</b></li>
+                            <li><b class="text-main">Cloud computing:</b> AWS, Azure, GCP, Azure Functions</li>
                             <li>
                                 <b class="text-main">DevOps:</b> Kubernetes, Docker, Jenkins, Ansible, Puppet, Linux
                             </li>
-                            <li><b class="text-main">Programming:</b> Python, TypeScript, Java, C#, .NET, PHP</li>
-                            <li><b class="text-main">Frameworks & Tools:</b> AngularJS, Symfony, Maven, Jasmine</li>
-                            <li><b class="text-main">Data:</b> MongoDB, MySQL, OLAP, Data Analysis</li>
-                            <li><b class="text-main">APIs & Formats:</b> REST, JSON, XML</li>
+                            <li><b class="text-main">Programación:</b> Python, TypeScript, Java, C#, .NET, PHP</li>
+                            <li><b class="text-main">Frameworks y herramientas:</b> AngularJS, Symfony, Maven, Jasmine</li>
+                            <li><b class="text-main">Datos:</b> MongoDB, MySQL, OLAP, análisis de datos</li>
+                            <li><b class="text-main">APIs y formatos:</b> REST, JSON, XML</li>
                         </ul>
                     </div>
                     <div class="card fade-in p-6 md:p-8" style="transition-delay: 0.1s">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="icon-tile"><i class="fas fa-diagram-project"></i></span>
-                            <h3 class="text-xl font-bold">Methodologies & Operations</h3>
+                            <h3 class="text-xl font-bold">Metodologías y operaciones</h3>
                         </div>
                         <ul class="bullet-list space-y-3 text-muted">
-                            <li><b class="text-main">Agile:</b> Scrum, Kanban, Agile Project Management</li>
-                            <li><b class="text-main">Software Development Methodologies</b></li>
-                            <li><b class="text-main">Software Architecture</b></li>
-                            <li><b class="text-main">Technical Requirements</b></li>
-                            <li><b class="text-main">Software Quality Assurance</b></li>
-                            <li><b class="text-main">Information Security</b></li>
-                            <li><b class="text-main">Infrastructure Management</b></li>
-                            <li><b class="text-main">Project Engineering & Tracking</b></li>
-                            <li><b class="text-main">Open Source Software</b></li>
-                            <li><b class="text-main">User Experience</b></li>
+                            <li><b class="text-main">Agile:</b> Scrum, Kanban, gestión ágil de proyectos</li>
+                            <li><b class="text-main">Metodologías de desarrollo de software</b></li>
+                            <li><b class="text-main">Arquitectura de software</b></li>
+                            <li><b class="text-main">Requisitos técnicos</b></li>
+                            <li><b class="text-main">Aseguramiento de la calidad del software</b></li>
+                            <li><b class="text-main">Seguridad de la información</b></li>
+                            <li><b class="text-main">Gestión de infraestructuras</b></li>
+                            <li><b class="text-main">Ingeniería y seguimiento de proyectos</b></li>
+                            <li><b class="text-main">Software de código abierto</b></li>
+                            <li><b class="text-main">Experiencia de usuario</b></li>
                         </ul>
                     </div>
                     <div class="card fade-in p-6 md:p-8" style="transition-delay: 0.2s">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="icon-tile"><i class="fas fa-compass"></i></span>
-                            <h3 class="text-xl font-bold">Leadership & Strategy</h3>
+                            <h3 class="text-xl font-bold">Liderazgo y estrategia</h3>
                         </div>
                         <ul class="bullet-list space-y-3 text-muted">
-                            <li><b class="text-main">Digital Transformation:</b> Business & HR Transformation</li>
-                            <li><b class="text-main">Business Strategy:</b> Market & Marketing Strategy</li>
+                            <li><b class="text-main">Transformación digital:</b> transformación del negocio y de RR. HH.</li>
+                            <li><b class="text-main">Estrategia de negocio:</b> estrategia de mercado y de marketing</li>
                             <li>
-                                <b class="text-main">Business Development:</b> B2B, Sales, Global Account Management, CRM
+                                <b class="text-main">Desarrollo de negocio:</b> B2B, ventas, gestión de cuentas globales, CRM
                             </li>
-                            <li><b class="text-main">Product Management</b></li>
-                            <li><b class="text-main">International Project Management</b></li>
+                            <li><b class="text-main">Gestión de producto</b></li>
+                            <li><b class="text-main">Gestión de proyectos internacionales</b></li>
                             <li>
-                                <b class="text-main">Team Leadership:</b> Multidisciplinary Teams, Team Building & Performance
+                                <b class="text-main">Liderazgo de equipos:</b> equipos multidisciplinares, formación y rendimiento de equipos
                             </li>
-                            <li><b class="text-main">Mentoring & Employee Training</b></li>
-                            <li><b class="text-main">Community Building</b></li>
-                            <li><b class="text-main">Negotiation</b></li>
+                            <li><b class="text-main">Mentoring y formación de empleados</b></li>
+                            <li><b class="text-main">Creación de comunidades</b></li>
+                            <li><b class="text-main">Negociación</b></li>
                         </ul>
                     </div>
                 </div>
@@ -192,14 +201,14 @@
         <section id="languages" class="py-16 md:py-24 bg-surface-2 border-y border-line">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Communication</p>
-                    <h2 class="section-title mb-4">Languages</h2>
+                    <p class="kicker mb-3">Comunicación</p>
+                    <h2 class="section-title mb-4">Idiomas</h2>
                 </div>
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                     <div class="card fade-in p-5 md:p-6 flex flex-col">
-                        <h3 class="text-xl font-bold mb-3">Spanish</h3>
-                        <span class="chip self-start">Native</span>
-                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Proficiency 5 of 5">
+                        <h3 class="text-xl font-bold mb-3">Español</h3>
+                        <span class="chip self-start">Nativo</span>
+                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Nivel 5 de 5">
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
@@ -208,9 +217,9 @@
                         </div>
                     </div>
                     <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.1s">
-                        <h3 class="text-xl font-bold mb-3">English</h3>
-                        <span class="chip self-start">Full Professional</span>
-                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Proficiency 4 of 5">
+                        <h3 class="text-xl font-bold mb-3">Inglés</h3>
+                        <span class="chip self-start">Profesional completo</span>
+                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Nivel 4 de 5">
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
@@ -219,9 +228,9 @@
                         </div>
                     </div>
                     <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.2s">
-                        <h3 class="text-xl font-bold mb-3">French</h3>
-                        <span class="chip self-start">Professional Working</span>
-                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Proficiency 3 of 5">
+                        <h3 class="text-xl font-bold mb-3">Francés</h3>
+                        <span class="chip self-start">Profesional</span>
+                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Nivel 3 de 5">
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
@@ -230,9 +239,9 @@
                         </div>
                     </div>
                     <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.3s">
-                        <h3 class="text-xl font-bold mb-3">German</h3>
-                        <span class="chip self-start">Limited Working</span>
-                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Proficiency 2 of 5">
+                        <h3 class="text-xl font-bold mb-3">Alemán</h3>
+                        <span class="chip self-start">Profesional limitado</span>
+                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Nivel 2 de 5">
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
                             <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
                             <span class="h-1.5 flex-1 rounded-full bg-line"></span>
@@ -247,12 +256,12 @@
         <section id="experience" class="py-16 md:py-24 bg-paper">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Experience</p>
-                    <h2 class="section-title mb-4">Success Stories & Experience</h2>
+                    <p class="kicker mb-3">Experiencia</p>
+                    <h2 class="section-title mb-4">Casos de éxito y experiencia</h2>
                     <p class="lead">
-                        As an AI consultant and technology leader, I've helped organizations across industries implement
-                        cutting-edge solutions that drive measurable business outcomes. Here's how I've transformed
-                        challenges into opportunities.
+                        Como consultor de IA y líder tecnológico, he ayudado a organizaciones de distintos sectores a
+                        implantar soluciones punteras que generan resultados de negocio medibles. Así he convertido
+                        retos en oportunidades.
                     </p>
                 </div>
                 <div class="space-y-8">
@@ -262,50 +271,50 @@
                         <div class="flex-shrink-0 md:w-1/4">
                             <img
                                 src="img/brand/simbolo-negro.svg"
-                                alt="perez-sechi Logo"
+                                alt="Logotipo de perez-sechi"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=perez-sechi&font=inter'; this.onerror=null;"
                             />
                             <h3 class="text-xl font-extrabold leading-tight">perez-sechi</h3>
-                            <p class="font-semibold text-brand-600 mt-1">AI Solutions Consultant | Freelance</p>
-                            <p class="mono text-xs text-subtle mt-2">Madrid (Remote) | Mar 2025 – Present</p>
+                            <p class="font-semibold text-brand-600 mt-1">Consultor de soluciones de IA | Freelance</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid (remoto) | mar. 2025 – actualidad</p>
                         </div>
                         <div class="flex-grow">
                             <h4 class="text-2xl font-extrabold tracking-tight mb-3">
-                                Generative AI: From Pilot to Production
+                                IA generativa: del piloto a producción
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
-                                I help enterprises architect, assess, and industrialize advanced AI and LLM solutions.
-                                From scaling proof-of-concepts into production-grade systems to ensuring rigorous
-                                corporate compliance, I specialize in transforming organizations through secure and
-                                reliable AI-driven innovation.
+                                Ayudo a las empresas a diseñar, evaluar e industrializar soluciones avanzadas de IA y
+                                LLM. Desde escalar pruebas de concepto a sistemas de nivel productivo hasta garantizar
+                                un cumplimiento corporativo riguroso, me especializo en transformar organizaciones
+                                mediante una innovación basada en IA segura y fiable.
                             </p>
                             <div class="mb-6">
-                                <h5 class="label mb-3">Recent Projects</h5>
+                                <h5 class="label mb-3">Proyectos recientes</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        <b>Pharma Compliance & AI Marketing Governance (100,000+ users):</b> Led data
-                                        governance and regulatory compliance frameworks for enterprise AI-based systems,
-                                        managing the supply chain for generative AI-supported marketing assets,
-                                        evaluating audiovisual content, and verifying Product Information Management
-                                        (PIM) processes.
+                                        <b>Cumplimiento farmacéutico y gobierno del marketing con IA (más de 100.000
+                                        usuarios):</b> lideré los marcos de gobierno del dato y cumplimiento normativo de
+                                        sistemas corporativos basados en IA: la cadena de suministro de activos de
+                                        marketing apoyados en IA generativa, la evaluación de contenido audiovisual y la
+                                        verificación de los procesos de gestión de información de producto (PIM).
                                     </li>
                                     <li>
-                                        <b>Enterprise Chatbot Industrialization (70,000+ users):</b> Industrialized the
-                                        system architecture for an enterprise chatbot, migrated the initial PoC to a
-                                        fully scalable cloud environment, and implemented strict LLM governance
-                                        protocols to ensure safety and system traceability.
+                                        <b>Industrialización de un chatbot corporativo (más de 70.000 usuarios):</b>
+                                        industrialicé la arquitectura del chatbot, migré la PoC inicial a un entorno cloud
+                                        plenamente escalable e implanté protocolos estrictos de gobierno de LLM para
+                                        garantizar la seguridad y la trazabilidad del sistema.
                                     </li>
                                     <li>
-                                        <b>Intelligent Document Repositories & RAG (40,000+ employees):</b> Spearheaded
-                                        a Retrieval-Augmented Generation (RAG) application using NoSQL databases for
-                                        document retrieval, industrializing the LLM-powered chat system with rigorous
-                                        AI-evaluation and risk tracing protocols.
+                                        <b>Repositorios documentales inteligentes y RAG (más de 40.000 empleados):</b>
+                                        lideré una aplicación de generación aumentada por recuperación (RAG) con bases de
+                                        datos NoSQL para la recuperación de documentos, e industrialicé el chat basado en
+                                        LLM con protocolos rigurosos de evaluación de la IA y trazabilidad de riesgos.
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <h5 class="label mb-3">Tecnologías y competencias</h5>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="chip">Azure AI Foundry</span>
                                     <span class="chip">Azure OpenAI</span>
@@ -332,70 +341,72 @@
                         <div class="flex-shrink-0 md:w-1/4">
                             <img
                                 src="img/bicg_logo.jpg"
-                                alt="Bicg Logo"
+                                alt="Logotipo de Bicg"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=bicg&font=inter'; this.onerror=null;"
                             />
                             <h3 class="text-xl font-extrabold leading-tight">Bicg</h3>
-                            <p class="font-semibold text-brand-600 mt-1">Digital Transformation Manager</p>
-                            <p class="mono text-xs text-subtle mt-2">Madrid (Hybrid) | Aug 2019 – Mar 2025</p>
+                            <p class="font-semibold text-brand-600 mt-1">Responsable de transformación digital</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid (híbrido) | ago. 2019 – mar. 2025</p>
                         </div>
                         <div class="flex-grow">
                             <h4 class="text-2xl font-extrabold tracking-tight mb-3">
-                                Enterprise Digital Transformation Consultancy
+                                Consultoría de transformación digital empresarial
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
-                                Consulted with Fortune 500 clients to implement AI-driven digital transformation
-                                initiatives that enhanced data analytics capabilities and streamlined operations.
+                                Asesoré a clientes de la lista Fortune 500 en iniciativas de transformación digital
+                                basadas en IA que reforzaron su capacidad de analítica de datos y agilizaron sus
+                                operaciones.
                             </p>
                             <div class="mb-6">
-                                <h5 class="label mb-3">How I Helped</h5>
+                                <h5 class="label mb-3">Cómo ayudé</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Developed custom AI models for real estate optimization and employee
-                                        relationship mapping, delivering actionable insights for strategic
-                                        decision-making.
+                                        Desarrollé modelos de IA a medida para la optimización inmobiliaria y el mapeo de
+                                        relaciones entre empleados, con información accionable para la toma de
+                                        decisiones estratégicas.
                                     </li>
                                     <li>
-                                        Created interactive data visualization dashboards that made complex information
-                                        accessible to 50,000+ users across client organizations.
+                                        Creé cuadros de mando interactivos que hicieron accesible información compleja a
+                                        más de 50.000 usuarios de las organizaciones cliente.
                                     </li>
                                     <li>
-                                        Implemented advanced customer segmentation using machine learning algorithms,
-                                        enabling targeted marketing strategies.
+                                        Implanté una segmentación avanzada de clientes con algoritmos de machine
+                                        learning que hizo posibles estrategias de marketing segmentadas.
                                     </li>
                                     <li>
-                                        Automated routine HR processes with conversational AI, allowing client teams to
-                                        focus on high-value activities.
+                                        Automaticé procesos rutinarios de RR. HH. con IA conversacional para que los
+                                        equipos del cliente se centraran en actividades de alto valor.
                                     </li>
                                 </ul>
                             </div>
                             <div class="mb-6">
-                                <h5 class="label mb-3">Outcomes</h5>
+                                <h5 class="label mb-3">Resultados</h5>
                                 <ul class="bullet-list text-muted space-y-2">
-                                    <li>15+ successful transformation projects delivered on time and within budget.</li>
+                                    <li>Más de 15 proyectos de transformación entregados en plazo y dentro del presupuesto.</li>
                                     <li>
-                                        20-30% productivity improvement through optimized collaborative environments.
+                                        Mejora de la productividad del 20-30 % gracias a entornos colaborativos
+                                        optimizados.
                                     </li>
                                     <li>
-                                        Empowered 50,000+ users with data-driven insights for better decision-making.
+                                        Más de 50.000 usuarios con información basada en datos para decidir mejor.
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <h5 class="label mb-3">Tecnologías y competencias</h5>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="chip">Retrieval-Augmented Generation (RAG)</span>
-                                    <span class="chip">Generative AI</span>
-                                    <span class="chip">Large Language Models (LLM)</span>
+                                    <span class="chip">Generación aumentada por recuperación (RAG)</span>
+                                    <span class="chip">IA generativa</span>
+                                    <span class="chip">Modelos de lenguaje de gran tamaño (LLM)</span>
                                     <span class="chip">LLMOps</span>
                                     <span class="chip">MLOps</span>
-                                    <span class="chip">Prompt Engineering</span>
-                                    <span class="chip">Model Training</span>
+                                    <span class="chip">Ingeniería de prompts</span>
+                                    <span class="chip">Entrenamiento de modelos</span>
                                     <span class="chip">Azure Functions</span>
                                     <span class="chip">TypeScript</span>
-                                    <span class="chip">REST APIs</span>
-                                    <span class="chip">Team Leadership</span>
+                                    <span class="chip">APIs REST</span>
+                                    <span class="chip">Liderazgo de equipos</span>
                                     <span class="chip">B2B</span>
                                 </div>
                             </div>
@@ -408,70 +419,70 @@
                         <div class="flex-shrink-0 md:w-1/4">
                             <img
                                 src="img/decathlon_logo.png"
-                                alt="Decathlon Logo"
+                                alt="Logotipo de Decathlon"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=Decathlon&font=inter'; this.onerror=null;"
                             />
                             <h3 class="text-xl font-extrabold leading-tight">Decathlon España</h3>
-                            <p class="font-semibold text-brand-600 mt-1">Project Manager</p>
-                            <p class="mono text-xs text-subtle mt-2">Madrid | Jun 2017 – Jul 2019</p>
+                            <p class="font-semibold text-brand-600 mt-1">Jefe de proyecto</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid | jun. 2017 – jul. 2019</p>
                         </div>
                         <div class="flex-grow">
                             <h4 class="text-2xl font-extrabold tracking-tight mb-3">
-                                Enterprise-Scale Digital Transformation Program
+                                Programa de transformación digital a escala empresarial
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
-                                Led Decathlon Spain's comprehensive digital transformation initiative, creating a
-                                tech-focused culture and implementing solutions that significantly enhanced operational
-                                efficiency.
+                                Lideré la iniciativa integral de transformación digital de Decathlon España: creé una
+                                cultura centrada en la tecnología e implanté soluciones que mejoraron notablemente la
+                                eficiencia operativa.
                             </p>
                             <div class="mb-6">
-                                <h5 class="label mb-3">How I Helped</h5>
+                                <h5 class="label mb-3">Cómo ayudé</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Established and nurtured an open-source community of 100+ developers, fostering
-                                        innovation and knowledge sharing.
+                                        Creé y dinamicé una comunidad open source de más de 100 desarrolladores que
+                                        impulsó la innovación y el intercambio de conocimiento.
                                     </li>
                                     <li>
-                                        Orchestrated full GDPR compliance implementation, protecting 5M+ customer
-                                        records and mitigating legal risks.
+                                        Coordiné la adaptación completa al RGPD, que protegió más de 5 millones de
+                                        registros de clientes y mitigó los riesgos legales.
                                     </li>
                                     <li>
-                                        Engineered data processing pipelines handling 1TB+ daily inventory data,
-                                        enabling real-time business insights.
+                                        Diseñé pipelines de procesamiento que gestionaban más de 1 TB diario de datos de
+                                        inventario y daban información de negocio en tiempo real.
                                     </li>
                                     <li>
-                                        Implemented containerized application deployment, dramatically improving
-                                        scalability and reliability.
+                                        Implanté el despliegue de aplicaciones en contenedores, con una mejora drástica
+                                        de la escalabilidad y la fiabilidad.
                                     </li>
                                     <li>
-                                        Introduced automated testing frameworks that reduced production incidents by
-                                        75%, improving customer experience.
+                                        Introduje frameworks de pruebas automatizadas que redujeron un 75 % las
+                                        incidencias en producción y mejoraron la experiencia del cliente.
                                     </li>
                                 </ul>
                             </div>
                             <div class="mb-6">
-                                <h5 class="label mb-3">Outcomes</h5>
+                                <h5 class="label mb-3">Resultados</h5>
                                 <ul class="bullet-list text-muted space-y-2">
-                                    <li>Created a sustainable tech community that continues to drive innovation.</li>
-                                    <li>Achieved full GDPR compliance with 80% reduction in data breach risk.</li>
+                                    <li>Una comunidad tecnológica sostenible que sigue impulsando la innovación.</li>
+                                    <li>Cumplimiento total del RGPD con un 80 % menos de riesgo de brechas de datos.</li>
                                     <li>
-                                        Delivered 70% infrastructure efficiency improvements, reducing operational
-                                        costs.
+                                        Mejoras del 70 % en la eficiencia de la infraestructura, con menores costes
+                                        operativos.
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <h5 class="label mb-3">Tecnologías y competencias</h5>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="chip">Project Management</span>
-                                    <span class="chip">International Project Management</span>
-                                    <span class="chip">Product Management</span>
-                                    <span class="chip">Software Development Methodologies</span>
+                                    <span class="chip">Gestión de proyectos</span>
+                                    <span class="chip">Gestión de proyectos internacionales</span>
+                                    <span class="chip">Gestión de producto</span>
+                                    <span class="chip">Metodologías de desarrollo de software</span>
                                     <span class="chip">MLOps</span>
                                     <span class="chip">TypeScript</span>
-                                    <span class="chip">Multidisciplinary Team Leadership</span>
-                                    <span class="chip">Employee Training</span>
+                                    <span class="chip">Liderazgo de equipos multidisciplinares</span>
+                                    <span class="chip">Formación de empleados</span>
                                 </div>
                             </div>
                         </div>
@@ -483,63 +494,64 @@
                         <div class="flex-shrink-0 md:w-1/4">
                             <img
                                 src="img/decathlon_logo.png"
-                                alt="Decathlon Logo"
+                                alt="Logotipo de Decathlon"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=Decathlon&font=inter'; this.onerror=null;"
                             />
                             <h3 class="text-xl font-extrabold leading-tight">Decathlon España</h3>
-                            <p class="font-semibold text-brand-600 mt-1">DevOps Engineer</p>
-                            <p class="mono text-xs text-subtle mt-2">Madrid & Barcelona (Hybrid) | Feb 2015 – Jun 2017</p>
+                            <p class="font-semibold text-brand-600 mt-1">Ingeniero DevOps</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid y Barcelona (híbrido) | feb. 2015 – jun. 2017</p>
                         </div>
                         <div class="flex-grow">
                             <h4 class="text-2xl font-extrabold tracking-tight mb-3">
-                                Cloud Migration & System Modernization Project
+                                Migración a la nube y modernización de sistemas
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
-                                Guided Decathlon Spain through a complex legacy-to-cloud migration, implementing modern
-                                microservices architecture and developing critical workforce management systems.
+                                Guié a Decathlon España en una compleja migración de sistemas heredados a la nube, con
+                                una arquitectura moderna de microservicios y el desarrollo de sistemas críticos de
+                                gestión de plantilla.
                             </p>
                             <div class="mb-6">
-                                <h5 class="label mb-3">How I Helped</h5>
+                                <h5 class="label mb-3">Cómo ayudé</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Architected and executed migration from legacy monolith to AWS microservices
-                                        architecture with 99.999% reliability.
+                                        Diseñé y ejecuté la migración de un monolito heredado a una arquitectura de
+                                        microservicios en AWS con una fiabilidad del 99,999 %.
                                     </li>
                                     <li>
-                                        Created workforce planning solution that optimized scheduling for 13,000+
-                                        employees across multiple locations.
+                                        Creé una solución de planificación de plantilla que optimizó los turnos de más
+                                        de 13.000 empleados en múltiples centros.
                                     </li>
                                     <li>
-                                        Implemented modern CI/CD pipelines that accelerated deployment cycles from hours
-                                        to minutes.
+                                        Implanté pipelines de CI/CD modernos que redujeron los ciclos de despliegue de
+                                        horas a minutos.
                                     </li>
                                     <li>
-                                        Conducted cloud cost optimization analysis that identified significant savings
-                                        opportunities.
+                                        Realicé un análisis de optimización de costes cloud que identificó importantes
+                                        oportunidades de ahorro.
                                     </li>
                                 </ul>
                             </div>
                             <div class="mb-6">
-                                <h5 class="label mb-3">Outcomes</h5>
+                                <h5 class="label mb-3">Resultados</h5>
                                 <ul class="bullet-list text-muted space-y-2">
-                                    <li>300% improvement in deployment velocity through automated processes.</li>
-                                    <li>40% reduction in cloud infrastructure costs through optimization.</li>
-                                    <li>Seamless workforce management for 13,000+ employees nationwide.</li>
-                                    <li>Enhanced system stability with containerized, scalable architecture.</li>
+                                    <li>Velocidad de despliegue un 300 % mayor gracias a procesos automatizados.</li>
+                                    <li>Reducción del 40 % en los costes de infraestructura cloud gracias a la optimización.</li>
+                                    <li>Gestión fluida de la plantilla para más de 13.000 empleados en todo el país.</li>
+                                    <li>Mayor estabilidad del sistema con una arquitectura escalable basada en contenedores.</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <h5 class="label mb-3">Tecnologías y competencias</h5>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="chip">Amazon Web Services (AWS)</span>
                                     <span class="chip">Google Cloud Platform</span>
                                     <span class="chip">MongoDB</span>
                                     <span class="chip">TypeScript</span>
-                                    <span class="chip">REST APIs</span>
-                                    <span class="chip">Open Source Software</span>
-                                    <span class="chip">Digital Transformation</span>
-                                    <span class="chip">Community Building</span>
+                                    <span class="chip">APIs REST</span>
+                                    <span class="chip">Software de código abierto</span>
+                                    <span class="chip">Transformación digital</span>
+                                    <span class="chip">Creación de comunidades</span>
                                 </div>
                             </div>
                         </div>
@@ -551,63 +563,64 @@
                         <div class="flex-shrink-0 md:w-1/4">
                             <img
                                 src="img/sicpa_logo.png"
-                                alt="SICPA Logo"
+                                alt="Logotipo de SICPA"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=SICPA&font=inter'; this.onerror=null;"
                             />
                             <h3 class="text-xl font-extrabold leading-tight">SICPA</h3>
-                            <p class="font-semibold text-brand-600 mt-1">Software Engineer</p>
-                            <p class="mono text-xs text-subtle mt-2">Madrid | Mar 2013 – Feb 2015</p>
+                            <p class="font-semibold text-brand-600 mt-1">Ingeniero de software</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid | mar. 2013 – feb. 2015</p>
                         </div>
                         <div class="flex-grow">
                             <h4 class="text-2xl font-extrabold tracking-tight mb-3">
-                                Supply Chain Security & Traceability Platform
+                                Plataforma de seguridad y trazabilidad de la cadena de suministro
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
-                                Delivered mission-critical secure systems for government and enterprise clients,
-                                implementing advanced data visualization and security engineering that safeguarded vital
-                                supply chains against counterfeit risks.
+                                Entregué sistemas seguros de misión crítica para clientes gubernamentales y
+                                empresariales, con visualización avanzada de datos e ingeniería de seguridad que
+                                protegieron cadenas de suministro vitales frente a la falsificación.
                             </p>
                             <div class="mb-6">
-                                <h5 class="label mb-3">How I Helped</h5>
+                                <h5 class="label mb-3">Cómo ayudé</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Designed intuitive front-end interfaces for complex security/traceability
-                                        solutions, enhancing usability for government stakeholders.
+                                        Diseñé interfaces front-end intuitivas para soluciones complejas de seguridad y
+                                        trazabilidad, que mejoraron la usabilidad para los organismos públicos.
                                     </li>
                                     <li>
-                                        Engineered sophisticated product traceability dashboards with OLAP Cube
-                                        integration, providing real-time visibility into supply chain movements.
+                                        Desarrollé cuadros de mando avanzados de trazabilidad de producto integrados con
+                                        cubos OLAP, con visibilidad en tiempo real de los movimientos de la cadena de
+                                        suministro.
                                     </li>
                                     <li>
-                                        Introduced robust testing frameworks that improved code quality by 25%, ensuring
-                                        system reliability in critical applications.
+                                        Introduje frameworks de pruebas robustos que mejoraron un 25 % la calidad del
+                                        código y garantizaron la fiabilidad de aplicaciones críticas.
                                     </li>
                                     <li>
-                                        Optimized development lifecycle through structured methodologies, accelerating
-                                        time-to-market for security solutions.
+                                        Optimicé el ciclo de desarrollo con metodologías estructuradas, lo que aceleró el
+                                        time-to-market de las soluciones de seguridad.
                                     </li>
                                 </ul>
                             </div>
                             <div class="mb-6">
-                                <h5 class="label mb-3">Outcomes</h5>
+                                <h5 class="label mb-3">Resultados</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Enhanced system reliability reducing tracking errors by 15%, protecting client
-                                        revenue and reputation.
+                                        Mayor fiabilidad del sistema, con un 15 % menos de errores de seguimiento, que
+                                        protegió los ingresos y la reputación del cliente.
                                     </li>
                                     <li>
-                                        Standardized testing processes across 5 product teams, creating sustainable
-                                        quality assurance practices.
+                                        Procesos de pruebas estandarizados en 5 equipos de producto, con prácticas
+                                        sostenibles de aseguramiento de la calidad.
                                     </li>
                                     <li>
-                                        Strengthened supply chain security for national-level initiatives in multiple
-                                        countries.
+                                        Más seguridad en la cadena de suministro de iniciativas de ámbito nacional en
+                                        varios países.
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <h5 class="label mb-3">Tecnologías y competencias</h5>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="chip">AngularJS</span>
                                     <span class="chip">PHP</span>
@@ -615,10 +628,10 @@
                                     <span class="chip">MongoDB</span>
                                     <span class="chip">Linux</span>
                                     <span class="chip">OLAP</span>
-                                    <span class="chip">REST APIs</span>
-                                    <span class="chip">Information Security</span>
-                                    <span class="chip">Data Analysis</span>
-                                    <span class="chip">User Experience</span>
+                                    <span class="chip">APIs REST</span>
+                                    <span class="chip">Seguridad de la información</span>
+                                    <span class="chip">Análisis de datos</span>
+                                    <span class="chip">Experiencia de usuario</span>
                                 </div>
                             </div>
                         </div>
@@ -630,72 +643,72 @@
                         <div class="flex-shrink-0 md:w-1/4">
                             <img
                                 src="img/cef_logo.png"
-                                alt="CEF Logo"
+                                alt="Logotipo del CEF"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=CEF&font=inter'; this.onerror=null;"
                             />
                             <h3 class="text-xl font-extrabold leading-tight">Centro de Estudios Financieros (CEF)</h3>
-                            <p class="font-semibold text-brand-600 mt-1">Software Engineer</p>
-                            <p class="mono text-xs text-subtle mt-2">Madrid | Jan 2011 – Mar 2013</p>
+                            <p class="font-semibold text-brand-600 mt-1">Ingeniero de software</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid | ene. 2011 – mar. 2013</p>
                         </div>
                         <div class="flex-grow">
                             <h4 class="text-2xl font-extrabold tracking-tight mb-3">
-                                High-Traffic Career Portal & Educational Platform
+                                Portal de empleo de alto tráfico y plataforma educativa
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
-                                Partnered with this leading educational institution to develop and optimize a scalable
-                                career portal that connected thousands of students with employment opportunities while
-                                streamlining educational resource delivery.
+                                Colaboré con esta institución educativa de referencia para desarrollar y optimizar un
+                                portal de empleo escalable que conectó a miles de estudiantes con oportunidades
+                                laborales y agilizó la entrega de recursos formativos.
                             </p>
                             <div class="mb-6">
-                                <h5 class="label mb-3">How I Helped</h5>
+                                <h5 class="label mb-3">Cómo ayudé</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Architected and implemented a robust full-stack career portal capable of
-                                        handling 3,000+ concurrent users with zero downtime.
+                                        Diseñé e implementé un portal de empleo full-stack robusto, capaz de atender a
+                                        más de 3.000 usuarios simultáneos sin caídas.
                                     </li>
                                     <li>
-                                        Conducted comprehensive stakeholder workshops to gather precise requirements,
-                                        ensuring alignment with educational objectives.
+                                        Dirigí talleres con las partes interesadas para recoger requisitos precisos y
+                                        alinearlos con los objetivos educativos.
                                     </li>
                                     <li>
-                                        Delivered a custom CMS solution that efficiently managed 400+ active job
-                                        listings with minimal administrative overhead.
+                                        Entregué un CMS a medida que gestionaba de forma eficiente más de 400 ofertas de
+                                        empleo activas con una carga administrativa mínima.
                                     </li>
                                     <li>
-                                        Provided responsive technical support for students and corporate partners,
-                                        ensuring seamless platform adoption.
+                                        Di soporte técnico ágil a estudiantes y empresas colaboradoras para facilitar la
+                                        adopción de la plataforma.
                                     </li>
                                 </ul>
                             </div>
                             <div class="mb-6">
-                                <h5 class="label mb-3">Outcomes</h5>
+                                <h5 class="label mb-3">Resultados</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Successfully launched platform supporting 15,000+ active users, becoming a
-                                        critical recruitment channel.
+                                        Lanzamiento de una plataforma con más de 15.000 usuarios activos, convertida en un
+                                        canal de selección clave.
                                     </li>
                                     <li>
-                                        Achieved 40% faster application response times through database query
-                                        optimization, enhancing user experience.
+                                        Tiempos de respuesta un 40 % más rápidos gracias a la optimización de consultas a
+                                        la base de datos, con una mejor experiencia de usuario.
                                     </li>
                                     <li>
-                                        Created a sustainable talent pipeline between educational institution and
-                                        industry partners.
+                                        Una cantera de talento sostenible entre la institución educativa y las empresas
+                                        colaboradoras.
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <h5 class="label mb-3">Tecnologías y competencias</h5>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="chip">PHP</span>
-                                    <span class="chip">REST APIs</span>
+                                    <span class="chip">APIs REST</span>
                                     <span class="chip">JSON</span>
                                     <span class="chip">XML</span>
-                                    <span class="chip">Software Development</span>
-                                    <span class="chip">Software Quality Assurance</span>
-                                    <span class="chip">Project Management</span>
-                                    <span class="chip">Product Management</span>
+                                    <span class="chip">Desarrollo de software</span>
+                                    <span class="chip">Aseguramiento de la calidad del software</span>
+                                    <span class="chip">Gestión de proyectos</span>
+                                    <span class="chip">Gestión de producto</span>
                                 </div>
                             </div>
                         </div>
@@ -707,70 +720,70 @@
                         <div class="flex-shrink-0 md:w-1/4">
                             <img
                                 src="img/hli_logo.jpg"
-                                alt="Groupe HLI Logo"
+                                alt="Logotipo de Groupe HLI"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=HLi&font=inter'; this.onerror=null;"
                             />
                             <h3 class="text-xl font-extrabold leading-tight">Groupe HLI</h3>
-                            <p class="font-semibold text-brand-600 mt-1">Operations Engineer</p>
-                            <p class="mono text-xs text-subtle mt-2">Madrid | Feb 2008 – Mar 2010</p>
+                            <p class="font-semibold text-brand-600 mt-1">Ingeniero de operaciones</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid | feb. 2008 – mar. 2010</p>
                         </div>
                         <div class="flex-grow">
                             <h4 class="text-2xl font-extrabold tracking-tight mb-3">
-                                Cross-Border E-Commerce & Network Infrastructure Project
+                                Comercio electrónico transfronterizo e infraestructura de red
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
-                                Delivered critical technical expertise for a Franco-Spanish telecommunications
-                                initiative, developing scalable e-commerce infrastructure and implementing cross-country
-                                network solutions for mobile commerce applications.
+                                Aporté conocimiento técnico clave a una iniciativa de telecomunicaciones
+                                franco-española: desarrollé una infraestructura de comercio electrónico escalable e
+                                implanté soluciones de red entre países para aplicaciones de comercio móvil.
                             </p>
                             <div class="mb-6">
-                                <h5 class="label mb-3">How I Helped</h5>
+                                <h5 class="label mb-3">Cómo ayudé</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Engineered robust backend services for M6 Mobile e-commerce platform, enabling
-                                        secure transaction processing across multiple countries.
+                                        Desarrollé servicios backend robustos para la plataforma de comercio electrónico
+                                        de M6 Mobile, con procesamiento seguro de transacciones en varios países.
                                     </li>
                                     <li>
-                                        Designed and implemented cross-border network infrastructure connecting
-                                        Paris-Madrid operations, ensuring seamless communication.
+                                        Diseñé e implanté la infraestructura de red transfronteriza que conectaba las
+                                        operaciones de París y Madrid y garantizaba una comunicación fluida.
                                     </li>
                                     <li>
-                                        Developed sophisticated monitoring solutions for distributed systems, allowing
-                                        for proactive issue resolution.
+                                        Desarrollé soluciones avanzadas de monitorización de sistemas distribuidos para
+                                        resolver incidencias de forma proactiva.
                                     </li>
                                     <li>
-                                        Optimized CI/CD pipelines for telecom applications, significantly reducing
-                                        deployment times and technical risk.
+                                        Optimicé pipelines de CI/CD para aplicaciones de telecomunicaciones, lo que redujo
+                                        notablemente los tiempos de despliegue y el riesgo técnico.
                                     </li>
                                 </ul>
                             </div>
                             <div class="mb-6">
-                                <h5 class="label mb-3">Outcomes</h5>
+                                <h5 class="label mb-3">Resultados</h5>
                                 <ul class="bullet-list text-muted space-y-2">
                                     <li>
-                                        Reduced network downtime by 30% through strategic infrastructure improvements,
-                                        enhancing operational reliability.
+                                        Un 30 % menos de caídas de red gracias a mejoras estratégicas de la
+                                        infraestructura, con mayor fiabilidad operativa.
                                     </li>
                                     <li>
-                                        Successfully scaled mobile commerce platform to handle 50,000+ monthly
-                                        transactions with 99.9% uptime.
+                                        Plataforma de comercio móvil escalada a más de 50.000 transacciones mensuales con
+                                        un 99,9 % de disponibilidad.
                                     </li>
                                     <li>
-                                        Enabled client's successful expansion into new European markets through reliable
-                                        technical infrastructure.
+                                        Expansión del cliente a nuevos mercados europeos sobre una infraestructura técnica
+                                        fiable.
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <h5 class="label mb-3">Tecnologías y competencias</h5>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="chip">REST APIs</span>
+                                    <span class="chip">APIs REST</span>
                                     <span class="chip">JSON</span>
                                     <span class="chip">XML</span>
-                                    <span class="chip">Enterprise Software</span>
+                                    <span class="chip">Software empresarial</span>
                                     <span class="chip">B2B</span>
-                                    <span class="chip">Software Development Methodologies</span>
+                                    <span class="chip">Metodologías de desarrollo de software</span>
                                 </div>
                             </div>
                         </div>
@@ -782,8 +795,8 @@
         <section id="education" class="py-16 md:py-24 bg-surface-2 border-y border-line">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Academic background</p>
-                    <h2 class="section-title mb-4">Education</h2>
+                    <p class="kicker mb-3">Trayectoria académica</p>
+                    <h2 class="section-title mb-4">Formación</h2>
                 </div>
                 <div class="grid lg:grid-cols-3 gap-6">
                     <div
@@ -791,18 +804,18 @@
                     >
                         <img
                             src="img/ucm_logo_strecht.png"
-                            alt="UCM Logo"
+                            alt="Logotipo de la UCM"
                             class="logo-tile w-32 h-16 object-contain"
                             onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UCM&font=inter'; this.onerror=null;"
                         />
                         <div>
-                            <h3 class="text-xl font-bold">PhD. Data Science</h3>
-                            <p class="text-muted mt-1">Complutense University of Madrid</p>
+                            <h3 class="text-xl font-bold">Doctorado en Ciencia de Datos</h3>
+                            <p class="text-muted mt-1">Universidad Complutense de Madrid</p>
                             <div class="flex flex-wrap items-center gap-3 mt-2">
-                                <span class="mono text-sm text-subtle">Nov 2022 – May 2026</span>
-                                <span class="chip amber">Cum Laude</span>
+                                <span class="mono text-sm text-subtle">nov. 2022 – may. 2026</span>
+                                <span class="chip amber">Cum laude</span>
                             </div>
-                            <p class="text-sm text-muted italic mt-3">Thesis: Análisis de Teoría de Juegos Cooperativos mediante Redes Sociales</p>
+                            <p class="text-sm text-muted italic mt-3">Tesis: Análisis de Teoría de Juegos Cooperativos mediante Redes Sociales</p>
                         </div>
                     </div>
                     <div
@@ -811,15 +824,15 @@
                     >
                         <img
                             src="img/ucm_logo_strecht.png"
-                            alt="UCM Logo"
+                            alt="Logotipo de la UCM"
                             class="logo-tile w-32 h-16 object-contain"
                             onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UCM&font=inter'; this.onerror=null;"
                         />
                         <div>
-                            <h3 class="text-xl font-bold">MSc. Data Mining & Business Intelligence</h3>
-                            <p class="text-muted mt-1">Complutense University of Madrid</p>
+                            <h3 class="text-xl font-bold">Máster en Minería de Datos e Inteligencia de Negocios</h3>
+                            <p class="text-muted mt-1">Universidad Complutense de Madrid</p>
                             <div class="flex flex-wrap items-center gap-3 mt-2">
-                                <span class="mono text-sm text-subtle">Oct 2019 – Jun 2021</span>
+                                <span class="mono text-sm text-subtle">oct. 2019 – jun. 2021</span>
                             </div>
                         </div>
                     </div>
@@ -829,15 +842,15 @@
                     >
                         <img
                             src="img/upm_logo_strecht.png"
-                            alt="UPM Logo"
+                            alt="Logotipo de la UPM"
                             class="logo-tile w-32 h-16 object-contain"
                             onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UPM&font=inter'; this.onerror=null;"
                         />
                         <div>
-                            <h3 class="text-xl font-bold">BSc. Telecommunications Engineering (Telematics)</h3>
-                            <p class="text-muted mt-1">Polytechnics University of Madrid</p>
+                            <h3 class="text-xl font-bold">Grado en Ingeniería de Telecomunicación (Telemática)</h3>
+                            <p class="text-muted mt-1">Universidad Politécnica de Madrid</p>
                             <div class="flex flex-wrap items-center gap-3 mt-2">
-                                <span class="mono text-sm text-subtle">Sep 2013 – Jun 2016</span>
+                                <span class="mono text-sm text-subtle">sept. 2013 – jun. 2016</span>
                             </div>
                         </div>
                     </div>
@@ -848,8 +861,8 @@
         <section id="awards" class="py-16 md:py-24 bg-paper">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Recognition</p>
-                    <h2 class="section-title mb-4">Awards & Certifications</h2>
+                    <p class="kicker mb-3">Reconocimientos</p>
+                    <h2 class="section-title mb-4">Premios y certificaciones</h2>
                 </div>
                 <div class="grid md:grid-cols-2 gap-4 md:gap-6">
                     <div
@@ -857,12 +870,12 @@
                     >
                         <img
                             src="img/sas_logo.png"
-                            alt="SAS Logo"
+                            alt="Logotipo de SAS"
                             class="logo-tile w-16 h-10 sm:w-24 sm:h-12 object-contain"
                             onerror="this.src='https://placehold.co/48x48/E3EEFC/1C5CAB?text=SAS&font=inter'; this.onerror=null;"
                         />
                         <p class="flex-grow font-semibold">
-                            Certificate in Data Mining and Business Analytics by SAS
+                            Certificado en Data Mining and Business Analytics de SAS
                         </p>
                         <span class="chip mono">2021</span>
                     </div>
@@ -872,13 +885,13 @@
                     >
                         <img
                             src="img/coitt_logo.jpg"
-                            alt="COITT Logo"
+                            alt="Logotipo del COITT"
                             class="logo-tile w-16 h-10 sm:w-24 sm:h-12 object-contain"
                             onerror="this.src='https://placehold.co/48x48/E3EEFC/1C5CAB?text=COITT&font=inter'; this.onerror=null;"
                         />
                         <p class="flex-grow font-semibold">
-                            Telecommunications Liberalization Award (National Best Academic Record & Degree Project) by
-                            COITT
+                            Premio Liberalización de las Telecomunicaciones (mejor expediente académico y proyecto fin de
+                            grado a nivel nacional) del COITT
                         </p>
                         <span class="chip mono">2016</span>
                     </div>
@@ -888,12 +901,12 @@
                     >
                         <img
                             src="img/coitt_logo.jpg"
-                            alt="COITT Logo"
+                            alt="Logotipo del COITT"
                             class="logo-tile w-16 h-10 sm:w-24 sm:h-12 object-contain"
                             onerror="this.src='https://placehold.co/48x48/E3EEFC/1C5CAB?text=COITT&font=inter'; this.onerror=null;"
                         />
                         <p class="flex-grow font-semibold">
-                            Diploma for the Best Academic Record in Telematics Engineering by COITT
+                            Diploma al mejor expediente académico en Ingeniería Telemática del COITT
                         </p>
                         <span class="chip mono">2016</span>
                     </div>
@@ -903,12 +916,12 @@
                     >
                         <img
                             src="img/microsoft_logo.webp"
-                            alt="Microsoft Logo"
+                            alt="Logotipo de Microsoft"
                             class="logo-tile w-16 h-10 sm:w-24 sm:h-12 object-contain"
                             onerror="this.src='https://placehold.co/48x48/E3EEFC/1C5CAB?text=MS&font=inter'; this.onerror=null;"
                         />
                         <p class="flex-grow font-semibold">
-                            Microsoft Certified Technology Specialist BizTalk Server 2006
+                            Microsoft Certified Technology Specialist: BizTalk Server 2006
                         </p>
                         <span class="chip mono">2009</span>
                     </div>
@@ -920,11 +933,11 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                     <div class="lg:col-span-6">
-                        <p class="kicker mb-3">Next step</p>
-                        <h2 class="section-title mb-4">Ready to Revolutionize Your Organization?</h2>
+                        <p class="kicker mb-3">Siguiente paso</p>
+                        <h2 class="section-title mb-4">¿Listo para transformar tu organización?</h2>
                         <p class="lead max-w-xl">
-                            Book a free 30-minute strategy session to discuss how custom AI solutions can address
-                            your specific business challenges and drive innovation.
+                            Reserva una sesión estratégica gratuita de 30 minutos para ver cómo una solución de IA a
+                            medida puede resolver los retos concretos de tu negocio e impulsar la innovación.
                         </p>
                     </div>
                     <div class="lg:col-span-6">
@@ -934,7 +947,7 @@
                                 class="cta-banner flex items-center gap-5 p-5 md:p-6"
                             >
                                 <span class="icon-tile !bg-white/20 !text-white"><i class="fas fa-calendar-check"></i></span>
-                                <span class="text-lg md:text-xl font-bold">Schedule Your Consultation Now</span>
+                                <span class="text-lg md:text-xl font-bold">Agenda tu consulta ahora</span>
                                 <i class="fas fa-arrow-right ml-auto text-xl"></i>
                             </a>
                             <div class="mt-8 space-y-4">
@@ -958,7 +971,7 @@
                                     class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
                                 >
                                     <span class="icon-tile !w-10 !h-10 !text-base"><i class="fab fa-linkedin"></i></span>
-                                    LinkedIn Profile
+                                    Perfil de LinkedIn
                                 </a>
                             </div>
                         </div>
@@ -971,65 +984,65 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-12 items-start">
                     <div class="max-w-xl">
-                        <p class="kicker mb-3">Contact</p>
-                        <h2 class="section-title mb-4">Start the Conversation</h2>
+                        <p class="kicker mb-3">Contacto</p>
+                        <h2 class="section-title mb-4">Empecemos a hablar</h2>
                         <p class="lead">
-                            Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo
-                            or strategy session.
+                            Rellena el formulario y te responderé en menos de 24 horas para agendar una demo
+                            personalizada o una sesión estratégica.
                         </p>
                     </div>
                     <div class="card p-8 md:p-10">
                         <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
                             <div>
-                                <label for="name" class="block text-sm font-semibold mb-1">Full Name</label>
+                                <label for="name" class="block text-sm font-semibold mb-1">Nombre completo</label>
                                 <input
                                     type="text"
                                     name="name"
                                     id="name"
-                                    placeholder="Your Name"
+                                    placeholder="Tu nombre"
                                     required
                                     class="field"
                                 />
                             </div>
                             <div>
-                                <label for="email" class="block text-sm font-semibold mb-1">Email Address</label>
+                                <label for="email" class="block text-sm font-semibold mb-1">Correo electrónico</label>
                                 <input
                                     type="email"
                                     name="email"
                                     id="email"
-                                    placeholder="Your Email"
+                                    placeholder="Tu correo"
                                     required
                                     class="field"
                                 />
                             </div>
                             <div>
                                 <label for="service" class="block text-sm font-semibold mb-1"
-                                    >Service of Interest</label
+                                    >Servicio de interés</label
                                 >
                                 <select name="service" id="service" required class="field appearance-none">
-                                    <option value="" disabled selected>Select Service</option>
-                                    <option value="Performance Optimization">Performance Optimization</option>
-                                    <option value="AI Chatbots">AI Chatbots & Assistants</option>
+                                    <option value="" disabled selected>Selecciona un servicio</option>
+                                    <option value="Performance Optimization">Optimización del rendimiento</option>
+                                    <option value="AI Chatbots">Chatbots y asistentes de IA</option>
                                     <option value="Intelligent Document Repositories">
-                                        Intelligent Document Repositories
+                                        Repositorios documentales inteligentes
                                     </option>
-                                    <option value="Custom Solution">Custom AI Solution</option>
+                                    <option value="Custom Solution">Solución de IA a medida</option>
                                 </select>
                             </div>
                             <div>
-                                <label for="message" class="block text-sm font-semibold mb-1">Project Details</label>
+                                <label for="message" class="block text-sm font-semibold mb-1">Detalles del proyecto</label>
                                 <textarea
                                     name="message"
                                     id="message"
                                     rows="5"
-                                    placeholder="Tell me about your project needs..."
+                                    placeholder="Cuéntame qué necesita tu proyecto..."
                                     required
                                     class="field"
                                 ></textarea>
                             </div>
                             <div>
                                 <button type="submit" class="btn btn-primary w-full px-6 py-3 text-lg">
-                                    Request Consultation <i class="fas fa-paper-plane"></i>
+                                    Solicitar consulta <i class="fas fa-paper-plane"></i>
                                 </button>
                             </div>
                         </form>
@@ -1045,10 +1058,10 @@
                 <span class="monogram" aria-hidden="true"></span>
                 <div class="leading-tight">
                     <p class="font-bold text-white">Carlos I. Pérez-Sechi</p>
-                    <p class="text-sm text-inv-muted mt-1">Pioneering AI Solutions for a Smarter Future.</p>
+                    <p class="text-sm text-inv-muted mt-1">Soluciones de IA pioneras para un futuro más inteligente.</p>
                 </div>
                 <p class="sm:ml-auto mono text-sm text-inv-subtle">
-                    &copy; <span id="currentYear"></span> All rights reserved.
+                    &copy; <span id="currentYear"></span> Todos los derechos reservados.
                 </p>
             </div>
         </footer>
@@ -1075,6 +1088,13 @@
 
                 document.querySelectorAll('.fade-in').forEach((element) => {
                     observer.observe(element);
+                });
+
+                // Keep the visitor on the same section when switching language
+                document.querySelectorAll('.lang-switch a').forEach((link) => {
+                    link.addEventListener('click', () => {
+                        link.hash = window.location.hash;
+                    });
                 });
 
                 // Mobile menu toggle
@@ -1124,27 +1144,27 @@
                 // and logo: true for logos, which are shown whole on a white panel instead of cropped.
                 const sampleUpdates = [
                     {
-                        title: 'Book chapter: Network Visualization of a Fuzzy Measure',
+                        title: 'Capítulo de libro: Network Visualization of a Fuzzy Measure',
                         content:
-                            'Our chapter in "Computational Intelligence and Mathematics for Tackling Complex Problems 7" (Springer, Studies in Computational Intelligence) uses graph representations and network analysis to interpret fuzzy measures. Building on the Shapley index and the Murofushi-Grabisch interaction index, it makes the interactions between many elements easier to read and supports decision-making in complex systems.',
+                            'Nuestro capítulo en «Computational Intelligence and Mathematics for Tackling Complex Problems 7» (Springer, Studies in Computational Intelligence) usa grafos y análisis de redes para interpretar medidas difusas. A partir del índice de Shapley y del índice de interacción de Murofushi-Grabisch, facilita la lectura de las interacciones entre muchos elementos y ayuda a tomar decisiones en sistemas complejos.',
                         imageUrl: 'img/logos/springer-nature.svg',
                         logo: true,
                         date: '2026-08-02',
                         link: 'https://doi.org/10.1007/978-3-032-20725-8_8',
                     },
                     {
-                        title: 'PhD in Data Science defended with Cum Laude',
+                        title: 'Doctorado en Ciencia de Datos defendido con cum laude',
                         content:
-                            'I defended my doctoral thesis, "Análisis de Teoría de Juegos Cooperativos mediante Redes Sociales", at the Faculty of Statistical Studies of the Complutense University of Madrid, supervised by Javier Castro Cantalejo. Traditional Explainable AI methods often stop at global importance metrics; the thesis combines cooperative game theory, fuzzy measures and network analysis to make the interactions between variables visible and interpretable. The dissertation is open access.',
+                            'Defendí mi tesis doctoral, «Análisis de Teoría de Juegos Cooperativos mediante Redes Sociales», en la Facultad de Estudios Estadísticos de la Universidad Complutense de Madrid, dirigida por Javier Castro Cantalejo. La IA explicable tradicional suele quedarse en métricas de importancia global; la tesis combina teoría de juegos cooperativos, medidas difusas y análisis de redes para hacer visibles e interpretables las interacciones entre variables. Está disponible en acceso abierto.',
                         imageUrl: 'img/ucm_logo_strecht.png',
                         logo: true,
                         date: '2026-05-20',
                         link: 'https://hdl.handle.net/20.500.14352/139709',
                     },
                     {
-                        title: 'Journal article: From fuzzy modeling to explanation, in the International Journal of Approximate Reasoning',
+                        title: 'Artículo en revista: From fuzzy modeling to explanation, en el International Journal of Approximate Reasoning',
                         content:
-                            'We propose a framework for Explainable AI based on Multi-Measure Fuzzy Systems, where each agent represents a distinct perspective of the model with its own fuzzy measure capturing uncertainty, relevance and local interactions. It addresses the limits of Shapley-value explanations, which can ignore feature interactions, are computationally expensive and hide instance-level variability behind global averages.',
+                            'Proponemos un marco de IA explicable basado en sistemas difusos multimedida, donde cada agente representa una perspectiva distinta del modelo con su propia medida difusa, que recoge incertidumbre, relevancia e interacciones locales. Aborda los límites de las explicaciones con valores de Shapley, que pueden ignorar las interacciones entre variables, son costosas de calcular y ocultan la variabilidad entre instancias tras promedios globales.',
                         imageUrl: 'img/logos/elsevier.png',
                         logo: true,
                         date: '2026-03-17',
@@ -1153,86 +1173,86 @@
                     {
                         title: 'FUZZ-IEEE 2025: On the role of relations and interactions in fuzzy systems for machine learning',
                         content:
-                            'Published at the 2025 IEEE International Conference on Fuzzy Systems (Reims, France). We introduce KWSHAP, an algorithm based on the Kruskal-Wallis test that applies to any machine learning model, and a method to define model variables when the input includes several fuzzy measures over a set of agents, using Shapley values and interaction indices. Together with a graph representation, they explain the role and importance of feature interactions.',
+                            'Publicado en la IEEE International Conference on Fuzzy Systems 2025 (Reims, Francia). Presentamos KWSHAP, un algoritmo basado en el test de Kruskal-Wallis aplicable a cualquier modelo de machine learning, y un método para definir las variables del modelo cuando la entrada incluye varias medidas difusas sobre un conjunto de agentes, con valores de Shapley e índices de interacción. Junto con un grafo, explican el papel y la importancia de las interacciones entre variables.',
                         imageUrl: 'img/logos/ieee.svg',
                         logo: true,
                         date: '2025-07-06',
                         link: 'https://doi.org/10.1109/FUZZ62266.2025.11152169',
                     },
                     {
-                        title: 'Research project PID2021-122905NB-C21: Modelos para el procesamiento de información compleja y aplicaciones a problemas de redes',
+                        title: 'Proyecto de investigación PID2021-122905NB-C21: Modelos para el procesamiento de información compleja y aplicaciones a problemas de redes',
                         content:
-                            'Research project on models for processing complex information and their applications to network problems, funded by the Spanish State Research Agency (AEI) under the State Plan for Scientific and Technical Research and Innovation 2021-2023, with the Complutense University of Madrid as beneficiary. It funded my work on fuzzy systems for machine learning (FUZZ-IEEE 2025) and on the network visualization of cooperative games (Applied Sciences, 2025).',
+                            'Proyecto financiado por la Agencia Estatal de Investigación (AEI) dentro del Plan Estatal de Investigación Científica, Técnica y de Innovación 2021-2023, con la Universidad Complutense de Madrid como beneficiaria. Financió mi trabajo sobre sistemas difusos para machine learning (FUZZ-IEEE 2025) y sobre la visualización en red de juegos cooperativos (Applied Sciences, 2025).',
                         imageUrl: 'img/logos/aei.svg',
                         logo: true,
-                        dateLabel: 'AEI research project · 2021 call',
+                        dateLabel: 'Proyecto de investigación AEI · convocatoria 2021',
                         link: 'https://buscador.recolecta.fecyt.es/buscador-recolecta-proyecto-detalle?projectcode=PID2021-122905NB-C21',
                     },
                     {
-                        title: 'Journal article: Network Visualization of Cooperative Games, in Applied Sciences',
+                        title: 'Artículo en revista: Network Visualization of Cooperative Games, en Applied Sciences',
                         content:
-                            'Cooperative game theory has focused on characteristic functions and on how to distribute value among players, with less attention to how players interact. Using the player interaction index, our article represents those interactions as a graph and applies network analysis to visualize them, deepening the understanding of player relationships, synergies and coalition formation.',
+                            'La teoría de juegos cooperativos se ha centrado en las funciones características y en cómo repartir el valor entre los jugadores, y menos en cómo interactúan. Con el índice de interacción entre jugadores, nuestro artículo representa esas interacciones como un grafo y aplica análisis de redes para visualizarlas, lo que ayuda a entender las relaciones entre jugadores, las sinergias y la formación de coaliciones.',
                         imageUrl: 'img/logos/mdpi.svg',
                         logo: true,
                         date: '2025-03-31',
                         link: 'https://doi.org/10.3390/app15073825',
                     },
                     {
-                        title: 'Research project PID2020-116884GB-I00: Modelos de atribución juego-teóricos y aplicaciones: redes sociales, marketing y machine learning',
+                        title: 'Proyecto de investigación PID2020-116884GB-I00: Modelos de atribución juego-teóricos y aplicaciones: redes sociales, marketing y machine learning',
                         content:
-                            'Research project on game-theoretic attribution models and their applications to social networks, marketing and machine learning, funded by the Spanish State Research Agency (AEI) under the State R&D&I Programme Oriented to the Challenges of Society, with the Complutense University of Madrid as beneficiary. It funded my article on the network visualization of cooperative games (Applied Sciences, 2025).',
+                            'Proyecto financiado por la Agencia Estatal de Investigación (AEI) dentro del Programa Estatal de I+D+i Orientada a los Retos de la Sociedad, con la Universidad Complutense de Madrid como beneficiaria. Financió mi artículo sobre la visualización en red de juegos cooperativos (Applied Sciences, 2025).',
                         imageUrl: 'img/logos/aei.svg',
                         logo: true,
-                        dateLabel: 'AEI research project · 2020 call',
+                        dateLabel: 'Proyecto de investigación AEI · convocatoria 2020',
                         link: 'https://buscador.recolecta.fecyt.es/buscador-recolecta-proyecto-detalle?projectcode=PID2020-116884GB-I00',
                     },
                     {
-                        title: 'Returning to +FuzzyMAD 2024: Another Year of Fuzzy Logic and Collaboration in Madrid!',
+                        title: 'De vuelta en +FuzzyMAD 2024: ¡otro año de lógica difusa y colaboración en Madrid!',
                         content:
-                            "I'm thrilled to be heading back to the UCM Facultad de Ciencias Matemáticas on December 13th for the 17th edition of +FuzzyMAD, reconnecting with colleagues, sharing research, and exploring new collaborations in the field of fuzzy logic.",
+                            'Me hace mucha ilusión volver el 13 de diciembre a la Facultad de Ciencias Matemáticas de la UCM para la 17.ª edición de +FuzzyMAD: reencontrarme con colegas, compartir investigación y explorar nuevas colaboraciones en el campo de la lógica difusa.',
                         imageUrl: 'img/FuzzyMAD-2024.jpg',
                         date: '2024-12-13',
                         link: 'https://eventos.ucm.es/125571/detail/fuzzymad-2024.html',
                     },
                     {
-                        title: 'My Experience at +FuzzyMAD 2023: Celebrating 16 Years of Fuzzy Logic and Soft Computing in Madrid.',
+                        title: 'Mi experiencia en +FuzzyMAD 2023: 16 años de lógica difusa y soft computing en Madrid',
                         content:
-                            'I joined fellow researchers and professionals at the UCM Facultad de Ciencias Matemáticas to celebrate the 16th edition of +FuzzyMAD, where we explored fuzzy sets, soft computing, and collaborative projects.',
+                            'Me uní a investigadores y profesionales en la Facultad de Ciencias Matemáticas de la UCM para celebrar la 16.ª edición de +FuzzyMAD, donde hablamos de conjuntos difusos, soft computing y proyectos colaborativos.',
                         imageUrl: 'img/FuzzyMAD-2023.jpg',
                         date: '2023-11-17',
                         link: 'https://eventos.ucm.es/105243/detail/fuzzymad-2023.html',
                     },
                     {
-                        title: 'Announcing the Release of the CGT Library on GitHub.',
+                        title: 'Publicamos la librería CGT en GitHub',
                         content:
-                            "We've launched the CGT library on GitHub! It's a Python toolkit for Cooperative Game Theory, enabling computations and visualizations of Shapley values, Grabisch interactions, and more. CGT includes modules for data exploration and features SHAP analysis for feature importance.",
+                            '¡Hemos lanzado la librería CGT en GitHub! Es un conjunto de herramientas en Python para teoría de juegos cooperativos que permite calcular y visualizar valores de Shapley, interacciones de Grabisch y más. CGT incluye módulos de exploración de datos y análisis SHAP de la importancia de las variables.',
                         imageUrl: 'img/github_logo.png',
                         logo: true,
                         date: '2023-10-30',
                         link: 'https://github.com/perez-sechi/cgt',
                     },
                     {
-                        title: 'Launched the hyTeams app: Empowering Businesses with Dynamic Workspaces.',
+                        title: 'Lanzamiento de la app hyTeams: espacios de trabajo dinámicos para las empresas',
                         content:
-                            'Oversaw the complete lifecycle of hyTeams, a new digital workspace management solution, from initial design to successful launch in May 2022. hyTeams, developed by BICG, leverages 25+ years of experience to empower businesses to create flexible, efficient, and dynamic work environments through advanced technology and strategic insights.',
+                            'Dirigí el ciclo de vida completo de hyTeams, una nueva solución de gestión de espacios de trabajo digitales, desde el diseño inicial hasta su lanzamiento en mayo de 2022. hyTeams, desarrollada por BICG, aprovecha más de 25 años de experiencia para ayudar a las empresas a crear entornos de trabajo flexibles, eficientes y dinámicos con tecnología avanzada y visión estratégica.',
                         imageUrl: 'img/hyteams_logo.png',
                         logo: true,
                         date: '2022-05-17',
                         link: 'https://hyteams.app/',
                     },
                     {
-                        title: 'Publication: Predicting User Engagement in Online News Through Behavior Analysis',
+                        title: 'Publicación: predicción del interés de los usuarios en noticias online mediante el análisis de su comportamiento',
                         content:
-                            "Published my Master's Thesis investigating user behavior in online news consumption. The thesis explores methods to predict user clicks on news articles by analyzing user interaction history and news features, addressing the cold-start problem in news recommendation. It leverages feature engineering and inference techniques, moving beyond traditional collaborative filtering approaches to improve the accuracy of news recommendations and user engagement.",
+                            'Publiqué mi trabajo de fin de máster sobre cómo consumen los usuarios las noticias online. Explora métodos para predecir sus clics a partir de su historial de interacción y de las características de cada noticia, y aborda el problema del arranque en frío en la recomendación. Con ingeniería de variables y técnicas de inferencia, va más allá del filtrado colaborativo tradicional para recomendar noticias con más precisión y aumentar el interés de los usuarios.',
                         imageUrl: 'img/mind.png',
                         logo: true,
                         date: '2021-07-07',
                         link: 'https://docta.ucm.es/entities/publication/a455257d-12ac-4867-905e-48f7501cc966',
                     },
                     {
-                        title: 'Graduated with MSc in Data Science and Business Intelligence - Universidad Complutense de Madrid',
+                        title: 'Máster en Ciencia de Datos e Inteligencia de Negocios por la Universidad Complutense de Madrid',
                         content:
-                            'Successfully completed the Master of Science in Data Science and Business Intelligence program at the Universidad Complutense de Madrid, specializing in advanced data analysis and its application in business strategy. The program culminated in the development of a comprehensive research project, demonstrating proficiency in applying data science methodologies to solve real-world business problems.',
+                            'Completé el Máster en Ciencia de Datos e Inteligencia de Negocios de la Universidad Complutense de Madrid, especializado en análisis avanzado de datos y su aplicación a la estrategia empresarial. El programa culminó con un proyecto de investigación completo en el que apliqué metodologías de ciencia de datos a problemas de negocio reales.',
                         imageUrl: 'img/ucm_logo.png',
                         logo: true,
                         date: '2021-06-22',
@@ -1254,7 +1274,7 @@
 
                         const formattedDate =
                             update.dateLabel ||
-                            new Date(update.date).toLocaleDateString('en-US', {
+                            new Date(update.date).toLocaleDateString('es-ES', {
                                 year: 'numeric',
                                 month: 'long',
                                 day: 'numeric',
@@ -1274,7 +1294,7 @@
                             </a>
                             <p class="text-muted mb-4 text-sm leading-relaxed flex-grow">${shortContent}</p>
                             <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="text-link mt-auto self-start">
-                                Read More <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                Leer más <i class="fas fa-arrow-right ml-1 text-xs"></i>
                             </a>
                         </div>
                     `;

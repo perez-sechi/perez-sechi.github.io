@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Carlos I. Pérez-Sechi</title>
+        <meta
+            name="description"
+            content="Portfolio and detailed experience of Carlos I. Pérez-Sechi, showcasing AI projects, LLM implementations, skills, education, awards, and digital transformation successes."
+        />
+        <meta
+            name="keywords"
+            content="AI portfolio, LLM projects, data science projects, digital transformation examples, Carlos I. Pérez-Sechi projects, AI skills, AI experience, AI education, AI news, AI updates"
+        />
+        <meta name="author" content="Carlos I. Pérez-Sechi" />
+        <link rel="canonical" href="https://perez-sechi.com/en/portfolio.html" />
+        <link rel="alternate" hreflang="es" href="https://perez-sechi.com/portfolio.html" />
+        <link rel="alternate" hreflang="en" href="https://perez-sechi.com/en/portfolio.html" />
+        <link rel="alternate" hreflang="x-default" href="https://perez-sechi.com/portfolio.html" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="../js/tailwind-config.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        <link rel="stylesheet" href="../css/brand.css" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-8QPR7MQ5QD');
+        </script>
+    </head>
+    <body class="antialiased">
+        <header class="site-header sticky top-0 z-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <a href="index.html" class="flex-shrink-0">
+                        <img src="../logo.svg" alt="perez-sechi" class="h-9 w-auto" />
+                    </a>
+                    <nav class="hidden xl:flex xl:items-center xl:ml-auto xl:space-x-4">
+                        <a href="index.html#services" class="nav-link px-2 py-2">Services</a>
+                        <a href="index.html#results" class="nav-link px-2 py-2">Results</a>
+                        <a href="index.html#white-papers" class="nav-link px-2 py-2">White Papers</a>
+                        <a href="portfolio.html#skills" class="nav-link px-2 py-2">Core Competencies</a>
+                        <a href="portfolio.html#experience" class="nav-link px-2 py-2">Success Stories</a>
+                        <a href="portfolio.html" class="nav-link px-2 py-2">Portfolio</a>
+                        <a
+                            href="https://calendly.com/carlos-perez-sechi/30min"
+                            class="btn btn-primary px-4 py-2 text-sm"
+                            >Book a session</a
+                        >
+                        <a href="index.html#contact" class="btn btn-outline px-4 py-2 text-sm">Contact</a>
+                    </nav>
+                    <div class="flex items-center gap-4 xl:ml-6">
+                        <div class="lang-switch" role="group" aria-label="Language">
+                            <a href="../portfolio.html" hreflang="es" lang="es">ES</a>
+                            <a href="portfolio.html" hreflang="en" lang="en" aria-current="page">EN</a>
+                        </div>
+                        <button
+                            id="mobile-menu-button"
+                            class="xl:hidden text-muted hover:text-main focus:outline-none"
+                            aria-label="Toggle menu"
+                        >
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="xl:hidden hidden bg-paper border-t border-line">
+                <a href="index.html#services" class="nav-link block px-4 py-3 hover:bg-surface-2">Services</a>
+                <a href="index.html#results" class="nav-link block px-4 py-3 hover:bg-surface-2">Results</a>
+                <a href="index.html#white-papers" class="nav-link block px-4 py-3 hover:bg-surface-2">White Papers</a>
+                <a href="portfolio.html#skills" class="nav-link block px-4 py-3 hover:bg-surface-2">Core Competencies</a>
+                <a href="portfolio.html#experience" class="nav-link block px-4 py-3 hover:bg-surface-2"
+                    >Success Stories</a
+                >
+                <a href="portfolio.html" class="nav-link block px-4 py-3 hover:bg-surface-2">Portfolio</a>
+                <div class="px-4 pt-2 pb-4 space-y-3">
+                    <a
+                        href="https://calendly.com/carlos-perez-sechi/30min"
+                        class="btn btn-primary w-full px-4 py-3 text-sm"
+                        >Book a session</a
+                    >
+                    <a href="#contact" class="btn btn-outline w-full px-4 py-3 text-sm">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="updates" class="py-16 md:py-24 bg-surface-2 border-b border-line">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <p class="kicker mb-3">Updates</p>
+                    <h2 class="section-title mb-4">Latest Updates & Insights</h2>
+                    <p class="lead">
+                        Stay informed with my latest articles, project milestones, and thoughts on AI and technology.
+                    </p>
+                </div>
+                <div id="updates-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8"></div>
+                <div class="pagination flex justify-center gap-4">
+                    <button
+                        id="load-prev"
+                        aria-label="Previous Updates"
+                        class="btn btn-outline px-4 py-2 disabled:opacity-40 disabled:cursor-not-allowed"
+                    >
+                        <i class="fas fa-chevron-left"></i>Prev
+                    </button>
+                    <button
+                        id="load-next"
+                        aria-label="Next Updates"
+                        class="btn btn-outline px-4 py-2 disabled:opacity-40 disabled:cursor-not-allowed"
+                    >
+                        Next<i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-16 md:py-24 bg-paper">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <p class="kicker mb-3">Skills</p>
+                    <h2 class="section-title mb-4">Core Competencies</h2>
+                    <p class="lead">
+                        A blend of technical expertise, strategic thinking, and leadership to drive innovation.
+                    </p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="card fade-in p-6 md:p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="icon-tile"><i class="fas fa-layer-group"></i></span>
+                            <h3 class="text-xl font-bold">Technology & Tools</h3>
+                        </div>
+                        <ul class="bullet-list space-y-3 text-muted">
+                            <li>
+                                <b class="text-main">Generative AI:</b> LLMs, RAG, NLP, Prompt Engineering, AI Chatbots & Virtual Assistants
+                            </li>
+                            <li>
+                                <b class="text-main">AI Frameworks & APIs:</b> LangChain, LlamaIndex, OpenAI / GPT API
+                            </li>
+                            <li>
+                                <b class="text-main">Machine Learning:</b> TensorFlow / PyTorch, AI Model Fine-Tuning, Model Training
+                            </li>
+                            <li><b class="text-main">MLOps & LLMOps</b></li>
+                            <li><b class="text-main">Cloud Computing:</b> AWS, Azure, GCP, Azure Functions</li>
+                            <li>
+                                <b class="text-main">DevOps:</b> Kubernetes, Docker, Jenkins, Ansible, Puppet, Linux
+                            </li>
+                            <li><b class="text-main">Programming:</b> Python, TypeScript, Java, C#, .NET, PHP</li>
+                            <li><b class="text-main">Frameworks & Tools:</b> AngularJS, Symfony, Maven, Jasmine</li>
+                            <li><b class="text-main">Data:</b> MongoDB, MySQL, OLAP, Data Analysis</li>
+                            <li><b class="text-main">APIs & Formats:</b> REST, JSON, XML</li>
+                        </ul>
+                    </div>
+                    <div class="card fade-in p-6 md:p-8" style="transition-delay: 0.1s">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="icon-tile"><i class="fas fa-diagram-project"></i></span>
+                            <h3 class="text-xl font-bold">Methodologies & Operations</h3>
+                        </div>
+                        <ul class="bullet-list space-y-3 text-muted">
+                            <li><b class="text-main">Agile:</b> Scrum, Kanban, Agile Project Management</li>
+                            <li><b class="text-main">Software Development Methodologies</b></li>
+                            <li><b class="text-main">Software Architecture</b></li>
+                            <li><b class="text-main">Technical Requirements</b></li>
+                            <li><b class="text-main">Software Quality Assurance</b></li>
+                            <li><b class="text-main">Information Security</b></li>
+                            <li><b class="text-main">Infrastructure Management</b></li>
+                            <li><b class="text-main">Project Engineering & Tracking</b></li>
+                            <li><b class="text-main">Open Source Software</b></li>
+                            <li><b class="text-main">User Experience</b></li>
+                        </ul>
+                    </div>
+                    <div class="card fade-in p-6 md:p-8" style="transition-delay: 0.2s">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="icon-tile"><i class="fas fa-compass"></i></span>
+                            <h3 class="text-xl font-bold">Leadership & Strategy</h3>
+                        </div>
+                        <ul class="bullet-list space-y-3 text-muted">
+                            <li><b class="text-main">Digital Transformation:</b> Business & HR Transformation</li>
+                            <li><b class="text-main">Business Strategy:</b> Market & Marketing Strategy</li>
+                            <li>
+                                <b class="text-main">Business Development:</b> B2B, Sales, Global Account Management, CRM
+                            </li>
+                            <li><b class="text-main">Product Management</b></li>
+                            <li><b class="text-main">International Project Management</b></li>
+                            <li>
+                                <b class="text-main">Team Leadership:</b> Multidisciplinary Teams, Team Building & Performance
+                            </li>
+                            <li><b class="text-main">Mentoring & Employee Training</b></li>
+                            <li><b class="text-main">Community Building</b></li>
+                            <li><b class="text-main">Negotiation</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages" class="py-16 md:py-24 bg-surface-2 border-y border-line">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <p class="kicker mb-3">Communication</p>
+                    <h2 class="section-title mb-4">Languages</h2>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div class="card fade-in p-5 md:p-6 flex flex-col">
+                        <h3 class="text-xl font-bold mb-3">Spanish</h3>
+                        <span class="chip self-start">Native</span>
+                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Proficiency 5 of 5">
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                        </div>
+                    </div>
+                    <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.1s">
+                        <h3 class="text-xl font-bold mb-3">English</h3>
+                        <span class="chip self-start">Full Professional</span>
+                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Proficiency 4 of 5">
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                        </div>
+                    </div>
+                    <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.2s">
+                        <h3 class="text-xl font-bold mb-3">French</h3>
+                        <span class="chip self-start">Professional Working</span>
+                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Proficiency 3 of 5">
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                        </div>
+                    </div>
+                    <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.3s">
+                        <h3 class="text-xl font-bold mb-3">German</h3>
+                        <span class="chip self-start">Limited Working</span>
+                        <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Proficiency 2 of 5">
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-16 md:py-24 bg-paper">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <p class="kicker mb-3">Experience</p>
+                    <h2 class="section-title mb-4">Success Stories & Experience</h2>
+                    <p class="lead">
+                        As an AI consultant and technology leader, I've helped organizations across industries implement
+                        cutting-edge solutions that drive measurable business outcomes. Here's how I've transformed
+                        challenges into opportunities.
+                    </p>
+                </div>
+                <div class="space-y-8">
+                    <div
+                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4">
+                            <img
+                                src="../img/brand/simbolo-negro.svg"
+                                alt="perez-sechi Logo"
+                                class="logo-tile w-20 h-20 mb-4 object-contain"
+                                onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=perez-sechi&font=inter'; this.onerror=null;"
+                            />
+                            <h3 class="text-xl font-extrabold leading-tight">perez-sechi</h3>
+                            <p class="font-semibold text-brand-600 mt-1">AI Solutions Consultant | Freelance</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid (Remote) | Mar 2025 – Present</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                                Generative AI: From Pilot to Production
+                            </h4>
+                            <p class="text-lg leading-relaxed mb-6">
+                                I help enterprises architect, assess, and industrialize advanced AI and LLM solutions.
+                                From scaling proof-of-concepts into production-grade systems to ensuring rigorous
+                                corporate compliance, I specialize in transforming organizations through secure and
+                                reliable AI-driven innovation.
+                            </p>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">Recent Projects</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        <b>Pharma Compliance & AI Marketing Governance (100,000+ users):</b> Led data
+                                        governance and regulatory compliance frameworks for enterprise AI-based systems,
+                                        managing the supply chain for generative AI-supported marketing assets,
+                                        evaluating audiovisual content, and verifying Product Information Management
+                                        (PIM) processes.
+                                    </li>
+                                    <li>
+                                        <b>Enterprise Chatbot Industrialization (70,000+ users):</b> Industrialized the
+                                        system architecture for an enterprise chatbot, migrated the initial PoC to a
+                                        fully scalable cloud environment, and implemented strict LLM governance
+                                        protocols to ensure safety and system traceability.
+                                    </li>
+                                    <li>
+                                        <b>Intelligent Document Repositories & RAG (40,000+ employees):</b> Spearheaded
+                                        a Retrieval-Augmented Generation (RAG) application using NoSQL databases for
+                                        document retrieval, industrializing the LLM-powered chat system with rigorous
+                                        AI-evaluation and risk tracing protocols.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="chip">Azure AI Foundry</span>
+                                    <span class="chip">Azure OpenAI</span>
+                                    <span class="chip">Amazon Bedrock</span>
+                                    <span class="chip">Azure Web Apps</span>
+                                    <span class="chip">Python FastAPI</span>
+                                    <span class="chip">React</span>
+                                    <span class="chip">MongoDB Atlas</span>
+                                    <span class="chip">LibreChat</span>
+                                    <span class="chip">LiteLLM</span>
+                                    <span class="chip">Langfuse</span>
+                                    <span class="chip">RAGAS</span>
+                                    <span class="chip">Arize Phoenix</span>
+                                    <span class="chip">Aprimo DAM</span>
+                                    <span class="chip">Veeva Quality</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4">
+                            <img
+                                src="../img/bicg_logo.jpg"
+                                alt="Bicg Logo"
+                                class="logo-tile w-20 h-20 mb-4 object-contain"
+                                onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=bicg&font=inter'; this.onerror=null;"
+                            />
+                            <h3 class="text-xl font-extrabold leading-tight">Bicg</h3>
+                            <p class="font-semibold text-brand-600 mt-1">Digital Transformation Manager</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid (Hybrid) | Aug 2019 – Mar 2025</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                                Enterprise Digital Transformation Consultancy
+                            </h4>
+                            <p class="text-lg leading-relaxed mb-6">
+                                Consulted with Fortune 500 clients to implement AI-driven digital transformation
+                                initiatives that enhanced data analytics capabilities and streamlined operations.
+                            </p>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">How I Helped</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Developed custom AI models for real estate optimization and employee
+                                        relationship mapping, delivering actionable insights for strategic
+                                        decision-making.
+                                    </li>
+                                    <li>
+                                        Created interactive data visualization dashboards that made complex information
+                                        accessible to 50,000+ users across client organizations.
+                                    </li>
+                                    <li>
+                                        Implemented advanced customer segmentation using machine learning algorithms,
+                                        enabling targeted marketing strategies.
+                                    </li>
+                                    <li>
+                                        Automated routine HR processes with conversational AI, allowing client teams to
+                                        focus on high-value activities.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">Outcomes</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>15+ successful transformation projects delivered on time and within budget.</li>
+                                    <li>
+                                        20-30% productivity improvement through optimized collaborative environments.
+                                    </li>
+                                    <li>
+                                        Empowered 50,000+ users with data-driven insights for better decision-making.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="chip">Retrieval-Augmented Generation (RAG)</span>
+                                    <span class="chip">Generative AI</span>
+                                    <span class="chip">Large Language Models (LLM)</span>
+                                    <span class="chip">LLMOps</span>
+                                    <span class="chip">MLOps</span>
+                                    <span class="chip">Prompt Engineering</span>
+                                    <span class="chip">Model Training</span>
+                                    <span class="chip">Azure Functions</span>
+                                    <span class="chip">TypeScript</span>
+                                    <span class="chip">REST APIs</span>
+                                    <span class="chip">Team Leadership</span>
+                                    <span class="chip">B2B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4">
+                            <img
+                                src="../img/decathlon_logo.png"
+                                alt="Decathlon Logo"
+                                class="logo-tile w-20 h-20 mb-4 object-contain"
+                                onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=Decathlon&font=inter'; this.onerror=null;"
+                            />
+                            <h3 class="text-xl font-extrabold leading-tight">Decathlon España</h3>
+                            <p class="font-semibold text-brand-600 mt-1">Project Manager</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid | Jun 2017 – Jul 2019</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                                Enterprise-Scale Digital Transformation Program
+                            </h4>
+                            <p class="text-lg leading-relaxed mb-6">
+                                Led Decathlon Spain's comprehensive digital transformation initiative, creating a
+                                tech-focused culture and implementing solutions that significantly enhanced operational
+                                efficiency.
+                            </p>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">How I Helped</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Established and nurtured an open-source community of 100+ developers, fostering
+                                        innovation and knowledge sharing.
+                                    </li>
+                                    <li>
+                                        Orchestrated full GDPR compliance implementation, protecting 5M+ customer
+                                        records and mitigating legal risks.
+                                    </li>
+                                    <li>
+                                        Engineered data processing pipelines handling 1TB+ daily inventory data,
+                                        enabling real-time business insights.
+                                    </li>
+                                    <li>
+                                        Implemented containerized application deployment, dramatically improving
+                                        scalability and reliability.
+                                    </li>
+                                    <li>
+                                        Introduced automated testing frameworks that reduced production incidents by
+                                        75%, improving customer experience.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">Outcomes</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>Created a sustainable tech community that continues to drive innovation.</li>
+                                    <li>Achieved full GDPR compliance with 80% reduction in data breach risk.</li>
+                                    <li>
+                                        Delivered 70% infrastructure efficiency improvements, reducing operational
+                                        costs.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="chip">Project Management</span>
+                                    <span class="chip">International Project Management</span>
+                                    <span class="chip">Product Management</span>
+                                    <span class="chip">Software Development Methodologies</span>
+                                    <span class="chip">MLOps</span>
+                                    <span class="chip">TypeScript</span>
+                                    <span class="chip">Multidisciplinary Team Leadership</span>
+                                    <span class="chip">Employee Training</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4">
+                            <img
+                                src="../img/decathlon_logo.png"
+                                alt="Decathlon Logo"
+                                class="logo-tile w-20 h-20 mb-4 object-contain"
+                                onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=Decathlon&font=inter'; this.onerror=null;"
+                            />
+                            <h3 class="text-xl font-extrabold leading-tight">Decathlon España</h3>
+                            <p class="font-semibold text-brand-600 mt-1">DevOps Engineer</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid & Barcelona (Hybrid) | Feb 2015 – Jun 2017</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                                Cloud Migration & System Modernization Project
+                            </h4>
+                            <p class="text-lg leading-relaxed mb-6">
+                                Guided Decathlon Spain through a complex legacy-to-cloud migration, implementing modern
+                                microservices architecture and developing critical workforce management systems.
+                            </p>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">How I Helped</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Architected and executed migration from legacy monolith to AWS microservices
+                                        architecture with 99.999% reliability.
+                                    </li>
+                                    <li>
+                                        Created workforce planning solution that optimized scheduling for 13,000+
+                                        employees across multiple locations.
+                                    </li>
+                                    <li>
+                                        Implemented modern CI/CD pipelines that accelerated deployment cycles from hours
+                                        to minutes.
+                                    </li>
+                                    <li>
+                                        Conducted cloud cost optimization analysis that identified significant savings
+                                        opportunities.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">Outcomes</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>300% improvement in deployment velocity through automated processes.</li>
+                                    <li>40% reduction in cloud infrastructure costs through optimization.</li>
+                                    <li>Seamless workforce management for 13,000+ employees nationwide.</li>
+                                    <li>Enhanced system stability with containerized, scalable architecture.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="chip">Amazon Web Services (AWS)</span>
+                                    <span class="chip">Google Cloud Platform</span>
+                                    <span class="chip">MongoDB</span>
+                                    <span class="chip">TypeScript</span>
+                                    <span class="chip">REST APIs</span>
+                                    <span class="chip">Open Source Software</span>
+                                    <span class="chip">Digital Transformation</span>
+                                    <span class="chip">Community Building</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4">
+                            <img
+                                src="../img/sicpa_logo.png"
+                                alt="SICPA Logo"
+                                class="logo-tile w-20 h-20 mb-4 object-contain"
+                                onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=SICPA&font=inter'; this.onerror=null;"
+                            />
+                            <h3 class="text-xl font-extrabold leading-tight">SICPA</h3>
+                            <p class="font-semibold text-brand-600 mt-1">Software Engineer</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid | Mar 2013 – Feb 2015</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                                Supply Chain Security & Traceability Platform
+                            </h4>
+                            <p class="text-lg leading-relaxed mb-6">
+                                Delivered mission-critical secure systems for government and enterprise clients,
+                                implementing advanced data visualization and security engineering that safeguarded vital
+                                supply chains against counterfeit risks.
+                            </p>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">How I Helped</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Designed intuitive front-end interfaces for complex security/traceability
+                                        solutions, enhancing usability for government stakeholders.
+                                    </li>
+                                    <li>
+                                        Engineered sophisticated product traceability dashboards with OLAP Cube
+                                        integration, providing real-time visibility into supply chain movements.
+                                    </li>
+                                    <li>
+                                        Introduced robust testing frameworks that improved code quality by 25%, ensuring
+                                        system reliability in critical applications.
+                                    </li>
+                                    <li>
+                                        Optimized development lifecycle through structured methodologies, accelerating
+                                        time-to-market for security solutions.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">Outcomes</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Enhanced system reliability reducing tracking errors by 15%, protecting client
+                                        revenue and reputation.
+                                    </li>
+                                    <li>
+                                        Standardized testing processes across 5 product teams, creating sustainable
+                                        quality assurance practices.
+                                    </li>
+                                    <li>
+                                        Strengthened supply chain security for national-level initiatives in multiple
+                                        countries.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="chip">AngularJS</span>
+                                    <span class="chip">PHP</span>
+                                    <span class="chip">Maven</span>
+                                    <span class="chip">MongoDB</span>
+                                    <span class="chip">Linux</span>
+                                    <span class="chip">OLAP</span>
+                                    <span class="chip">REST APIs</span>
+                                    <span class="chip">Information Security</span>
+                                    <span class="chip">Data Analysis</span>
+                                    <span class="chip">User Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4">
+                            <img
+                                src="../img/cef_logo.png"
+                                alt="CEF Logo"
+                                class="logo-tile w-20 h-20 mb-4 object-contain"
+                                onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=CEF&font=inter'; this.onerror=null;"
+                            />
+                            <h3 class="text-xl font-extrabold leading-tight">Centro de Estudios Financieros (CEF)</h3>
+                            <p class="font-semibold text-brand-600 mt-1">Software Engineer</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid | Jan 2011 – Mar 2013</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                                High-Traffic Career Portal & Educational Platform
+                            </h4>
+                            <p class="text-lg leading-relaxed mb-6">
+                                Partnered with this leading educational institution to develop and optimize a scalable
+                                career portal that connected thousands of students with employment opportunities while
+                                streamlining educational resource delivery.
+                            </p>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">How I Helped</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Architected and implemented a robust full-stack career portal capable of
+                                        handling 3,000+ concurrent users with zero downtime.
+                                    </li>
+                                    <li>
+                                        Conducted comprehensive stakeholder workshops to gather precise requirements,
+                                        ensuring alignment with educational objectives.
+                                    </li>
+                                    <li>
+                                        Delivered a custom CMS solution that efficiently managed 400+ active job
+                                        listings with minimal administrative overhead.
+                                    </li>
+                                    <li>
+                                        Provided responsive technical support for students and corporate partners,
+                                        ensuring seamless platform adoption.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">Outcomes</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Successfully launched platform supporting 15,000+ active users, becoming a
+                                        critical recruitment channel.
+                                    </li>
+                                    <li>
+                                        Achieved 40% faster application response times through database query
+                                        optimization, enhancing user experience.
+                                    </li>
+                                    <li>
+                                        Created a sustainable talent pipeline between educational institution and
+                                        industry partners.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="chip">PHP</span>
+                                    <span class="chip">REST APIs</span>
+                                    <span class="chip">JSON</span>
+                                    <span class="chip">XML</span>
+                                    <span class="chip">Software Development</span>
+                                    <span class="chip">Software Quality Assurance</span>
+                                    <span class="chip">Project Management</span>
+                                    <span class="chip">Product Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                    >
+                        <div class="flex-shrink-0 md:w-1/4">
+                            <img
+                                src="../img/hli_logo.jpg"
+                                alt="Groupe HLI Logo"
+                                class="logo-tile w-20 h-20 mb-4 object-contain"
+                                onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=HLi&font=inter'; this.onerror=null;"
+                            />
+                            <h3 class="text-xl font-extrabold leading-tight">Groupe HLI</h3>
+                            <p class="font-semibold text-brand-600 mt-1">Operations Engineer</p>
+                            <p class="mono text-xs text-subtle mt-2">Madrid | Feb 2008 – Mar 2010</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                                Cross-Border E-Commerce & Network Infrastructure Project
+                            </h4>
+                            <p class="text-lg leading-relaxed mb-6">
+                                Delivered critical technical expertise for a Franco-Spanish telecommunications
+                                initiative, developing scalable e-commerce infrastructure and implementing cross-country
+                                network solutions for mobile commerce applications.
+                            </p>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">How I Helped</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Engineered robust backend services for M6 Mobile e-commerce platform, enabling
+                                        secure transaction processing across multiple countries.
+                                    </li>
+                                    <li>
+                                        Designed and implemented cross-border network infrastructure connecting
+                                        Paris-Madrid operations, ensuring seamless communication.
+                                    </li>
+                                    <li>
+                                        Developed sophisticated monitoring solutions for distributed systems, allowing
+                                        for proactive issue resolution.
+                                    </li>
+                                    <li>
+                                        Optimized CI/CD pipelines for telecom applications, significantly reducing
+                                        deployment times and technical risk.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-6">
+                                <h5 class="label mb-3">Outcomes</h5>
+                                <ul class="bullet-list text-muted space-y-2">
+                                    <li>
+                                        Reduced network downtime by 30% through strategic infrastructure improvements,
+                                        enhancing operational reliability.
+                                    </li>
+                                    <li>
+                                        Successfully scaled mobile commerce platform to handle 50,000+ monthly
+                                        transactions with 99.9% uptime.
+                                    </li>
+                                    <li>
+                                        Enabled client's successful expansion into new European markets through reliable
+                                        technical infrastructure.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="label mb-3">Technologies & Skills</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="chip">REST APIs</span>
+                                    <span class="chip">JSON</span>
+                                    <span class="chip">XML</span>
+                                    <span class="chip">Enterprise Software</span>
+                                    <span class="chip">B2B</span>
+                                    <span class="chip">Software Development Methodologies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-16 md:py-24 bg-surface-2 border-y border-line">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <p class="kicker mb-3">Academic background</p>
+                    <h2 class="section-title mb-4">Education</h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <div
+                        class="card fade-in p-6 flex flex-col sm:flex-row lg:flex-col sm:items-start gap-4 sm:gap-6 lg:gap-5"
+                    >
+                        <img
+                            src="../img/ucm_logo_strecht.png"
+                            alt="UCM Logo"
+                            class="logo-tile w-32 h-16 object-contain"
+                            onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UCM&font=inter'; this.onerror=null;"
+                        />
+                        <div>
+                            <h3 class="text-xl font-bold">PhD. Data Science</h3>
+                            <p class="text-muted mt-1">Complutense University of Madrid</p>
+                            <div class="flex flex-wrap items-center gap-3 mt-2">
+                                <span class="mono text-sm text-subtle">Nov 2022 – May 2026</span>
+                                <span class="chip amber">Cum Laude</span>
+                            </div>
+                            <p class="text-sm text-muted italic mt-3">Thesis: Análisis de Teoría de Juegos Cooperativos mediante Redes Sociales</p>
+                        </div>
+                    </div>
+                    <div
+                        class="card fade-in p-6 flex flex-col sm:flex-row lg:flex-col sm:items-start gap-4 sm:gap-6 lg:gap-5"
+                        style="transition-delay: 0.1s"
+                    >
+                        <img
+                            src="../img/ucm_logo_strecht.png"
+                            alt="UCM Logo"
+                            class="logo-tile w-32 h-16 object-contain"
+                            onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UCM&font=inter'; this.onerror=null;"
+                        />
+                        <div>
+                            <h3 class="text-xl font-bold">MSc. Data Mining & Business Intelligence</h3>
+                            <p class="text-muted mt-1">Complutense University of Madrid</p>
+                            <div class="flex flex-wrap items-center gap-3 mt-2">
+                                <span class="mono text-sm text-subtle">Oct 2019 – Jun 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card fade-in p-6 flex flex-col sm:flex-row lg:flex-col sm:items-start gap-4 sm:gap-6 lg:gap-5"
+                        style="transition-delay: 0.2s"
+                    >
+                        <img
+                            src="../img/upm_logo_strecht.png"
+                            alt="UPM Logo"
+                            class="logo-tile w-32 h-16 object-contain"
+                            onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UPM&font=inter'; this.onerror=null;"
+                        />
+                        <div>
+                            <h3 class="text-xl font-bold">BSc. Telecommunications Engineering (Telematics)</h3>
+                            <p class="text-muted mt-1">Polytechnics University of Madrid</p>
+                            <div class="flex flex-wrap items-center gap-3 mt-2">
+                                <span class="mono text-sm text-subtle">Sep 2013 – Jun 2016</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="py-16 md:py-24 bg-paper">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <p class="kicker mb-3">Recognition</p>
+                    <h2 class="section-title mb-4">Awards & Certifications</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                    <div
+                        class="card fade-in p-5 flex items-center gap-4 sm:gap-5"
+                    >
+                        <img
+                            src="../img/sas_logo.png"
+                            alt="SAS Logo"
+                            class="logo-tile w-16 h-10 sm:w-24 sm:h-12 object-contain"
+                            onerror="this.src='https://placehold.co/48x48/E3EEFC/1C5CAB?text=SAS&font=inter'; this.onerror=null;"
+                        />
+                        <p class="flex-grow font-semibold">
+                            Certificate in Data Mining and Business Analytics by SAS
+                        </p>
+                        <span class="chip mono">2021</span>
+                    </div>
+                    <div
+                        class="card fade-in p-5 flex items-center gap-4 sm:gap-5"
+                        style="transition-delay: 0.1s"
+                    >
+                        <img
+                            src="../img/coitt_logo.jpg"
+                            alt="COITT Logo"
+                            class="logo-tile w-16 h-10 sm:w-24 sm:h-12 object-contain"
+                            onerror="this.src='https://placehold.co/48x48/E3EEFC/1C5CAB?text=COITT&font=inter'; this.onerror=null;"
+                        />
+                        <p class="flex-grow font-semibold">
+                            Telecommunications Liberalization Award (National Best Academic Record & Degree Project) by
+                            COITT
+                        </p>
+                        <span class="chip mono">2016</span>
+                    </div>
+                    <div
+                        class="card fade-in p-5 flex items-center gap-4 sm:gap-5"
+                        style="transition-delay: 0.2s"
+                    >
+                        <img
+                            src="../img/coitt_logo.jpg"
+                            alt="COITT Logo"
+                            class="logo-tile w-16 h-10 sm:w-24 sm:h-12 object-contain"
+                            onerror="this.src='https://placehold.co/48x48/E3EEFC/1C5CAB?text=COITT&font=inter'; this.onerror=null;"
+                        />
+                        <p class="flex-grow font-semibold">
+                            Diploma for the Best Academic Record in Telematics Engineering by COITT
+                        </p>
+                        <span class="chip mono">2016</span>
+                    </div>
+                    <div
+                        class="card fade-in p-5 flex items-center gap-4 sm:gap-5"
+                        style="transition-delay: 0.3s"
+                    >
+                        <img
+                            src="../img/microsoft_logo.webp"
+                            alt="Microsoft Logo"
+                            class="logo-tile w-16 h-10 sm:w-24 sm:h-12 object-contain"
+                            onerror="this.src='https://placehold.co/48x48/E3EEFC/1C5CAB?text=MS&font=inter'; this.onerror=null;"
+                        />
+                        <p class="flex-grow font-semibold">
+                            Microsoft Certified Technology Specialist BizTalk Server 2006
+                        </p>
+                        <span class="chip mono">2009</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section dark grid-bg py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                    <div class="lg:col-span-6">
+                        <p class="kicker mb-3">Next step</p>
+                        <h2 class="section-title mb-4">Ready to Revolutionize Your Organization?</h2>
+                        <p class="lead max-w-xl">
+                            Book a free 30-minute strategy session to discuss how custom AI solutions can address
+                            your specific business challenges and drive innovation.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <div class="card p-6 md:p-8">
+                            <a
+                                href="https://calendly.com/carlos-perez-sechi/30min"
+                                class="cta-banner flex items-center gap-5 p-5 md:p-6"
+                            >
+                                <span class="icon-tile !bg-white/20 !text-white"><i class="fas fa-calendar-check"></i></span>
+                                <span class="text-lg md:text-xl font-bold">Schedule Your Consultation Now</span>
+                                <i class="fas fa-arrow-right ml-auto text-xl"></i>
+                            </a>
+                            <div class="mt-8 space-y-4">
+                                <a
+                                    href="mailto:carlos@perez-sechi.com"
+                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fas fa-envelope"></i></span>
+                                    carlos@perez-sechi.com
+                                </a>
+                                <a
+                                    href="tel:+34605566929"
+                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fas fa-phone"></i></span>
+                                    +34 605 566 929
+                                </a>
+                                <a
+                                    href="https://linkedin.com/in/perez-sechi"
+                                    target="_blank"
+                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
+                                >
+                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fab fa-linkedin"></i></span>
+                                    LinkedIn Profile
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-paper">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="max-w-xl">
+                        <p class="kicker mb-3">Contact</p>
+                        <h2 class="section-title mb-4">Start the Conversation</h2>
+                        <p class="lead">
+                            Fill out the form below, and I'll respond within 24 hours to schedule your personalized demo
+                            or strategy session.
+                        </p>
+                    </div>
+                    <div class="card p-8 md:p-10">
+                        <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold mb-1">Full Name</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="Your Name"
+                                    required
+                                    class="field"
+                                />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-semibold mb-1">Email Address</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Your Email"
+                                    required
+                                    class="field"
+                                />
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-semibold mb-1"
+                                    >Service of Interest</label
+                                >
+                                <select name="service" id="service" required class="field appearance-none">
+                                    <option value="" disabled selected>Select Service</option>
+                                    <option value="Performance Optimization">Performance Optimization</option>
+                                    <option value="AI Chatbots">AI Chatbots & Assistants</option>
+                                    <option value="Intelligent Document Repositories">
+                                        Intelligent Document Repositories
+                                    </option>
+                                    <option value="Custom Solution">Custom AI Solution</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-semibold mb-1">Project Details</label>
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    rows="5"
+                                    placeholder="Tell me about your project needs..."
+                                    required
+                                    class="field"
+                                ></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary w-full px-6 py-3 text-lg">
+                                    Request Consultation <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-ink-950 text-inv py-10">
+            <div
+                class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-5 text-center sm:text-left"
+            >
+                <span class="monogram" aria-hidden="true"></span>
+                <div class="leading-tight">
+                    <p class="font-bold text-white">Carlos I. Pérez-Sechi</p>
+                    <p class="text-sm text-inv-muted mt-1">Pioneering AI Solutions for a Smarter Future.</p>
+                </div>
+                <p class="sm:ml-auto mono text-sm text-inv-subtle">
+                    &copy; <span id="currentYear"></span> All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Intersection Observer for fade-in animations
+            document.addEventListener('DOMContentLoaded', function () {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('active');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.05, // Adjusted for potentially larger experience cards
+                    }
+                );
+
+                document.querySelectorAll('.fade-in').forEach((element) => {
+                    observer.observe(element);
+                });
+
+                // Keep the visitor on the same section when switching language
+                document.querySelectorAll('.lang-switch a').forEach((link) => {
+                    link.addEventListener('click', () => {
+                        link.hash = window.location.hash;
+                    });
+                });
+
+                // Mobile menu toggle
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (mobileMenu.classList.contains('hidden')) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        } else {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        }
+                    });
+                }
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach((link) => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const updatesContainer = document.getElementById('updates-container');
+                const loadPrevButton = document.getElementById('load-prev');
+                const loadNextButton = document.getElementById('load-next');
+
+                if (!updatesContainer || !loadPrevButton || !loadNextButton) {
+                    console.warn('Updates section elements not found. Skipping updates script.');
+                    return;
+                }
+
+                let currentPage = 1;
+                const updatesPerPage = 3;
+
+                // Newest first. Use dateLabel instead of a day-precise date when the item has none (e.g. projects),
+                // and logo: true for logos, which are shown whole on a white panel instead of cropped.
+                const sampleUpdates = [
+                    {
+                        title: 'Book chapter: Network Visualization of a Fuzzy Measure',
+                        content:
+                            'Our chapter in "Computational Intelligence and Mathematics for Tackling Complex Problems 7" (Springer, Studies in Computational Intelligence) uses graph representations and network analysis to interpret fuzzy measures. Building on the Shapley index and the Murofushi-Grabisch interaction index, it makes the interactions between many elements easier to read and supports decision-making in complex systems.',
+                        imageUrl: '../img/logos/springer-nature.svg',
+                        logo: true,
+                        date: '2026-08-02',
+                        link: 'https://doi.org/10.1007/978-3-032-20725-8_8',
+                    },
+                    {
+                        title: 'PhD in Data Science defended with Cum Laude',
+                        content:
+                            'I defended my doctoral thesis, "Análisis de Teoría de Juegos Cooperativos mediante Redes Sociales", at the Faculty of Statistical Studies of the Complutense University of Madrid, supervised by Javier Castro Cantalejo. Traditional Explainable AI methods often stop at global importance metrics; the thesis combines cooperative game theory, fuzzy measures and network analysis to make the interactions between variables visible and interpretable. The dissertation is open access.',
+                        imageUrl: '../img/ucm_logo_strecht.png',
+                        logo: true,
+                        date: '2026-05-20',
+                        link: 'https://hdl.handle.net/20.500.14352/139709',
+                    },
+                    {
+                        title: 'Journal article: From fuzzy modeling to explanation, in the International Journal of Approximate Reasoning',
+                        content:
+                            'We propose a framework for Explainable AI based on Multi-Measure Fuzzy Systems, where each agent represents a distinct perspective of the model with its own fuzzy measure capturing uncertainty, relevance and local interactions. It addresses the limits of Shapley-value explanations, which can ignore feature interactions, are computationally expensive and hide instance-level variability behind global averages.',
+                        imageUrl: '../img/logos/elsevier.png',
+                        logo: true,
+                        date: '2026-03-17',
+                        link: 'https://doi.org/10.1016/j.ijar.2026.109670',
+                    },
+                    {
+                        title: 'FUZZ-IEEE 2025: On the role of relations and interactions in fuzzy systems for machine learning',
+                        content:
+                            'Published at the 2025 IEEE International Conference on Fuzzy Systems (Reims, France). We introduce KWSHAP, an algorithm based on the Kruskal-Wallis test that applies to any machine learning model, and a method to define model variables when the input includes several fuzzy measures over a set of agents, using Shapley values and interaction indices. Together with a graph representation, they explain the role and importance of feature interactions.',
+                        imageUrl: '../img/logos/ieee.svg',
+                        logo: true,
+                        date: '2025-07-06',
+                        link: 'https://doi.org/10.1109/FUZZ62266.2025.11152169',
+                    },
+                    {
+                        title: 'Research project PID2021-122905NB-C21: Modelos para el procesamiento de información compleja y aplicaciones a problemas de redes',
+                        content:
+                            'Research project on models for processing complex information and their applications to network problems, funded by the Spanish State Research Agency (AEI) under the State Plan for Scientific and Technical Research and Innovation 2021-2023, with the Complutense University of Madrid as beneficiary. It funded my work on fuzzy systems for machine learning (FUZZ-IEEE 2025) and on the network visualization of cooperative games (Applied Sciences, 2025).',
+                        imageUrl: '../img/logos/aei.svg',
+                        logo: true,
+                        dateLabel: 'AEI research project · 2021 call',
+                        link: 'https://buscador.recolecta.fecyt.es/buscador-recolecta-proyecto-detalle?projectcode=PID2021-122905NB-C21',
+                    },
+                    {
+                        title: 'Journal article: Network Visualization of Cooperative Games, in Applied Sciences',
+                        content:
+                            'Cooperative game theory has focused on characteristic functions and on how to distribute value among players, with less attention to how players interact. Using the player interaction index, our article represents those interactions as a graph and applies network analysis to visualize them, deepening the understanding of player relationships, synergies and coalition formation.',
+                        imageUrl: '../img/logos/mdpi.svg',
+                        logo: true,
+                        date: '2025-03-31',
+                        link: 'https://doi.org/10.3390/app15073825',
+                    },
+                    {
+                        title: 'Research project PID2020-116884GB-I00: Modelos de atribución juego-teóricos y aplicaciones: redes sociales, marketing y machine learning',
+                        content:
+                            'Research project on game-theoretic attribution models and their applications to social networks, marketing and machine learning, funded by the Spanish State Research Agency (AEI) under the State R&D&I Programme Oriented to the Challenges of Society, with the Complutense University of Madrid as beneficiary. It funded my article on the network visualization of cooperative games (Applied Sciences, 2025).',
+                        imageUrl: '../img/logos/aei.svg',
+                        logo: true,
+                        dateLabel: 'AEI research project · 2020 call',
+                        link: 'https://buscador.recolecta.fecyt.es/buscador-recolecta-proyecto-detalle?projectcode=PID2020-116884GB-I00',
+                    },
+                    {
+                        title: 'Returning to +FuzzyMAD 2024: Another Year of Fuzzy Logic and Collaboration in Madrid!',
+                        content:
+                            "I'm thrilled to be heading back to the UCM Facultad de Ciencias Matemáticas on December 13th for the 17th edition of +FuzzyMAD, reconnecting with colleagues, sharing research, and exploring new collaborations in the field of fuzzy logic.",
+                        imageUrl: '../img/FuzzyMAD-2024.jpg',
+                        date: '2024-12-13',
+                        link: 'https://eventos.ucm.es/125571/detail/fuzzymad-2024.html',
+                    },
+                    {
+                        title: 'My Experience at +FuzzyMAD 2023: Celebrating 16 Years of Fuzzy Logic and Soft Computing in Madrid.',
+                        content:
+                            'I joined fellow researchers and professionals at the UCM Facultad de Ciencias Matemáticas to celebrate the 16th edition of +FuzzyMAD, where we explored fuzzy sets, soft computing, and collaborative projects.',
+                        imageUrl: '../img/FuzzyMAD-2023.jpg',
+                        date: '2023-11-17',
+                        link: 'https://eventos.ucm.es/105243/detail/fuzzymad-2023.html',
+                    },
+                    {
+                        title: 'Announcing the Release of the CGT Library on GitHub.',
+                        content:
+                            "We've launched the CGT library on GitHub! It's a Python toolkit for Cooperative Game Theory, enabling computations and visualizations of Shapley values, Grabisch interactions, and more. CGT includes modules for data exploration and features SHAP analysis for feature importance.",
+                        imageUrl: '../img/github_logo.png',
+                        logo: true,
+                        date: '2023-10-30',
+                        link: 'https://github.com/perez-sechi/cgt',
+                    },
+                    {
+                        title: 'Launched the hyTeams app: Empowering Businesses with Dynamic Workspaces.',
+                        content:
+                            'Oversaw the complete lifecycle of hyTeams, a new digital workspace management solution, from initial design to successful launch in May 2022. hyTeams, developed by BICG, leverages 25+ years of experience to empower businesses to create flexible, efficient, and dynamic work environments through advanced technology and strategic insights.',
+                        imageUrl: '../img/hyteams_logo.png',
+                        logo: true,
+                        date: '2022-05-17',
+                        link: 'https://hyteams.app/',
+                    },
+                    {
+                        title: 'Publication: Predicting User Engagement in Online News Through Behavior Analysis',
+                        content:
+                            "Published my Master's Thesis investigating user behavior in online news consumption. The thesis explores methods to predict user clicks on news articles by analyzing user interaction history and news features, addressing the cold-start problem in news recommendation. It leverages feature engineering and inference techniques, moving beyond traditional collaborative filtering approaches to improve the accuracy of news recommendations and user engagement.",
+                        imageUrl: '../img/mind.png',
+                        logo: true,
+                        date: '2021-07-07',
+                        link: 'https://docta.ucm.es/entities/publication/a455257d-12ac-4867-905e-48f7501cc966',
+                    },
+                    {
+                        title: 'Graduated with MSc in Data Science and Business Intelligence - Universidad Complutense de Madrid',
+                        content:
+                            'Successfully completed the Master of Science in Data Science and Business Intelligence program at the Universidad Complutense de Madrid, specializing in advanced data analysis and its application in business strategy. The program culminated in the development of a comprehensive research project, demonstrating proficiency in applying data science methodologies to solve real-world business problems.',
+                        imageUrl: '../img/ucm_logo.png',
+                        logo: true,
+                        date: '2021-06-22',
+                        link: 'https://estudiosestadisticos.ucm.es/master-cienciadatos',
+                    },
+                ];
+
+                function loadUpdates(page) {
+                    const start = (page - 1) * updatesPerPage;
+                    const end = start + updatesPerPage;
+                    const currentUpdates = sampleUpdates.slice(start, end);
+
+                    updatesContainer.innerHTML = '';
+
+                    currentUpdates.forEach((update) => {
+                        const updateElement = document.createElement('div');
+                        updateElement.className =
+                            'card card-hover overflow-hidden flex flex-col group fade-in';
+
+                        const formattedDate =
+                            update.dateLabel ||
+                            new Date(update.date).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                            });
+
+                        let shortContent = update.content;
+                        if (shortContent.length > 512) {
+                            shortContent = shortContent.substring(0, 512) + '...';
+                        }
+
+                        updateElement.innerHTML = `
+                        <img src="${update.imageUrl}" alt="${update.title}" class="w-full h-48 ${update.logo ? 'object-contain p-10 bg-white border-b border-line' : 'object-cover'}" onerror="this.src='https://placehold.co/600x400/E3EEFC/1C5CAB?text=Image+Error&font=inter'; this.onerror=null;">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="mono text-xs text-subtle mb-2">${formattedDate}</p>
+                            <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="block mb-3">
+                                <h3 class="text-xl font-bold leading-snug group-hover:text-brand-500 transition-colors">${update.title}</h3>
+                            </a>
+                            <p class="text-muted mb-4 text-sm leading-relaxed flex-grow">${shortContent}</p>
+                            <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="text-link mt-auto self-start">
+                                Read More <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    `;
+                        updatesContainer.appendChild(updateElement);
+                    });
+
+                    setTimeout(() => {
+                        document
+                            .querySelectorAll('#updates-container .fade-in:not(.active)')
+                            .forEach((el) => el.classList.add('active'));
+                    }, 50);
+
+                    loadPrevButton.disabled = page === 1;
+                    loadNextButton.disabled = end >= sampleUpdates.length;
+                }
+
+                loadUpdates(currentPage);
+
+                loadNextButton.addEventListener('click', () => {
+                    if (currentPage * updatesPerPage < sampleUpdates.length) {
+                        currentPage++;
+                        loadUpdates(currentPage);
+                    }
+                });
+
+                loadPrevButton.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        loadUpdates(currentPage);
+                    }
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            _linkedin_partner_id = '8206961';
+            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        </script>
+        <script type="text/javascript">
+            (function (l) {
+                if (!l) {
+                    window.lintrk = function (a, b) {
+                        window.lintrk.q.push([a, b]);
+                    };
+                    window.lintrk.q = [];
+                }
+                var s = document.getElementsByTagName('script')[0];
+                var b = document.createElement('script');
+                b.type = 'text/javascript';
+                b.async = true;
+                b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+                s.parentNode.insertBefore(b, s);
+            })(window.lintrk);
+        </script>
+        <noscript>
+            <img
+                height="1"
+                width="1"
+                style="display: none"
+                alt=""
+                src="https://px.ads.linkedin.com/collect/?pid=8206961&fmt=gif"
+            />
+        </noscript>
+    </body>
+</html>
