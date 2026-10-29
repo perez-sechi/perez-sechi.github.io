@@ -293,6 +293,21 @@ h5 {
 .cta-banner:hover {
     transform: translateY(-2px);
 }
+/* Secondary call to action on dark sections, in WhatsApp green */
+.whatsapp-banner {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius-m);
+    color: #fff;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+.whatsapp-banner:hover {
+    border-color: #25d366;
+    background: rgba(37, 211, 102, 0.08);
+}
+.whatsapp-banner .icon-tile {
+    background: #25d366;
+    color: #fff;
+}
 .field {
     width: 100%;
     background: var(--surface);

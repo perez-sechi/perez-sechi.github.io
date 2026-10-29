@@ -22,7 +22,7 @@
         <script src="js/tailwind-config.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
         <!-- Bump ?v= whenever css/brand.css changes so browsers drop their cached copy -->
-        <link rel="stylesheet" href="css/brand.css?v=2" />
+        <link rel="stylesheet" href="css/brand.css?v=3" />
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
         <script>
@@ -930,15 +930,16 @@
             </div>
         </section>
 
-        <section class="cta-section dark grid-bg py-16 md:py-24">
+        <section id="contact" class="cta-section dark grid-bg py-16 md:py-24">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                     <div class="lg:col-span-6">
                         <p class="kicker mb-3">Siguiente paso</p>
                         <h2 class="section-title mb-4">¿Listo para transformar tu organización?</h2>
                         <p class="lead max-w-xl">
-                            Reserva una sesión estratégica gratuita de 30 minutos para ver cómo una solución de IA a
-                            medida puede resolver los retos concretos de tu negocio e impulsar la innovación.
+                            Reserva una sesión estratégica gratuita de 30 minutos o escríbeme por WhatsApp para ver cómo
+                            una solución de IA a medida puede resolver los retos concretos de tu negocio e impulsar
+                            la innovación.
                         </p>
                     </div>
                     <div class="lg:col-span-6">
@@ -949,6 +950,16 @@
                             >
                                 <span class="icon-tile !bg-white/20 !text-white"><i class="fas fa-calendar-check"></i></span>
                                 <span class="text-lg md:text-xl font-bold">Agenda tu consulta ahora</span>
+                                <i class="fas fa-arrow-right ml-auto text-xl"></i>
+                            </a>
+                            <a
+                                href="https://wa.me/34605566929?text=Hola%20Carlos%2C%20me%20gustar%C3%ADa%20hablar%20de%20llevar%20nuestro%20piloto%20de%20IA%20a%20producci%C3%B3n."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="whatsapp-banner flex items-center gap-5 p-5 md:p-6 mt-4"
+                            >
+                                <span class="icon-tile"><i class="fab fa-whatsapp"></i></span>
+                                <span class="text-lg md:text-xl font-bold">Escríbeme por WhatsApp</span>
                                 <i class="fas fa-arrow-right ml-auto text-xl"></i>
                             </a>
                             <div class="mt-8 space-y-4">
@@ -976,77 +987,6 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-16 md:py-24 bg-paper">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-start">
-                    <div class="max-w-xl">
-                        <p class="kicker mb-3">Contacto</p>
-                        <h2 class="section-title mb-4">Empecemos a hablar</h2>
-                        <p class="lead">
-                            Rellena el formulario y te responderé en menos de 24 horas para agendar una demo
-                            personalizada o una sesión estratégica.
-                        </p>
-                    </div>
-                    <div class="card p-8 md:p-10">
-                        <form action="https://formspree.io/f/xblggora" method="POST" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-semibold mb-1">Nombre completo</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                    placeholder="Tu nombre"
-                                    required
-                                    class="field"
-                                />
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-semibold mb-1">Correo electrónico</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Tu correo"
-                                    required
-                                    class="field"
-                                />
-                            </div>
-                            <div>
-                                <label for="service" class="block text-sm font-semibold mb-1"
-                                    >Servicio de interés</label
-                                >
-                                <select name="service" id="service" required class="field appearance-none">
-                                    <option value="" disabled selected>Selecciona un servicio</option>
-                                    <option value="Performance Optimization">Optimización del rendimiento</option>
-                                    <option value="AI Chatbots">Chatbots y asistentes de IA</option>
-                                    <option value="Intelligent Document Repositories">
-                                        Repositorios documentales inteligentes
-                                    </option>
-                                    <option value="Custom Solution">Solución de IA a medida</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-semibold mb-1">Detalles del proyecto</label>
-                                <textarea
-                                    name="message"
-                                    id="message"
-                                    rows="5"
-                                    placeholder="Cuéntame qué necesita tu proyecto..."
-                                    required
-                                    class="field"
-                                ></textarea>
-                            </div>
-                            <div>
-                                <button type="submit" class="btn btn-primary w-full px-6 py-3 text-lg">
-                                    Solicitar consulta <i class="fas fa-paper-plane"></i>
-                                </button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
