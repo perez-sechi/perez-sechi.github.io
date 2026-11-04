@@ -20,9 +20,15 @@
 
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="js/tailwind-config.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap"
+        />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
         <!-- Bump ?v= whenever css/brand.css changes so browsers drop their cached copy -->
-        <link rel="stylesheet" href="css/brand.css?v=3" />
+        <link rel="stylesheet" href="css/brand.css?v=4" />
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QPR7MQ5QD"></script>
         <script>
@@ -39,9 +45,9 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-20">
                     <a href="index.html" class="flex-shrink-0">
-                        <img src="./logo.svg" alt="perez-sechi" class="h-9 w-auto" />
+                        <img src="./logo.svg" alt="perez-sechi" class="site-logo h-8 w-auto" />
                     </a>
-                    <nav class="hidden xl:flex xl:items-center xl:ml-auto xl:space-x-4">
+                    <nav class="hidden xl:flex xl:items-center xl:ml-auto xl:gap-1" aria-label="Principal">
                         <a href="index.html#services" class="nav-link px-2 py-2">Servicios</a>
                         <a href="index.html#results" class="nav-link px-2 py-2">Resultados</a>
                         <a href="index.html#white-papers" class="nav-link px-2 py-2">White papers</a>
@@ -50,10 +56,10 @@
                         <a href="portfolio.html" class="nav-link px-2 py-2">Porfolio</a>
                         <a
                             href="https://calendly.com/carlos-perez-sechi/30min"
-                            class="btn btn-primary px-4 py-2 text-sm"
+                            class="btn btn-light ml-4 px-4 py-2.5 text-sm"
                             >Reservar sesión</a
                         >
-                        <a href="index.html#contact" class="btn btn-outline px-4 py-2 text-sm">Contacto</a>
+                        <a href="index.html#contact" class="btn btn-ghost ml-2 px-4 py-2.5 text-sm">Contacto</a>
                     </nav>
                     <div class="flex items-center gap-4 xl:ml-6">
                         <div class="lang-switch" role="group" aria-label="Idioma">
@@ -62,44 +68,67 @@
                         </div>
                         <button
                             id="mobile-menu-button"
-                            class="xl:hidden text-muted hover:text-main focus:outline-none"
+                            class="xl:hidden text-white/80 hover:text-white focus:outline-none"
                             aria-label="Abrir o cerrar el menú"
+                            aria-controls="mobile-menu"
+                            aria-expanded="false"
                         >
                             <i class="fas fa-bars text-2xl"></i>
                         </button>
                     </div>
                 </div>
             </div>
-            <div id="mobile-menu" class="xl:hidden hidden bg-paper border-t border-line">
-                <a href="index.html#services" class="nav-link block px-4 py-3 hover:bg-surface-2">Servicios</a>
-                <a href="index.html#results" class="nav-link block px-4 py-3 hover:bg-surface-2">Resultados</a>
-                <a href="index.html#white-papers" class="nav-link block px-4 py-3 hover:bg-surface-2">White papers</a>
-                <a href="portfolio.html#skills" class="nav-link block px-4 py-3 hover:bg-surface-2">Competencias</a>
-                <a href="portfolio.html#experience" class="nav-link block px-4 py-3 hover:bg-surface-2"
-                    >Casos de éxito</a
-                >
-                <a href="portfolio.html" class="nav-link block px-4 py-3 hover:bg-surface-2">Porfolio</a>
-                <div class="px-4 pt-2 pb-4 space-y-3">
+            <div id="mobile-menu" class="mobile-menu xl:hidden hidden">
+                <a href="index.html#services" class="nav-link block px-4 py-3">Servicios</a>
+                <a href="index.html#results" class="nav-link block px-4 py-3">Resultados</a>
+                <a href="index.html#white-papers" class="nav-link block px-4 py-3">White papers</a>
+                <a href="portfolio.html#skills" class="nav-link block px-4 py-3">Competencias</a>
+                <a href="portfolio.html#experience" class="nav-link block px-4 py-3">Casos de éxito</a>
+                <a href="portfolio.html" class="nav-link block px-4 py-3">Porfolio</a>
+                <div class="px-4 pt-4 pb-5 space-y-3">
                     <a
                         href="https://calendly.com/carlos-perez-sechi/30min"
-                        class="btn btn-primary w-full px-4 py-3 text-sm"
+                        class="btn btn-light w-full px-4 py-3 text-sm"
                         >Reservar sesión</a
                     >
-                    <a href="#contact" class="btn btn-outline w-full px-4 py-3 text-sm">Contacto</a>
+                    <a href="index.html#contact" class="btn btn-ghost w-full px-4 py-3 text-sm">Contacto</a>
                 </div>
             </div>
         </header>
 
-        <section id="updates" class="py-16 md:py-24 bg-surface-2 border-b border-line">
+        <section class="page-hero">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <div class="grid lg:grid-cols-12 gap-12 items-end">
+                    <div class="lg:col-span-7">
+                        <p class="kicker mb-8">Porfolio</p>
+                        <h1 class="display mb-8">
+                            <span class="line"><span>Carlos I.</span></span>
+                            <span class="line"><span><em>Pérez-Sechi</em></span></span>
+                        </h1>
+                        <p class="hero-lead max-w-xl">Plataforma GenAI, seguridad, gobierno y FinOps</p>
+                    </div>
+                    <nav class="page-index lg:col-span-4 lg:col-start-9" aria-label="En esta página">
+                        <a href="#updates"><span class="num">01</span>Novedades</a>
+                        <a href="#skills"><span class="num">02</span>Competencias</a>
+                        <a href="#languages"><span class="num">03</span>Idiomas</a>
+                        <a href="#experience"><span class="num">04</span>Experiencia</a>
+                        <a href="#education"><span class="num">05</span>Formación</a>
+                        <a href="#awards"><span class="num">06</span>Premios y certificaciones</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section id="updates" class="section bg-paper">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Novedades</p>
-                    <h2 class="section-title mb-4">Últimas novedades y reflexiones</h2>
+                    <p class="kicker mb-5">Novedades</p>
+                    <h2 class="section-title mb-6">Últimas novedades y reflexiones</h2>
                     <p class="lead">
                         Mis últimos artículos, hitos de proyectos y reflexiones sobre IA y tecnología.
                     </p>
                 </div>
-                <div id="updates-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8"></div>
+                <div id="updates-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 mb-12"></div>
                 <div class="pagination flex justify-center gap-4">
                     <button
                         id="load-prev"
@@ -119,21 +148,21 @@
             </div>
         </section>
 
-        <section id="skills" class="py-16 md:py-24 bg-paper">
+        <section id="skills" class="section bg-surface">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Competencias</p>
-                    <h2 class="section-title mb-4">Competencias clave</h2>
+                    <p class="kicker mb-5">Competencias</p>
+                    <h2 class="section-title mb-6">Competencias clave</h2>
                     <p class="lead">
                         Una combinación de conocimiento técnico, visión estratégica y liderazgo para impulsar la
                         innovación.
                     </p>
                 </div>
-                <div class="grid lg:grid-cols-3 gap-8">
-                    <div class="card fade-in p-6 md:p-8">
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <div class="rule-top fade-in">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="icon-tile"><i class="fas fa-layer-group"></i></span>
-                            <h3 class="text-xl font-bold">Tecnología y herramientas</h3>
+                            <h3 class="text-2xl font-semibold">Tecnología y herramientas</h3>
                         </div>
                         <ul class="bullet-list space-y-3 text-muted">
                             <li>
@@ -156,10 +185,10 @@
                             <li><b class="text-main">APIs y formatos:</b> REST, JSON, XML</li>
                         </ul>
                     </div>
-                    <div class="card fade-in p-6 md:p-8" style="transition-delay: 0.1s">
+                    <div class="rule-top fade-in" style="transition-delay: 0.1s">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="icon-tile"><i class="fas fa-diagram-project"></i></span>
-                            <h3 class="text-xl font-bold">Metodologías y operaciones</h3>
+                            <h3 class="text-2xl font-semibold">Metodologías y operaciones</h3>
                         </div>
                         <ul class="bullet-list space-y-3 text-muted">
                             <li><b class="text-main">Agile:</b> Scrum, Kanban, gestión ágil de proyectos</li>
@@ -174,10 +203,10 @@
                             <li><b class="text-main">Experiencia de usuario</b></li>
                         </ul>
                     </div>
-                    <div class="card fade-in p-6 md:p-8" style="transition-delay: 0.2s">
+                    <div class="rule-top fade-in" style="transition-delay: 0.2s">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="icon-tile"><i class="fas fa-compass"></i></span>
-                            <h3 class="text-xl font-bold">Liderazgo y estrategia</h3>
+                            <h3 class="text-2xl font-semibold">Liderazgo y estrategia</h3>
                         </div>
                         <ul class="bullet-list space-y-3 text-muted">
                             <li><b class="text-main">Transformación digital:</b> transformación del negocio y de RR. HH.</li>
@@ -199,89 +228,89 @@
             </div>
         </section>
 
-        <section id="languages" class="py-16 md:py-24 bg-surface-2 border-y border-line">
+        <section id="languages" class="section bg-paper">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Comunicación</p>
-                    <h2 class="section-title mb-4">Idiomas</h2>
+                    <p class="kicker mb-5">Comunicación</p>
+                    <h2 class="section-title mb-6">Idiomas</h2>
                 </div>
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                    <div class="card fade-in p-5 md:p-6 flex flex-col">
-                        <h3 class="text-xl font-bold mb-3">Español</h3>
+                    <div class="rule-top fade-in flex flex-col">
+                        <h3 class="text-2xl font-semibold mb-3">Español</h3>
                         <span class="chip self-start">Nativo</span>
                         <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Nivel 5 de 5">
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
                         </div>
                     </div>
-                    <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.1s">
-                        <h3 class="text-xl font-bold mb-3">Inglés</h3>
+                    <div class="rule-top fade-in flex flex-col" style="transition-delay: 0.1s">
+                        <h3 class="text-2xl font-semibold mb-3">Inglés</h3>
                         <span class="chip self-start">Profesional completo</span>
                         <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Nivel 4 de 5">
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-line"></span>
                         </div>
                     </div>
-                    <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.2s">
-                        <h3 class="text-xl font-bold mb-3">Francés</h3>
+                    <div class="rule-top fade-in flex flex-col" style="transition-delay: 0.2s">
+                        <h3 class="text-2xl font-semibold mb-3">Francés</h3>
                         <span class="chip self-start">Profesional</span>
                         <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Nivel 3 de 5">
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-line"></span>
+                            <span class="h-1 flex-1 bg-line"></span>
                         </div>
                     </div>
-                    <div class="card fade-in p-5 md:p-6 flex flex-col" style="transition-delay: 0.3s">
-                        <h3 class="text-xl font-bold mb-3">Alemán</h3>
+                    <div class="rule-top fade-in flex flex-col" style="transition-delay: 0.3s">
+                        <h3 class="text-2xl font-semibold mb-3">Alemán</h3>
                         <span class="chip self-start">Profesional limitado</span>
                         <div class="flex gap-1.5 mt-auto pt-6" role="img" aria-label="Nivel 2 de 5">
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-brand-500"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
-                            <span class="h-1.5 flex-1 rounded-full bg-line"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-brand-600"></span>
+                            <span class="h-1 flex-1 bg-line"></span>
+                            <span class="h-1 flex-1 bg-line"></span>
+                            <span class="h-1 flex-1 bg-line"></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="py-16 md:py-24 bg-paper">
+        <section id="experience" class="section bg-surface">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Experiencia</p>
-                    <h2 class="section-title mb-4">Casos de éxito y experiencia</h2>
+                    <p class="kicker mb-5">Experiencia</p>
+                    <h2 class="section-title mb-6">Casos de éxito y experiencia</h2>
                     <p class="lead">
                         Como consultor de IA y líder tecnológico, he ayudado a organizaciones de distintos sectores a
                         implantar soluciones punteras que generan resultados de negocio medibles. Así he convertido
                         retos en oportunidades.
                     </p>
                 </div>
-                <div class="space-y-8">
+                <div>
                     <div
-                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                        class="timeline-item fade-in flex flex-col md:flex-row gap-6 md:gap-12"
                     >
-                        <div class="flex-shrink-0 md:w-1/4">
+                        <div class="flex-shrink-0 md:w-1/4 md:sticky md:top-28 md:self-start">
                             <img
                                 src="img/brand/simbolo-negro.svg"
                                 alt="Logotipo de perez-sechi"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=perez-sechi&font=inter'; this.onerror=null;"
                             />
-                            <h3 class="text-xl font-extrabold leading-tight">perez-sechi</h3>
+                            <h3 class="text-2xl font-semibold leading-tight">perez-sechi</h3>
                             <p class="font-semibold text-brand-600 mt-1">Consultor de soluciones de IA | Freelance</p>
                             <p class="mono text-xs text-subtle mt-2">Madrid (remoto) | mar. 2025 – actualidad</p>
                         </div>
                         <div class="flex-grow">
-                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                            <h4 class="text-3xl md:text-4xl font-normal leading-tight tracking-tight mb-5">
                                 IA generativa: del piloto a producción
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
@@ -337,21 +366,21 @@
                     </div>
 
                     <div
-                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                        class="timeline-item fade-in flex flex-col md:flex-row gap-6 md:gap-12"
                     >
-                        <div class="flex-shrink-0 md:w-1/4">
+                        <div class="flex-shrink-0 md:w-1/4 md:sticky md:top-28 md:self-start">
                             <img
                                 src="img/bicg_logo.jpg"
                                 alt="Logotipo de Bicg"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=bicg&font=inter'; this.onerror=null;"
                             />
-                            <h3 class="text-xl font-extrabold leading-tight">Bicg</h3>
+                            <h3 class="text-2xl font-semibold leading-tight">Bicg</h3>
                             <p class="font-semibold text-brand-600 mt-1">Responsable de transformación digital</p>
                             <p class="mono text-xs text-subtle mt-2">Madrid (híbrido) | ago. 2019 – mar. 2025</p>
                         </div>
                         <div class="flex-grow">
-                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                            <h4 class="text-3xl md:text-4xl font-normal leading-tight tracking-tight mb-5">
                                 Consultoría de transformación digital empresarial
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
@@ -415,21 +444,21 @@
                     </div>
 
                     <div
-                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                        class="timeline-item fade-in flex flex-col md:flex-row gap-6 md:gap-12"
                     >
-                        <div class="flex-shrink-0 md:w-1/4">
+                        <div class="flex-shrink-0 md:w-1/4 md:sticky md:top-28 md:self-start">
                             <img
                                 src="img/decathlon_logo.png"
                                 alt="Logotipo de Decathlon"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=Decathlon&font=inter'; this.onerror=null;"
                             />
-                            <h3 class="text-xl font-extrabold leading-tight">Decathlon España</h3>
+                            <h3 class="text-2xl font-semibold leading-tight">Decathlon España</h3>
                             <p class="font-semibold text-brand-600 mt-1">Jefe de proyecto</p>
                             <p class="mono text-xs text-subtle mt-2">Madrid | jun. 2017 – jul. 2019</p>
                         </div>
                         <div class="flex-grow">
-                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                            <h4 class="text-3xl md:text-4xl font-normal leading-tight tracking-tight mb-5">
                                 Programa de transformación digital a escala empresarial
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
@@ -490,21 +519,21 @@
                     </div>
 
                     <div
-                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                        class="timeline-item fade-in flex flex-col md:flex-row gap-6 md:gap-12"
                     >
-                        <div class="flex-shrink-0 md:w-1/4">
+                        <div class="flex-shrink-0 md:w-1/4 md:sticky md:top-28 md:self-start">
                             <img
                                 src="img/decathlon_logo.png"
                                 alt="Logotipo de Decathlon"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=Decathlon&font=inter'; this.onerror=null;"
                             />
-                            <h3 class="text-xl font-extrabold leading-tight">Decathlon España</h3>
+                            <h3 class="text-2xl font-semibold leading-tight">Decathlon España</h3>
                             <p class="font-semibold text-brand-600 mt-1">Ingeniero DevOps</p>
                             <p class="mono text-xs text-subtle mt-2">Madrid y Barcelona (híbrido) | feb. 2015 – jun. 2017</p>
                         </div>
                         <div class="flex-grow">
-                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                            <h4 class="text-3xl md:text-4xl font-normal leading-tight tracking-tight mb-5">
                                 Migración a la nube y modernización de sistemas
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
@@ -559,21 +588,21 @@
                     </div>
 
                     <div
-                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                        class="timeline-item fade-in flex flex-col md:flex-row gap-6 md:gap-12"
                     >
-                        <div class="flex-shrink-0 md:w-1/4">
+                        <div class="flex-shrink-0 md:w-1/4 md:sticky md:top-28 md:self-start">
                             <img
                                 src="img/sicpa_logo.png"
                                 alt="Logotipo de SICPA"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=SICPA&font=inter'; this.onerror=null;"
                             />
-                            <h3 class="text-xl font-extrabold leading-tight">SICPA</h3>
+                            <h3 class="text-2xl font-semibold leading-tight">SICPA</h3>
                             <p class="font-semibold text-brand-600 mt-1">Ingeniero de software</p>
                             <p class="mono text-xs text-subtle mt-2">Madrid | mar. 2013 – feb. 2015</p>
                         </div>
                         <div class="flex-grow">
-                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                            <h4 class="text-3xl md:text-4xl font-normal leading-tight tracking-tight mb-5">
                                 Plataforma de seguridad y trazabilidad de la cadena de suministro
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
@@ -639,21 +668,21 @@
                     </div>
 
                     <div
-                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                        class="timeline-item fade-in flex flex-col md:flex-row gap-6 md:gap-12"
                     >
-                        <div class="flex-shrink-0 md:w-1/4">
+                        <div class="flex-shrink-0 md:w-1/4 md:sticky md:top-28 md:self-start">
                             <img
                                 src="img/cef_logo.png"
                                 alt="Logotipo del CEF"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=CEF&font=inter'; this.onerror=null;"
                             />
-                            <h3 class="text-xl font-extrabold leading-tight">Centro de Estudios Financieros (CEF)</h3>
+                            <h3 class="text-2xl font-semibold leading-tight">Centro de Estudios Financieros (CEF)</h3>
                             <p class="font-semibold text-brand-600 mt-1">Ingeniero de software</p>
                             <p class="mono text-xs text-subtle mt-2">Madrid | ene. 2011 – mar. 2013</p>
                         </div>
                         <div class="flex-grow">
-                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                            <h4 class="text-3xl md:text-4xl font-normal leading-tight tracking-tight mb-5">
                                 Portal de empleo de alto tráfico y plataforma educativa
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
@@ -716,21 +745,21 @@
                     </div>
 
                     <div
-                        class="timeline-item card info fade-in p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-10"
+                        class="timeline-item fade-in flex flex-col md:flex-row gap-6 md:gap-12"
                     >
-                        <div class="flex-shrink-0 md:w-1/4">
+                        <div class="flex-shrink-0 md:w-1/4 md:sticky md:top-28 md:self-start">
                             <img
                                 src="img/hli_logo.jpg"
                                 alt="Logotipo de Groupe HLI"
                                 class="logo-tile w-20 h-20 mb-4 object-contain"
                                 onerror="this.src='https://placehold.co/100x100/E3EEFC/1C5CAB?text=HLi&font=inter'; this.onerror=null;"
                             />
-                            <h3 class="text-xl font-extrabold leading-tight">Groupe HLI</h3>
+                            <h3 class="text-2xl font-semibold leading-tight">Groupe HLI</h3>
                             <p class="font-semibold text-brand-600 mt-1">Ingeniero de operaciones</p>
                             <p class="mono text-xs text-subtle mt-2">Madrid | feb. 2008 – mar. 2010</p>
                         </div>
                         <div class="flex-grow">
-                            <h4 class="text-2xl font-extrabold tracking-tight mb-3">
+                            <h4 class="text-3xl md:text-4xl font-normal leading-tight tracking-tight mb-5">
                                 Comercio electrónico transfronterizo e infraestructura de red
                             </h4>
                             <p class="text-lg leading-relaxed mb-6">
@@ -793,11 +822,11 @@
             </div>
         </section>
 
-        <section id="education" class="py-16 md:py-24 bg-surface-2 border-y border-line">
+        <section id="education" class="section bg-paper">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Trayectoria académica</p>
-                    <h2 class="section-title mb-4">Formación</h2>
+                    <p class="kicker mb-5">Trayectoria académica</p>
+                    <h2 class="section-title mb-6">Formación</h2>
                 </div>
                 <div class="grid lg:grid-cols-3 gap-6">
                     <div
@@ -810,7 +839,7 @@
                             onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UCM&font=inter'; this.onerror=null;"
                         />
                         <div>
-                            <h3 class="text-xl font-bold">Doctorado en Ciencia de Datos</h3>
+                            <h3 class="text-2xl font-semibold">Doctorado en Ciencia de Datos</h3>
                             <p class="text-muted mt-1">Universidad Complutense de Madrid</p>
                             <div class="flex flex-wrap items-center gap-3 mt-2">
                                 <span class="mono text-sm text-subtle">nov. 2022 – may. 2026</span>
@@ -830,7 +859,7 @@
                             onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UCM&font=inter'; this.onerror=null;"
                         />
                         <div>
-                            <h3 class="text-xl font-bold">Máster en Minería de Datos e Inteligencia de Negocios</h3>
+                            <h3 class="text-2xl font-semibold">Máster en Minería de Datos e Inteligencia de Negocios</h3>
                             <p class="text-muted mt-1">Universidad Complutense de Madrid</p>
                             <div class="flex flex-wrap items-center gap-3 mt-2">
                                 <span class="mono text-sm text-subtle">oct. 2019 – jun. 2021</span>
@@ -848,7 +877,7 @@
                             onerror="this.src='https://placehold.co/64x64/E3EEFC/1C5CAB?text=UPM&font=inter'; this.onerror=null;"
                         />
                         <div>
-                            <h3 class="text-xl font-bold">Grado en Ingeniería de Telecomunicación (Telemática)</h3>
+                            <h3 class="text-2xl font-semibold">Grado en Ingeniería de Telecomunicación (Telemática)</h3>
                             <p class="text-muted mt-1">Universidad Politécnica de Madrid</p>
                             <div class="flex flex-wrap items-center gap-3 mt-2">
                                 <span class="mono text-sm text-subtle">sept. 2013 – jun. 2016</span>
@@ -859,11 +888,11 @@
             </div>
         </section>
 
-        <section id="awards" class="py-16 md:py-24 bg-paper">
+        <section id="awards" class="section bg-surface">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mb-12 md:mb-16">
-                    <p class="kicker mb-3">Reconocimientos</p>
-                    <h2 class="section-title mb-4">Premios y certificaciones</h2>
+                    <p class="kicker mb-5">Reconocimientos</p>
+                    <h2 class="section-title mb-6">Premios y certificaciones</h2>
                 </div>
                 <div class="grid md:grid-cols-2 gap-4 md:gap-6">
                     <div
@@ -930,142 +959,89 @@
             </div>
         </section>
 
-        <section id="contact" class="cta-section dark grid-bg py-16 md:py-24">
+        <section id="contact" class="band section">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                     <div class="lg:col-span-6">
-                        <p class="kicker mb-3">Siguiente paso</p>
-                        <h2 class="section-title mb-4">¿Listo para transformar tu organización?</h2>
+                        <p class="kicker mb-5">Siguiente paso</p>
+                        <h2 class="section-title mb-6">¿Listo para transformar tu organización?</h2>
                         <p class="lead max-w-xl">
                             Reserva una sesión estratégica gratuita de 30 minutos o escríbeme por WhatsApp para ver cómo
-                            una solución de IA a medida puede resolver los retos concretos de tu negocio e impulsar
-                            la innovación.
+                            una solución de IA a medida puede resolver los retos concretos de tu negocio e impulsar la
+                            innovación.
                         </p>
                     </div>
-                    <div class="lg:col-span-6">
-                        <div class="card p-6 md:p-8">
-                            <a
-                                href="https://calendly.com/carlos-perez-sechi/30min"
-                                class="cta-banner flex items-center gap-5 p-5 md:p-6"
+                    <div class="lg:col-span-5 lg:col-start-8">
+                        <a
+                            href="https://calendly.com/carlos-perez-sechi/30min"
+                            class="contact-action contact-action--primary"
+                        >
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Agenda tu consulta ahora</span>
+                            <i class="fas fa-arrow-right go"></i>
+                        </a>
+                        <a
+                            href="https://wa.me/34605566929?text=Hola%20Carlos%2C%20me%20gustar%C3%ADa%20hablar%20de%20llevar%20nuestro%20piloto%20de%20IA%20a%20producci%C3%B3n."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-action"
+                        >
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Escríbeme por WhatsApp</span>
+                            <i class="fas fa-arrow-right go"></i>
+                        </a>
+                        <div class="contact-list">
+                            <a href="mailto:carlos@perez-sechi.com"
+                                ><i class="fas fa-envelope"></i> carlos@perez-sechi.com</a
                             >
-                                <span class="icon-tile !bg-white/20 !text-white"><i class="fas fa-calendar-check"></i></span>
-                                <span class="text-lg md:text-xl font-bold">Agenda tu consulta ahora</span>
-                                <i class="fas fa-arrow-right ml-auto text-xl"></i>
-                            </a>
-                            <a
-                                href="https://wa.me/34605566929?text=Hola%20Carlos%2C%20me%20gustar%C3%ADa%20hablar%20de%20llevar%20nuestro%20piloto%20de%20IA%20a%20producci%C3%B3n."
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="whatsapp-banner flex items-center gap-5 p-5 md:p-6 mt-4"
+                            <a href="tel:+34605566929"><i class="fas fa-phone"></i> +34 605 566 929</a>
+                            <a href="https://linkedin.com/in/perez-sechi" target="_blank"
+                                ><i class="fab fa-linkedin"></i> Perfil de LinkedIn</a
                             >
-                                <span class="icon-tile"><i class="fab fa-whatsapp"></i></span>
-                                <span class="text-lg md:text-xl font-bold">Escríbeme por WhatsApp</span>
-                                <i class="fas fa-arrow-right ml-auto text-xl"></i>
-                            </a>
-                            <div class="mt-8 space-y-4">
-                                <a
-                                    href="mailto:carlos@perez-sechi.com"
-                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
-                                >
-                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fas fa-envelope"></i></span>
-                                    carlos@perez-sechi.com
-                                </a>
-                                <a
-                                    href="tel:+34605566929"
-                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
-                                >
-                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fas fa-phone"></i></span>
-                                    +34 605 566 929
-                                </a>
-                                <a
-                                    href="https://linkedin.com/in/perez-sechi"
-                                    target="_blank"
-                                    class="contact-method flex items-center gap-4 text-inv-muted hover:text-white transition duration-300"
-                                >
-                                    <span class="icon-tile !w-10 !h-10 !text-base"><i class="fab fa-linkedin"></i></span>
-                                    Perfil de LinkedIn
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="bg-ink-950 text-inv py-10">
-            <div
-                class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-5 text-center sm:text-left"
-            >
-                <span class="monogram" aria-hidden="true"></span>
-                <div class="leading-tight">
-                    <p class="font-bold text-white">Carlos I. Pérez-Sechi</p>
-                    <p class="text-sm text-inv-muted mt-1">Soluciones de IA pioneras para un futuro más inteligente.</p>
+        <footer class="site-footer">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+                <div class="grid gap-12 md:grid-cols-12">
+                    <div class="md:col-span-5">
+                        <div class="flex items-center gap-4">
+                            <span class="monogram" aria-hidden="true"></span>
+                            <p class="footer-name">Carlos I. Pérez-Sechi</p>
+                        </div>
+                        <p class="footer-tagline mt-6 max-w-sm">
+                            Soluciones de IA pioneras para un futuro más inteligente.
+                        </p>
+                    </div>
+                    <nav class="md:col-span-3 md:col-start-7" aria-label="Pie de página">
+                        <p class="footer-label">Explorar</p>
+                        <ul class="footer-links">
+                            <li><a href="index.html#services">Servicios</a></li>
+                            <li><a href="index.html#results">Resultados</a></li>
+                            <li><a href="index.html#white-papers">White papers</a></li>
+                            <li><a href="portfolio.html#experience">Casos de éxito</a></li>
+                            <li><a href="portfolio.html">Porfolio</a></li>
+                        </ul>
+                    </nav>
+                    <div class="md:col-span-3">
+                        <p class="footer-label">Contacto</p>
+                        <ul class="footer-links">
+                            <li><a href="mailto:carlos@perez-sechi.com">carlos@perez-sechi.com</a></li>
+                            <li><a href="tel:+34605566929">+34 605 566 929</a></li>
+                            <li><a href="https://linkedin.com/in/perez-sechi" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="sm:ml-auto mono text-sm text-inv-subtle">
-                    &copy; <span id="currentYear"></span> Todos los derechos reservados.
-                </p>
+                <div class="footer-bottom mt-14 pt-6">
+                    <p class="mono">&copy; <span id="currentYear"></span> Todos los derechos reservados.</p>
+                </div>
             </div>
         </footer>
 
-        <script>
-            // Set current year in footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-            // Intersection Observer for fade-in animations
-            document.addEventListener('DOMContentLoaded', function () {
-                const observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('active');
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    },
-                    {
-                        threshold: 0.05, // Adjusted for potentially larger experience cards
-                    }
-                );
-
-                document.querySelectorAll('.fade-in').forEach((element) => {
-                    observer.observe(element);
-                });
-
-                // Keep the visitor on the same section when switching language
-                document.querySelectorAll('.lang-switch a').forEach((link) => {
-                    link.addEventListener('click', () => {
-                        link.hash = window.location.hash;
-                    });
-                });
-
-                // Mobile menu toggle
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileMenuButton && mobileMenu) {
-                    mobileMenuButton.addEventListener('click', () => {
-                        mobileMenu.classList.toggle('hidden');
-                        const icon = mobileMenuButton.querySelector('i');
-                        if (mobileMenu.classList.contains('hidden')) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        } else {
-                            icon.classList.remove('fa-bars');
-                            icon.classList.add('fa-times');
-                        }
-                    });
-                }
-
-                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-                mobileMenuLinks.forEach((link) => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        const icon = mobileMenuButton.querySelector('i');
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    });
-                });
-            });
-        </script>
+        <script src="js/site.js"></script>
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -1211,7 +1187,7 @@
                     currentUpdates.forEach((update) => {
                         const updateElement = document.createElement('div');
                         updateElement.className =
-                            'card card-hover overflow-hidden flex flex-col group fade-in';
+                            'insight-card fade-in';
 
                         const formattedDate =
                             update.dateLabel ||
@@ -1227,13 +1203,15 @@
                         }
 
                         updateElement.innerHTML = `
-                        <img src="${update.imageUrl}" alt="${update.title}" class="w-full h-48 ${update.logo ? 'object-contain p-10 bg-white border-b border-line' : 'object-cover'}" onerror="this.src='https://placehold.co/600x400/E3EEFC/1C5CAB?text=Image+Error&font=inter'; this.onerror=null;">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <p class="mono text-xs text-subtle mb-2">${formattedDate}</p>
-                            <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="block mb-3">
-                                <h3 class="text-xl font-bold leading-snug group-hover:text-brand-500 transition-colors">${update.title}</h3>
-                            </a>
-                            <p class="text-muted mb-4 text-sm leading-relaxed flex-grow">${shortContent}</p>
+                        <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="insight-media ${update.logo ? 'is-logo' : ''}" tabindex="-1">
+                            <img src="${update.imageUrl}" alt="${update.title}" loading="lazy" onerror="this.src='https://placehold.co/600x400/E3EEFC/1C5CAB?text=Image+Error&font=inter'; this.onerror=null;">
+                        </a>
+                        <div class="insight-body">
+                            <p class="insight-meta">${formattedDate}</p>
+                            <h3 class="insight-title">
+                                <a href="${update.link}" target="_blank" rel="noopener noreferrer">${update.title}</a>
+                            </h3>
+                            <p class="insight-text">${shortContent}</p>
                             <a href="${update.link}" target="_blank" rel="noopener noreferrer" class="text-link mt-auto self-start">
                                 Leer más <i class="fas fa-arrow-right ml-1 text-xs"></i>
                             </a>

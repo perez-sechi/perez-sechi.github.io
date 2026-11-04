@@ -2,6 +2,9 @@
 tailwind.config = {
     theme: {
         extend: {
+            fontFamily: {
+                serif: ['"Source Serif 4"', '"Iowan Old Style"', 'Georgia', '"Times New Roman"', 'serif'],
+            },
             colors: {
                 paper: '#f7f6f2',
                 surface: '#ffffff',
